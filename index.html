@@ -144,7 +144,7 @@
                     <hr class="my-2 w-100">
                     <div class="row">
                         <div class="col-auto">
-                            <span class="text-muted small">Registratie datum</span>
+                            <span class="small" style="color:cadetblue">Registratie datum</span>
                         </div>
                         <div class="col-auto">
                             <span class="small fs-7">12/10/2023</span>
@@ -172,7 +172,7 @@
                       <hr class="my-2 w-100">
                       <div class="row">
                           <div class="col-auto">
-                              <span class="text-muted small">Registratie datum</span>
+                              <span class="small" style="color:cadetblue">Registratie datum</span>
                           </div>
                           <div class="col-auto">
                               <span class="small fs-7">12/10/2023</span>
@@ -198,7 +198,7 @@
                       <hr class="my-2 w-100">
                       <div class="row">
                           <div class="col-auto">
-                              <span class="text-muted small">Registratie datum</span>
+                              <span class="small" style="color:cadetblue">Registratie datum</span>
                           </div>
                           <div class="col-auto">
                               <span class="small fs-7">12/10/2023</span>
@@ -224,8 +224,16 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Zoeken</h1>
+      <h1>User accounts</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Users</li>
+          <li class="breadcrumb-item active">All</li>
+        </ol>
+      </nav>
     </div><!-- End Page Title -->
+
 
     <section class="section">
       <div class="row">
@@ -233,65 +241,95 @@
 
           <div class="card">
             <div class="card-body">
+
+                 <!-- Container with border style -->
+                 <div class="border p-3">             
+        
+                <!-- List of round radio buttons -->
+                <label class="form-label">Voer de gegevens in van het verzoek dat u wilt vinden</label>
+        
+                <!-- Container with border style -->
+
+                    <!-- Private Sector -->
+                    <div data-bs-toggle="collapse" data-bs-target="#private" aria-expanded="false" aria-controls="private">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sector" id="private_sector" value="0">
+                            <label class="form-check-label" for="private_sector">Private</label>
+                        </div>
+                    </div>
+                    <div class="row" id="sector_descriptions">
+                        <div class="col-lg-12">
+                            <div class="collapse" id="private" data-bs-parent="#sector_descriptions">
+                                <div class="card card-body shadow-none">
+                                    You selected Private.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Governmental Sector -->
+                    <div data-bs-toggle="collapse" data-bs-target="#governmental" aria-expanded="false" aria-controls="governmental">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sector" id="governmental_sector" value="1">
+                            <label class="form-check-label" for="governmental_sector">Governmental</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="collapse" id="governmental" data-bs-parent="#sector_descriptions">
+                            <div class="card card-body shadow-none">
+                                You selected Governmental.
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+                      </div>
+                    </div>     
+
+    
+              <hr class="my-2 w-100" style="height: 2px; background-color: blue;">
               <div class="d-flex flex-row justify-content-between align-items-center">
-              <h5 class="card-title">Users</h5>		    
+            
+              <h5 class="card-title">Referral history</h5>
               <div>
                 <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown"><i class="bi bi-download"></i></button>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="#"><i class="ri-printer-line"></i>Print</a></li>
-		    <li><a class="dropdown-item" href="#"><i class="ri-file-excel-2-line"></i>Csv</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="bx bxs-file-pdf"></i>PDF</a></li>
-                  </ul>
+                  	<ul class="dropdown-menu dropdown-menu-end">
+                    	 <li><a class="dropdown-item" href="#"><i class="ri-printer-line"></i>Print</a></li>
+		     	             <li><a class="dropdown-item" href="#"><i class="ri-file-excel-2-line"></i>Csv</a></li>
+                    	 <li><a class="dropdown-item" href="#"><i class="bx bxs-file-pdf"></i>PDF</a></li>
+                  	</ul>
                 <button type="button" class="btn btn-secondary"><i class="bi bi-layout-three-columns"></i></button>
               </div>
             </div>
             <div class="table-responsive">
 
               <!-- Table with stripped rows -->
-
-              <table class=" table datatable">
+             <table class="table datatable">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First Name</th>
-		    <th scope="col">Last Name</th>
-		    <th scope="col">Balance</th>
-		    <th scope="col">Phone number</th>
-		    <th scope="col">Email</th>
-		    <th scope="col">Status</th>
-		    <th scope="col">Sign-up date</th>
+                    <th scope="col">Commission</th>
+                    <th scope="col">Referrer</th>
+		                <th scope="col">Tran ID</th>
+		                <th scope="col">Status</th>
+		                <th scope="col">Campaign name</th>
+                    <th scope="col">Date</th>
+
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td><a href="users-profile.html">Brandon</a></td>
-		    <td><a href="users-profile.html">Jacob</a></td>
-                    <td>NAf 125.00</td>
-                    <td><a href="users-profile.html">+5999 555 5555</a></td>
-		    <td>b.jacobs@example.com</td>
-		    <td><span class="badge rounded-pill bg-success">Active</span></td>
-                    <td>dd-mm-yyyy hh:mm:ss</td>
-                  </tr>
-		    <tr>
-                    <th scope="row">2</th>
-                    <td><a href="users-profile.html">Raheem</a></td>
-		    <td><a href="users-profile.html">Lehner</a></td>
-                    <td>NAf 500.00</td>
-                    <td><a href="users-profile.html">+5999 555 5557</a></td>
-		    <td>r.lehner@example.com</td>
-		    <td><span class="badge rounded-pill bg-warning text-dark">On hold</span></td>
-                    <td>dd-mm-yyyy hh:mm:ss</td>
-		    <tr>
-                    <th scope="row">3</th>
-                    <td><a href="users-profile.html">Zelda</a></td>
-		    <td><a href="users-profile.html">Chong</a></td>
-                    <td>NAf 00.00</td>
-                    <td><a href="users-profile.html">+5999 555 5558</a></td>
-		    <td>z.chong@example.com</td>
-		    <td><span class="badge rounded-pill bg-danger">Deleted</span></td>
-                    <td>dd-mm-yyyy hh:mm:ss</td>
-                  </tr>
+                    <td>NAf 1.00</td>
+                    <td>Raheem Lehner</td>
+                    <td>#123456789</td>
+		                <td>Approved</td>
+		                <td>Relaunch</td>                    
+                    <td>dd-mmm-yyyy hh:mm:ss</td>
                   </tr>
                 </tbody>
               </table>
@@ -303,7 +341,9 @@
         </div>
       </div>
     </section>
-  </main><!-- End #main -->
+
+  </main>
+  <!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
