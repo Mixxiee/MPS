@@ -239,51 +239,145 @@
       <div class="row">
         <div class="col-lg-12">
 
-          <div class="card">
-            <div class="card-body">
+          <div class="card" >
+            <div class="card-body pt-5">
 
                  <!-- Container with border style -->
-                 <div class="border p-3">             
+                 <div class="border p-5 border-primary">             
         
                 <!-- List of round radio buttons -->
                 <label class="form-label">Voer de gegevens in van het verzoek dat u wilt vinden</label>
         
-                <!-- Container with border style -->
 
-                    <!-- Private Sector -->
-                    <div data-bs-toggle="collapse" data-bs-target="#private" aria-expanded="false" aria-controls="private">
+
+                    <!-- Aanvrager -->
+                    <div data-bs-toggle="collapse" data-bs-target="#aanvrager" aria-expanded="false" aria-controls="aanvrager">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sector" id="private_sector" value="0">
-                            <label class="form-check-label" for="private_sector">Private</label>
+                            <input class="form-check-input" type="radio" name="sector" id="aanvrager_sector" value="0">
+                            <label class="form-check-label" for="aanvrager_sector">Aanvrager</label>
                         </div>
                     </div>
                     <div class="row" id="sector_descriptions">
                         <div class="col-lg-12">
-                            <div class="collapse" id="private" data-bs-parent="#sector_descriptions">
+                            <div class="collapse" id="aanvrager" data-bs-parent="#sector_descriptions">
                                 <div class="card card-body shadow-none">
-                                    You selected Private.
+                                    
+									
+								<div class="container">
+								  <div class="row">
+									<div class="col-lg-3 mb-3">
+									  <label for="filter1">Achternaam</label>
+									  <input type="text" class="form-control" id="filter1" placeholder="Enter filter 1">
+									</div>
+									<div class="col-lg-3 mb-3">
+									  <label for="filter2">Voornaam</label>
+									  <input type="text" class="form-control" id="filter2" placeholder="Enter filter 2">
+									</div>
+									<div class="col-lg-3 mb-3">
+									  <label for="filter3">Filter 3 (Calendar):</label>
+									  <input type="date" class="form-control" id="filter3">
+									</div>
+									<div class="col-lg-3 mb-3">
+									  <label for="filter4">Adres</label>
+									  <input type="text" class="form-control" id="filter4" placeholder="Enter filter 4">
+									</div>
+									<div class="col-lg-3 mb-3">
+									  <label for="filter5">Snelzoeken</label>
+									  <input type="text" class="form-control" id="filter5" placeholder="Enter filter 5">
+									</div>
+								  </div>
+								</div>
+
+																		
+									
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    
         
-                    <!-- Governmental Sector -->
-                    <div data-bs-toggle="collapse" data-bs-target="#governmental" aria-expanded="false" aria-controls="governmental">
+                    <!-- Aanvraag -->
+                    <div data-bs-toggle="collapse" data-bs-target="#aanvraag" aria-expanded="false" aria-controls="aanvraag">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sector" id="governmental_sector" value="1">
-                            <label class="form-check-label" for="governmental_sector">Governmental</label>
+                            <input class="form-check-input" type="radio" name="sector" id="aanvrager_sector" value="1">
+                            <label class="form-check-label" for="aanvraag_sector">Aanvraag</label>
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <div class="collapse" id="governmental" data-bs-parent="#sector_descriptions">
+                        <div class="collapse" id="aanvraag" data-bs-parent="#sector_descriptions">
                             <div class="card card-body shadow-none">
                                 You selected Governmental.
                             </div>
                         </div>
                     </div>
+                
+					<!-- Werkgever Natuurlijk persoon -->
+				    <div data-bs-toggle="collapse" data-bs-target="#wnp" aria-expanded="false" aria-controls="wnp">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sector" id="wnp_sector" value="0">
+                            <label class="form-check-label" for="wnp_sector">Werkgever Natuurlijk persoon</label>
+                        </div>
                     </div>
+                    <div class="row" id="sector_descriptions">
+                        <div class="col-lg-12">
+                            <div class="collapse" id="wnp" data-bs-parent="#sector_descriptions">
+                                <div class="card card-body shadow-none">
+                                    You selected Private.
+                                </div>
+                            </div>
+                        </div>
+                    
+				
+									<!-- Werkgever Organisatie -->
+				    <div data-bs-toggle="collapse" data-bs-target="#wo" aria-expanded="false" aria-controls="wo">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sector" id="wo_sector" value="0">
+                            <label class="form-check-label" for="wo_sector">Werkgever Organisatie</label>
+                        </div>
+                    </div>
+                    <div class="row" id="sector_descriptions">
+                        <div class="col-lg-12">
+                            <div class="collapse" id="wo" data-bs-parent="#sector_descriptions">
+                                <div class="card card-body shadow-none">
+                                    You selected Private.
+                                </div>
+                            </div>
+                        </div>
+						
+						
+											<!-- Garantsteller Natuurlijke persoon  -->
+				    <div data-bs-toggle="collapse" data-bs-target="#gnp" aria-expanded="false" aria-controls="gnp">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sector" id="gnp_sector" value="0">
+                            <label class="form-check-label" for="gnp_sector">Garantsteller Natuurlijke persoon</label>
+                        </div>
+                    </div>
+                    <div class="row" id="sector_descriptions">
+                        <div class="col-lg-12">
+                            <div class="collapse" id="gnp" data-bs-parent="#sector_descriptions">
+                                <div class="card card-body shadow-none">
+                                    You selected Private.
+                                </div>
+                            </div>
+                        </div>
+						
+											<!-- Garantsteller Organisatie -->
+				    <div data-bs-toggle="collapse" data-bs-target="#go" aria-expanded="false" aria-controls="go">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sector" id="go_sector" value="0">
+                            <label class="form-check-label" for="go_sector">Garantsteller Organisatie</label>
+                        </div>
+                    </div>
+                    <div class="row" id="sector_descriptions">
+                        <div class="col-lg-12">
+                            <div class="collapse" id="go" data-bs-parent="#sector_descriptions">
+                                <div class="card card-body shadow-none">
+                                    You selected Private.
+                                </div>
+                            </div>
+                        </div>
+						
                 </div>
-        
+			</div>
             </div>
         </div>
 
@@ -291,7 +385,9 @@
                     </div>     
 
     
-              <hr class="my-2 w-100" style="height: 2px; background-color: blue;">
+              <div style="margin-top: 50px;">
+				<hr class="my-2 w-100" style="height: 2px; background-color: blue;">
+			  </div>
               <div class="d-flex flex-row justify-content-between align-items-center">
             
               <h5 class="card-title">Referral history</h5>
