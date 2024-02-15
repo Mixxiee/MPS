@@ -224,14 +224,7 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>User accounts</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Users</li>
-          <li class="breadcrumb-item active">All</li>
-        </ol>
-      </nav>
+      <h1>Zoeken</h1>
     </div><!-- End Page Title -->
 
 
@@ -240,11 +233,22 @@
         <div class="col-lg-12">
 
           <div class="card" >
-            <div class="card-body pt-5">
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item">
+                  <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#support-nav" data-bs-toggle="collapse" href="#">
+                      <span class="title-text-color">Aanvrager</span>
+                      <i class="bi bi-chevron-down ms-auto icon-color"></i>
+                  </a>
+                  <ul id="support-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
+              
 
+      
+
+                <div class="card-body pt-5">
                  <!-- Container with border style -->
-                 <div class="border p-5 border-primary">             
-        
+                 <div class="border p-5 filter-border"> 
+                  <!-- The heading -->           
+                  <div class="filter-heading">Zoekfilters</div> 
                 <!-- List of round radio buttons -->
                 <label class="form-label">Voer de gegevens in van het verzoek dat u wilt vinden</label>
         
@@ -266,24 +270,24 @@
 								<div class="container">
 								  <div class="row">
 									<div class="col-lg-3 mb-3">
-									  <label for="filter1">Achternaam</label>
-									  <input type="text" class="form-control" id="filter1" placeholder="Enter filter 1">
+									  <label for="filter1" class= "filter-label">Achternaam</label>
+									  <input type="text" class="form-control input-borders" id="filter1">
 									</div>
 									<div class="col-lg-3 mb-3">
-									  <label for="filter2">Voornaam</label>
-									  <input type="text" class="form-control" id="filter2" placeholder="Enter filter 2">
+									  <label for="filter2" class= "filter-label">Voornaam</label>
+									  <input type="text" class="form-control input-borders" id="filter2">
 									</div>
 									<div class="col-lg-3 mb-3">
-									  <label for="filter3">Filter 3 (Calendar):</label>
-									  <input type="date" class="form-control" id="filter3">
+									  <label for="filter3" class= "filter-label">Geboortedatum</label>
+									  <input type="date" class="form-control input-borders" id="filter3">
 									</div>
 									<div class="col-lg-3 mb-3">
-									  <label for="filter4">Adres</label>
-									  <input type="text" class="form-control" id="filter4" placeholder="Enter filter 4">
+									  <label for="filter4" class= "filter-label">Adres</label>
+									  <input type="text" class="form-control input-borders" id="filter4">
 									</div>
 									<div class="col-lg-3 mb-3">
-									  <label for="filter5">Snelzoeken</label>
-									  <input type="text" class="form-control" id="filter5" placeholder="Enter filter 5">
+									  <label for="filter5" class= "filter-label">Snelzoeken</label>
+									  <input type="text" class="form-control input-borders" id="filter5">
 									</div>
 								  </div>
 								</div>
@@ -377,20 +381,26 @@
                         </div>
 						
                 </div>
-			</div>
+  
+              </div>
             </div>
         </div>
-
                       </div>
-                    </div>     
+                    </div>   
 
-    
-              <div style="margin-top: 50px;">
-				<hr class="my-2 w-100" style="height: 2px; background-color: blue;">
+                </ul>
+              </li><!-- End Filter -->
+            </ul>
+
+        
+
+        <div class="card-body pt-2"></div>
+        <div class="line-container d-flex justify-content-center">
+				<hr class="my-hr">
 			  </div>
               <div class="d-flex flex-row justify-content-between align-items-center">
             
-              <h5 class="card-title">Referral history</h5>
+
               <div>
                 <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown"><i class="bi bi-download"></i></button>
                   	<ul class="dropdown-menu dropdown-menu-end">
@@ -398,7 +408,6 @@
 		     	             <li><a class="dropdown-item" href="#"><i class="ri-file-excel-2-line"></i>Csv</a></li>
                     	 <li><a class="dropdown-item" href="#"><i class="bx bxs-file-pdf"></i>PDF</a></li>
                   	</ul>
-                <button type="button" class="btn btn-secondary"><i class="bi bi-layout-three-columns"></i></button>
               </div>
             </div>
             <div class="table-responsive">
@@ -430,8 +439,9 @@
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
-</div>
             </div>
+           
+    
           </div>
 
         </div>
