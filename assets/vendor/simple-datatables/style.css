@@ -30,7 +30,10 @@
 }
 
 .datatable-input {
-	padding: 6px 12px;
+	padding: 5px 20px;
+	border-radius: 5px;
+	border-color: #203b66;
+	border-width: 1px;   
 }
 
 .datatable-info {
@@ -112,7 +115,6 @@
 	width: 100%;
 	border-spacing: 0;
 	border-collapse: separate;
-	scrollY: true;
 }
 
 .datatable-table > tbody > tr > td,
@@ -140,6 +142,8 @@
 .datatable-table th {
 	vertical-align: bottom;
 	text-align: left;
+	background-color: #D3D3D3;
+	color: #203b66;
 }
 
 .datatable-table th a {
