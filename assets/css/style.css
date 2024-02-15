@@ -827,6 +827,16 @@ h6 {
   background-color: blue;
 }
 
+.custom-blue-btn {
+  color: #203b66; 
+  border-color: #203b66; 
+}
+
+.custom-blue-btn:hover {
+  color: #fff;
+  background-color: #203b66; 
+  border-color: #203b66; 
+}
 /*--------------------------------------------------------------
 # Dashboard
 --------------------------------------------------------------*/
