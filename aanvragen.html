@@ -317,7 +317,7 @@
                                                 <div class="row">
                                                   <div class="col-lg-3 mb-5">
                                                     <label for="filter1" class= "filter-label">Straatnaam</label>
-                                                    <input type="text" class="form-control filled-borders" value="Weg nar westpunt" id="filter1" readonly>
+                                                    <input type="text" class="form-control filled-borders" value="Weg naar westpunt" id="filter1" readonly>
                                                   </div>
                                                   <div class="col-lg-3 mb-5">
                                                     <label for="filter2" class= "filter-label">Nr</label>
@@ -685,43 +685,68 @@
                                            <div class="border p-5 filter-border"> 
                                             <!-- The heading -->           
                                             <div class="filter-heading">Gemachtigde Natuurlijke Persoon</div> 
-                                  
-                                                              
+                                                <!-- Gegevens --> 
                                                           <div class="container">
                                                             <div class="row">
+                                                            <h4 class="custom-h5heading">Gegevens</h4>
                                                               <div class="col-lg-3 mb-5">
-                                                                <label for="filter1" class= "filter-label">Straatnaam</label>
-                                                                <input type="text" class="form-control filled-borders" value="Weg nar westpunt" id="filter1" readonly>
+                                                                <label for="filter1" class= "filter-label">Naam Persoon</label>
+                                                                <input type="text" class="form-control filled-borders" value="Gressman" id="filter1" readonly>
                                                               </div>
-                                                              <div class="col-lg-3 mb-5">
-                                                                <label for="filter2" class= "filter-label">Nr</label>
-                                                                <input type="number" class="form-control filled-borders" value="18" id="filter2" readonly>
-                                                              </div>
-                                                              <div class="col-lg-3 mb-5">
-                                                                <label for="filter3" class= "filter-label">Locatie omschrijving</label>
-                                                                <input type="text" class="form-control filled-borders" value="Verblijfsvergunning" id="filter3" readonly>
-                                                              </div>
-                                                              <div class="col-lg-3 mb-5">
-                                                                <label for="filter4" class= "filter-label">Postcode</label>
-                                                                <input type="text" class="form-control filled-borders" value="233233" id="filter4" readonly>
-                                                              </div>
-                                                              <div class="col-lg-3 mb-5">
-                                                                <label for="filter5" class= "filter-label">Plaats</label>
-                                                                <input type="text" class="form-control filled-borders" id="filter5" readonly>
-                                                              </div>
-                                                              <div class="col-lg-3 mb-5">
-                                                                <label for="filter6" class= "filter-label">Datum vestiging</label>
-                                                                <input type="text" class="form-control filled-borders" value="23/07/2006" id="filter6" readonly>
-                                                              </div>
-                                                              <div class="col-lg-3 mb-5">
-                                                                <label for="filter7" class= "filter-label">Telefoon</label>
-                                                                <input type="number" class="form-control filled-borders" value="2334123223" id="filter7" readonly>
-                                                              </div>
+
+                                                              <hr class="striped-line"> 
+                                                <!-- End Gegevens --> 
+
+                                                <!-- Adres --> 
+                                                              <div class="container">
+                                                                <div class="row">
+                                                                <h4 class="custom-h5heading">Adres</h4>
+                                                                  <div class="col-lg-3 mb-5">
+                                                                    <label for="filter1" class= "filter-label">Adres</label>
+                                                                    <input type="text" class="form-control filled-borders" value="Kaya pachi jan bakhuis" id="filter1" readonly>
+                                                                  </div>
+                                                                  <div class="col-lg-3 mb-5">
+                                                                    <label for="filter2" class= "filter-label">Adres nummer</label>
+                                                                    <input type="number" class="form-control filled-borders" value="15" id="filter2" readonly>
+                                                                  </div>
+
+                                                                  <hr class="striped-line">
+                                                <!-- End Adres -->
+
+                                                
+                                                <!-- Contact telefoon --> 
+                                                                  <div class="container">
+                                                                    <div class="row">
+                                                                    <h4 class="custom-h5heading">Contact telefon</h4>
+                                                                      <div class="col-lg-3 mb-5">
+                                                                        <label for="filter1" class= "filter-label">Telefoon werk 1</label>
+                                                                        <input type="number" class="form-control filled-borders" value="Weg naar westpunt" id="filter1" readonly>
+                                                                      </div>
+                                                                      <div class="col-lg-3 mb-5">
+                                                                        <label for="filter2" class= "filter-label">Telefoon werk 2</label>
+                                                                        <input type="number" class="form-control filled-borders" value="18" id="filter2" readonly>
+                                                                      </div>
+                                                                      <div class="col-lg-3 mb-5">
+                                                                        <label for="filter3" class= "filter-label">Telefoon Mobiel</label>
+                                                                        <input type="number" class="form-control filled-borders" value="Verblijfsvergunning" id="filter3" readonly>
+                                                                      </div>
+                                                                      <div class="col-lg-3 mb-5">
+                                                                        <label for="filter4" class= "filter-label">Fax</label>
+                                                                        <input type="number" class="form-control filled-borders" value="233233" id="filter4" readonly>
+                                                                      </div>
+                                                                      <div class="col-lg-3 mb-5">
+                                                                        <label for="filter5" class= "filter-label">E-mail Adres</label>
+                                                                        <input type="text" class="form-control filled-borders" id="filter5" readonly>
+                                                                      </div>
+                                                <!-- End Contact telefoon -->
+
+
                                           
                                                             </div>
                                                           </div>
-                                              <!-- table -->
-                                                          <div class="card-body pt-2">
+
+
+                                              <!-- table -->                                                          
                                       
                                                 
                                                             <div class="table-responsive ml-1">
@@ -731,18 +756,26 @@
                                                              <table class="table table-striped table-hover simpletable">
                                                                 <thead>
                                                                   <tr>
-                                                                    <th scope="col">Adres</th>
-                                                                    <th scope="col">Adres Nr.</th>
+                                                                    <th scope="col">Document Name</th>
+                                                                    <th scope="col">Document Upload</th>
+                                                                    <th scope="col"></th>
                                                                   </tr>
                                                                 </thead>
                                                                 <tbody>
                                                                   <tr>
-                                                                    <td>WAYACA STRAAT</td>
-                                                                    <td>9</td>             
+                                                                    <td>Machtiging</td>
+                                                                    <td><a href="aanvragen.html">FMSCRV202114751-2 VO OTNIEL 17-03-2021.doc</a></td>
+                                                                    <td class="d-flex justify-content-end">
+                                                                        <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown"><i class="bi bi-download"></i></button>
+  
+                                                                    </td>             
                                                                   </tr>
                                                                   <tr>
-                                                                    <td>TRIANGEL WEG</td>
-                                                                    <td>10b</td>                  
+                                                                    <td>Machtiging 2</td>
+                                                                    <td><a href="aanvragen.html">FMSCRV202114751-2 VO OTNIEL 17-03-2021.doc</a></td>
+                                                                    <td class="d-flex justify-content-end">
+                                                                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-target="#myModal"><i class="bi bi-download"></i></button>                                                                        
+                                                                    </td>                 
                                                                   </tr>                              
                                                                 </tbody>
                                                               </table>
@@ -752,58 +785,59 @@
                           
                                            </div>
                                           </div>   
-                                          <!-- End Adres -->
+                                          <!-- End 4 sections -->
 
-                          
-                                          
-                          
-                                          <!-- Eerder bewoonde adressen-->      
-                                          
-                                          <div class="card-body pt-5">
-                                                <!-- Container with border style -->
-                                                <div class="border p-5 filter-border"> 
-                                                 <!-- The heading -->           
-                                                 <div class="filter-heading">Gemachtigde Organisatie/Rechtpersoon</div> 
-                                       
-                                                 
-                                                 <div class="card-body pt-2">
-                                      
-                                                
-                                                  <div class="table-responsive ml-1">
-                                      
-                                                    <!-- Table with stripped rows -->
                         
-                                                   <table class="table table-striped table-hover simpletable">
-                                                      <thead>
-                                                        <tr>
-                                                          <th scope="col">Adres</th>
-                                                          <th scope="col">Adres Nr.</th>
-                                                        </tr>
-                                                      </thead>
-                                                      <tbody>
-                                                        <tr>
-                                                          <td>WAYACA STRAAT</td>
-                                                          <td>9</td>             
-                                                        </tr>
-                                                        <tr>
-                                                          <td>TRIANGEL WEG</td>
-                                                          <td>10b</td>                  
-                                                        </tr>                              
-                                                      </tbody>
-                                                    </table>
-                                                    <!-- End Table with stripped rows -->
-                        
-                                                  </div>
-                        
-                        
-                                              </div>
-                               
-                                          <!-- End Eerder bewoonde adressen --> 
                           
                                           </ul>
                                         </li>
                                       </ul>
                                       <!-- End Gemachtigde informatie -->
+
+
+
+                                                                                <!-- Eerder bewoonde adressen-->      
+                                          
+                                                                                <div class="card-body pt-5">
+                                                                                    <!-- Container with border style -->
+                                                                                    <div class="border p-5 filter-border"> 
+                                                                                     <!-- The heading -->           
+                                                                                     <div class="filter-heading">Gemachtigde Organisatie/Rechtpersoon</div> 
+                                                                           
+                                                                                     
+                                                                                     <div class="card-body pt-2">
+                                                                          
+                                                                                    
+                                                                                      <div class="table-responsive ml-1">
+                                                                          
+                                                                                        <!-- Table with stripped rows -->
+                                                            
+                                                                                       <table class="table table-striped table-hover simpletable">
+                                                                                          <thead>
+                                                                                            <tr>
+                                                                                              <th scope="col">Adres</th>
+                                                                                              <th scope="col">Adres Nr.</th>
+                                                                                            </tr>
+                                                                                          </thead>
+                                                                                          <tbody>
+                                                                                            <tr>
+                                                                                              <td>WAYACA STRAAT</td>
+                                                                                              <td>9</td>             
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                              <td>TRIANGEL WEG</td>
+                                                                                              <td>10b</td>                  
+                                                                                            </tr>                              
+                                                                                          </tbody>
+                                                                                        </table>
+                                                                                        <!-- End Table with stripped rows -->
+                                                            
+                                                                                      </div>
+                                                            
+                                                            
+                                                                                  </div>
+                                                                   
+                                                                              <!-- End Eerder bewoonde adressen --> 
             
 
             <!-- Aanvragen overzicht -->
