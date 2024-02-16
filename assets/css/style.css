@@ -898,7 +898,7 @@ h6 {
 
 .simpletable tbody td:first-child,
 .simpletable thead th:first-child {
-  width: 250px; /* Adjust the width as needed */
+  width: 250px;
 }
 
 .simpletable thead th {
@@ -908,12 +908,21 @@ h6 {
     color: #203b66;
   }
 
-  .table-striped.custom-striped tbody tr:nth-child(odd) {
-  background-color: #f0f0f0; /* Custom color for odd rows */
+  /*--------------------------------------------------------------
+# Boxs
+--------------------------------------------------------------*/
+
+.custom-h5heading {
+  color: #203b66; 
+  font-size: 20px; 
+  font-weight: bold; 
 }
 
-.table-striped.custom-striped tbody tr:nth-child(even) {
-  background-color: #c22020; /* Custom color for even rows */
+.striped-line {
+  border: none;
+  height: 2px;
+  background-image: linear-gradient(to right, #000 40%, transparent 25%, transparent 90%, #000 75%);
+  background-size: 4px 50%; /* Adjust stripe width as needed */
 }
 
 /*--------------------------------------------------------------
