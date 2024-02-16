@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ACTFMS</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Calendar -->
+  <link rel="stylesheet" type="text/css" href="assets/jsCalendar.css">
+  <script type="text/javascript" src="assets/jsCalendar.js"></script>
+
+  <!-- evoCalendar -->
+  <link rel="stylesheet" type="text/css" href="assets/evo-calendar.css"/>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Aug 30 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/actslogo.png" alt="">
+        <span class="d-none d-lg-block">ACTFMS</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Zoek" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">J. Lomp</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Jeremy Lomp</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Forgot password?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-login.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+     <section class="section dashboard">  
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#settings-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-arrow-counterclockwise"></i><span>Historisch</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="settings-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+          <!-- Default Card -->
+          <div class="card info-card revenue-card shadow">
+            <div class="card-body">
+                <div class="pt-3">
+                    <div class="d-flex">
+                        <div class="card-icon d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="right" title="U heeft nog geen uitnodigingsbrief gegeneerd">
+                            <i class="bi bi-dash-circle"></i>
+                        </div>
+                        <div class="ps-2 d-flex flex-column">
+                            <h6>1748</h6>
+                            <span class="small fs-7 fw-bold">Edith D Abreau De Paulo</span>
+                        </div>
+                    </div>
+                    <hr class="my-2 w-100">
+                    <div class="row">
+                        <div class="col-auto">
+                            <span class="small" style="color:cadetblue">Registratie datum</span>
+                        </div>
+                        <div class="col-auto">
+                            <span class="small fs-7">12/10/2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+	<!-- End Default Card -->
+          </li>
+          <li>
+            <div class="card info-card revenue-card shadow">
+              <div class="card-body">
+                  <div class="pt-3">
+                      <div class="d-flex">
+                          <div class="card-icon d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="right" title="U heeft nog geen uitnodigingsbrief gegeneerd">
+                              <i class="bi bi-dash-circle"></i>
+                          </div>
+                          <div class="ps-2 d-flex flex-column">
+                              <h6>1748</h6>
+                              <span class="small fs-7 fw-bold">Edith D Abreau De Paulo</span>
+                          </div>
+                      </div>
+                      <hr class="my-2 w-100">
+                      <div class="row">
+                          <div class="col-auto">
+                              <span class="small" style="color:cadetblue">Registratie datum</span>
+                          </div>
+                          <div class="col-auto">
+                              <span class="small fs-7">12/10/2023</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </li>
+          <li>
+            <div class="card info-card revenue-card shadow">
+              <div class="card-body">
+                  <div class="pt-3">
+                      <div class="d-flex">
+                          <div class="card-icon d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="right" title="U heeft nog geen uitnodigingsbrief gegeneerd">
+                              <i class="bi bi-dash-circle"></i>
+                          </div>
+                          <div class="ps-2 d-flex flex-column">
+                              <h6>1748</h6>
+                              <span class="small fs-7 fw-bold">Edith D Abreau De Paulo</span>
+                          </div>
+                      </div>
+                      <hr class="my-2 w-100">
+                      <div class="row">
+                          <div class="col-auto">
+                              <span class="small" style="color:cadetblue">Registratie datum</span>
+                          </div>
+                          <div class="col-auto">
+                              <span class="small fs-7">12/10/2023</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </li>
+        </ul>
+      </li><!-- End Settings Nav -->
+      </section>
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <i class="bi bi-house"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <button type="button" class="back-button" onclick="history.back()" class="back-button"><i class="bi bi-arrow-left-circle-fill"></i></button>
+      <h1>Aanvraag details</h1>
+    </div><!-- End Page Title -->
+
+    <div class="line-container d-flex justify-content-center">
+      <hr class="my-hr">
+    </div>
+
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <!-- Card Body  -->
+          <div class="card" >
+            <!-- Aanvraag details -->
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item">
+                  <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#ad-nav" data-bs-toggle="collapse" href="#">
+                      <span class="title-text-color">Aanvraag details</span>
+                      <i class="bi bi-chevron-down ms-auto icon-color"></i>
+                  </a>
+                  <ul id="ad-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
+              
+
+                    <!-- inner Aanvraag details -->      
+                
+                <div class="card-body pt-5">
+                 <!-- Container with border style -->
+                 <div class="border p-5 filter-border"> 
+                  <!-- The heading -->           
+                  <div class="filter-heading">Aanvraag details</div> 
+        
+									
+								<div class="container">
+								  <div class="row">
+									<div class="col-lg-3 mb-5">
+									  <label for="filter1" class= "filter-label">Aanvraag Nummer</label>
+									  <input type="number" class="form-control filled-borders" value="8001000914" id="filter1" readonly>
+									</div>
+									<div class="col-lg-3 mb-5">
+									  <label for="filter2" class= "filter-label">Registratie datum</label>
+									  <input type="text" class="form-control filled-borders" value="23/07/2066" id="filter2" readonly>
+									</div>
+									<div class="col-lg-3 mb-5">
+									  <label for="filter3" class= "filter-label">Hoofddoel</label>
+									  <input type="text" class="form-control filled-borders" value="Verblijfsvergunning" id="filter3" readonly>
+									</div>
+									<div class="col-lg-3 mb-5">
+									  <label for="filter4" class= "filter-label">Subdoel</label>
+									  <input type="text" class="form-control filled-borders" value="VTV" id="filter4" readonly>
+									</div>
+									<div class="col-lg-3 mb-5">
+									  <label for="filter5" class= "filter-label">Verlengd tot</label>
+									  <input type="text" class="form-control filled-borders" id="filter5" readonly>
+									</div>
+                
+								  </div>
+								</div>
+                    
+
+                 </div>
+                </div>   
+                <!-- End inner Aanvraag details -->
+
+                </ul>
+              </li>
+            </ul>
+            <!-- End Aanvraag Details -->
+
+                        <!-- Adres informatie -->
+                        <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
+                            <li class="nav-item">
+                                <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#ai-nav" data-bs-toggle="collapse" href="#">
+                                    <span class="title-text-color">Adres Informatie</span>
+                                    <i class="bi bi-chevron-down ms-auto icon-color"></i>
+                                </a>
+                                <ul id="ai-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
+                            
+              
+                                  <!-- Adres -->      
+                              
+                              <div class="card-body pt-5">
+                               <!-- Container with border style -->
+                               <div class="border p-5 filter-border"> 
+                                <!-- The heading -->           
+                                <div class="filter-heading">Adres</div> 
+                      
+                                                  
+                                              <div class="container">
+                                                <div class="row">
+                                                  <div class="col-lg-3 mb-5">
+                                                    <label for="filter1" class= "filter-label">Straatnaam</label>
+                                                    <input type="text" class="form-control filled-borders" value="Weg nar westpunt" id="filter1" readonly>
+                                                  </div>
+                                                  <div class="col-lg-3 mb-5">
+                                                    <label for="filter2" class= "filter-label">Nr</label>
+                                                    <input type="number" class="form-control filled-borders" value="18" id="filter2" readonly>
+                                                  </div>
+                                                  <div class="col-lg-3 mb-5">
+                                                    <label for="filter3" class= "filter-label">Locatie omschrijving</label>
+                                                    <input type="text" class="form-control filled-borders" value="Verblijfsvergunning" id="filter3" readonly>
+                                                  </div>
+                                                  <div class="col-lg-3 mb-5">
+                                                    <label for="filter4" class= "filter-label">Postcode</label>
+                                                    <input type="text" class="form-control filled-borders" value="233233" id="filter4" readonly>
+                                                  </div>
+                                                  <div class="col-lg-3 mb-5">
+                                                    <label for="filter5" class= "filter-label">Plaats</label>
+                                                    <input type="text" class="form-control filled-borders" id="filter5" readonly>
+                                                  </div>
+                                                  <div class="col-lg-3 mb-5">
+                                                    <label for="filter6" class= "filter-label">Datum vestiging</label>
+                                                    <input type="text" class="form-control filled-borders" value="23/07/2006" id="filter6" readonly>
+                                                  </div>
+                                                  <div class="col-lg-3 mb-5">
+                                                    <label for="filter7" class= "filter-label">Telefoon</label>
+                                                    <input type="number" class="form-control filled-borders" value="2334123223" id="filter7" readonly>
+                                                  </div>
+                              
+                                                </div>
+                                              </div>
+                                  
+              
+                               </div>
+                              </div>   
+                              <!-- End Adres -->
+              
+                              
+              
+                              <!-- Eerder bewoonde adressen-->      
+                              
+                              <div class="card-body pt-5">
+                                    <!-- Container with border style -->
+                                    <div class="border p-5 filter-border"> 
+                                     <!-- The heading -->           
+                                     <div class="filter-heading">Eerder bewoonde adressen</div> 
+                           
+                                     
+                                     <div class="card-body pt-2">
+                          
+                                    
+                                      <div class="table-responsive ml-1">
+                          
+                                        <!-- Table with stripped rows -->
+            
+                                       <table class="table table-striped table-hover simpletable">
+                                          <thead>
+                                            <tr>
+                                              <th scope="col">Adres</th>
+                                              <th scope="col">Adres Nr.</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>WAYACA STRAAT</td>
+                                              <td>9</td>             
+                                            </tr>
+                                            <tr>
+                                              <td>TRIANGEL WEG</td>
+                                              <td>10b</td>                  
+                                            </tr>                              
+                                          </tbody>
+                                        </table>
+                                        <!-- End Table with stripped rows -->
+            
+                                      </div>
+            
+            
+                                  </div>
+                   
+                              <!-- End Eerder bewoonde adressen --> 
+              
+                              </ul>
+                            </li>
+                          </ul>
+                          <!-- End Adres informatie -->
+
+                            <!-- Werkgever informatie -->
+            <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
+                <li class="nav-item">
+                    <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#wi-nav" data-bs-toggle="collapse" href="#">
+                        <span class="title-text-color">Werkgever Informatie</span>
+                        <i class="bi bi-chevron-down ms-auto icon-color"></i>
+                    </a>
+                    <ul id="wi-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
+                
+  
+                      <!-- Werkgever -->      
+                  
+                  <div class="card-body pt-5">
+                   <!-- Container with border style -->
+                   <div class="border p-5 filter-border"> 
+                    <!-- The heading -->           
+                    <div class="filter-heading">Werkgever</div> 
+          
+                                      
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter1" class= "filter-label">Naam bedrijf</label>
+                                        <input type="text" class="form-control filled-borders" id="filter1" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter2" class= "filter-label">Type relatie</label>
+                                        <input type="text" class="form-control filled-borders" value="Werkgever" id="filter2" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter3" class= "filter-label">Achternaam</label>
+                                        <input type="text" class="form-control filled-borders" id="filter3" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter4" class= "filter-label">Voornaam</label>
+                                        <input type="text" class="form-control filled-borders" id="filter4" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter5" class= "filter-label">Voorletters</label>
+                                        <input type="text" class="form-control filled-borders" id="filter5" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter6" class= "filter-label">Geboortedatum</label>
+                                        <input type="text" class="form-control filled-borders" value="12/03/1958" id="filter6" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter7" class= "filter-label">Land</label>
+                                        <input type="text" class="form-control filled-borders" value="Nederlandse Antillen" id="filter7" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter8" class= "filter-label">Straatnaam</label>
+                                        <input type="text" class="form-control filled-borders" value="Kaya Korona" id="filter8" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter9" class= "filter-label">Nationaliteit</label>
+                                        <input type="text" class="form-control filled-borders" value="Nederlandse" id="filter9" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">                    
+                                        <legend class="filter-label">Geslacht</legend>
+                                          <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="maleRadio" value="male" checked onclick="return false";>
+                                            <label class="form-check-label" for="maleRadio">
+                                              Man
+                                            </label>
+                                          </div>
+                                          <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="femaleRadio" value="female" onclick="return false">
+                                            <label class="form-check-label" for="femaleRadio">
+                                              Vrouw
+                                            </label>
+                                          </div>
+                                        </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter10" class= "filter-label">Geboorteplaats</label>
+                                        <input type="text" class="form-control filled-borders" value="Curacao" id="filter10" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter11" class= "filter-label">Nr</label>
+                                        <input type="number" class="form-control filled-borders" value="22" id="filter11" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter12" class= "filter-label">Toevoegsel</label>
+                                        <input type="text" class="form-control filled-borders" id="filter12" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter13" class= "filter-label">Gevestigd te</label>
+                                        <input type="text" class="form-control filled-borders" value="Curacao" id="filter13" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter14" class= "filter-label">Postcode</label>
+                                        <input type="text" class="form-control filled-borders" value="728102" id="filter14" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter15" class= "filter-label">Plaats</label>
+                                        <input type="text" class="form-control filled-borders" id="filter15" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter16" class= "filter-label">Datum vestiging</label>
+                                        <input type="text" class="form-control filled-borders" value="23/11/2019" id="filter16" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter17" class= "filter-label">Telefoon</label>
+                                        <input type="number" class="form-control filled-borders" value="9281819282" id="filter17" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter18" class= "filter-label">Verblijfspositie</label>
+                                        <input type="text" class="form-control filled-borders" value="Niet van toepassing" id="filter18" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter19" class= "filter-label">Functie</label>
+                                        <input type="text" class="form-control filled-borders" value="Directeur" id="filter19" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter20" class= "filter-label">Nadelige feiten</label>
+                                        <input type="text" class="form-control filled-borders" id="filter20" readonly>
+                                      </div>
+                  
+                                    </div>
+                                  </div>
+                      
+  
+                   </div>
+                  </div>   
+                  <!-- Werkgever -->
+  
+  
+                  </ul>
+                </li>
+              </ul>
+              <!-- End Werkgever informatie -->
+
+             <!-- Garantsteller informatie -->
+            <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
+                <li class="nav-item">
+                    <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#wi-nav" data-bs-toggle="collapse" href="#">
+                        <span class="title-text-color">Garantsteller Informatie</span>
+                        <i class="bi bi-chevron-down ms-auto icon-color"></i>
+                    </a>
+                    <ul id="wi-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
+                
+  
+                      <!-- Werkgever -->      
+                  
+                  <div class="card-body pt-5">
+                   <!-- Container with border style -->
+                   <div class="border p-5 filter-border"> 
+                    <!-- The heading -->           
+                    <div class="filter-heading">Referent/Garantsteller</div> 
+          
+                                      
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter1" class= "filter-label">Naam bedrijf</label>
+                                        <input type="text" class="form-control filled-borders" id="filter1" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter2" class= "filter-label">Referent/Garantsteller</label>
+                                        <input type="text" class="form-control filled-borders" value="Werkgever" id="filter2" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter3" class= "filter-label">Type relatie</label>
+                                        <input type="text" class="form-control filled-borders" value="Werkgever" id="filter3" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter4" class= "filter-label">Achternaam</label>
+                                        <input type="text" class="form-control filled-borders" value="Jessurun" id="filter4" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter5" class= "filter-label">Voornaam</label>
+                                        <input type="text" class="form-control filled-borders" value="David" id="filter5" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter6" class= "filter-label">Voorletters</label>
+                                        <input type="text" class="form-control filled-borders" id="filter6" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter7" class= "filter-label">Geboortedatum</label>
+                                        <input type="text" class="form-control filled-borders" value="12/03/1958" id="filter7" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter8" class= "filter-label">Land</label>
+                                        <input type="text" class="form-control filled-borders" value="Nederlandse Antillen" id="filter8" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter9" class= "filter-label">Geboorteplaats</label>
+                                        <input type="text" class="form-control filled-borders" value="Curacao" id="filter9" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter10" class= "filter-label">Nationaliteit</label>
+                                        <input type="text" class="form-control filled-borders" value="Nederlandse" id="filter10" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">                    
+                                        <legend class="filter-label">Geslacht</legend>
+                                          <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="maleRadio" value="male" checked onclick="return false";>
+                                            <label class="form-check-label" for="maleRadio">
+                                              Man
+                                            </label>
+                                          </div>
+                                          <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="femaleRadio" value="female" onclick="return false">
+                                            <label class="form-check-label" for="femaleRadio">
+                                              Vrouw
+                                            </label>
+                                          </div>
+                                        </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter11" class= "filter-label">Straatnaam</label>
+                                        <input type="text" class="form-control filled-borders" value="Kaya Korona" id="filter11" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter12" class= "filter-label">Nr</label>
+                                        <input type="number" class="form-control filled-borders" value="22" id="filter12" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter13" class= "filter-label">Toevoegsel</label>
+                                        <input type="text" class="form-control filled-borders" id="filter13" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter14" class= "filter-label">Gevestigd te</label>
+                                        <input type="text" class="form-control filled-borders" value="Curacao" id="filter14" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter15" class= "filter-label">Postcode</label>
+                                        <input type="text" class="form-control filled-borders" value="728102" id="filter15" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter16" class= "filter-label">Plaats</label>
+                                        <input type="text" class="form-control filled-borders" id="filter16" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter17" class= "filter-label">Datum vestiging</label>
+                                        <input type="number" class="form-control filled-borders" value="23/11/2019" id="filter17" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter18" class= "filter-label">Telefoon</label>
+                                        <input type="text" class="form-control filled-borders" value="9281819282" id="filter18" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter19" class= "filter-label">Verblijfspositie</label>
+                                        <input type="text" class="form-control filled-borders" value="Niet van toepassing" id="filter19" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter20" class= "filter-label">Functie</label>
+                                        <input type="text" class="form-control filled-borders" value="Directeur" id="filter20" readonly>
+                                      </div>
+                                      <div class="col-lg-3 mb-5">
+                                        <label for="filter21" class= "filter-label">Nadelige feiten</label>
+                                        <input type="text" class="form-control filled-borders" id="filter21" readonly>
+                                      </div>
+                  
+                                    </div>
+                                  </div>
+                      
+  
+                   </div>
+                  </div>   
+                  <!-- Werkgever -->
+  
+  
+                  </ul>
+                </li>
+              </ul>
+              <!-- End Garantsteller informatie -->
+
+                                      <!-- Gemachtigde informatie -->
+                                      <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
+                                        <li class="nav-item">
+                                            <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#ai-nav" data-bs-toggle="collapse" href="#">
+                                                <span class="title-text-color">Gemachtigde Informatie</span>
+                                                <i class="bi bi-chevron-down ms-auto icon-color"></i>
+                                            </a>
+                                            <ul id="ai-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
+                                        
+                          
+                                              <!-- Adres -->      
+                                          
+                                          <div class="card-body pt-5">
+                                           <!-- Container with border style -->
+                                           <div class="border p-5 filter-border"> 
+                                            <!-- The heading -->           
+                                            <div class="filter-heading">Gemachtigde Natuurlijke Persoon</div> 
+                                  
+                                                              
+                                                          <div class="container">
+                                                            <div class="row">
+                                                              <div class="col-lg-3 mb-5">
+                                                                <label for="filter1" class= "filter-label">Straatnaam</label>
+                                                                <input type="text" class="form-control filled-borders" value="Weg nar westpunt" id="filter1" readonly>
+                                                              </div>
+                                                              <div class="col-lg-3 mb-5">
+                                                                <label for="filter2" class= "filter-label">Nr</label>
+                                                                <input type="number" class="form-control filled-borders" value="18" id="filter2" readonly>
+                                                              </div>
+                                                              <div class="col-lg-3 mb-5">
+                                                                <label for="filter3" class= "filter-label">Locatie omschrijving</label>
+                                                                <input type="text" class="form-control filled-borders" value="Verblijfsvergunning" id="filter3" readonly>
+                                                              </div>
+                                                              <div class="col-lg-3 mb-5">
+                                                                <label for="filter4" class= "filter-label">Postcode</label>
+                                                                <input type="text" class="form-control filled-borders" value="233233" id="filter4" readonly>
+                                                              </div>
+                                                              <div class="col-lg-3 mb-5">
+                                                                <label for="filter5" class= "filter-label">Plaats</label>
+                                                                <input type="text" class="form-control filled-borders" id="filter5" readonly>
+                                                              </div>
+                                                              <div class="col-lg-3 mb-5">
+                                                                <label for="filter6" class= "filter-label">Datum vestiging</label>
+                                                                <input type="text" class="form-control filled-borders" value="23/07/2006" id="filter6" readonly>
+                                                              </div>
+                                                              <div class="col-lg-3 mb-5">
+                                                                <label for="filter7" class= "filter-label">Telefoon</label>
+                                                                <input type="number" class="form-control filled-borders" value="2334123223" id="filter7" readonly>
+                                                              </div>
+                                          
+                                                            </div>
+                                                          </div>
+                                              <!-- table -->
+                                                          <div class="card-body pt-2">
+                                      
+                                                
+                                                            <div class="table-responsive ml-1">
+                                                
+                                                              <!-- Table with stripped rows -->
+                                  
+                                                             <table class="table table-striped table-hover simpletable">
+                                                                <thead>
+                                                                  <tr>
+                                                                    <th scope="col">Adres</th>
+                                                                    <th scope="col">Adres Nr.</th>
+                                                                  </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                  <tr>
+                                                                    <td>WAYACA STRAAT</td>
+                                                                    <td>9</td>             
+                                                                  </tr>
+                                                                  <tr>
+                                                                    <td>TRIANGEL WEG</td>
+                                                                    <td>10b</td>                  
+                                                                  </tr>                              
+                                                                </tbody>
+                                                              </table>
+                                                              <!-- End Table with stripped rows -->
+                                  
+                                                            </div>
+                          
+                                           </div>
+                                          </div>   
+                                          <!-- End Adres -->
+
+                          
+                                          
+                          
+                                          <!-- Eerder bewoonde adressen-->      
+                                          
+                                          <div class="card-body pt-5">
+                                                <!-- Container with border style -->
+                                                <div class="border p-5 filter-border"> 
+                                                 <!-- The heading -->           
+                                                 <div class="filter-heading">Gemachtigde Organisatie/Rechtpersoon</div> 
+                                       
+                                                 
+                                                 <div class="card-body pt-2">
+                                      
+                                                
+                                                  <div class="table-responsive ml-1">
+                                      
+                                                    <!-- Table with stripped rows -->
+                        
+                                                   <table class="table table-striped table-hover simpletable">
+                                                      <thead>
+                                                        <tr>
+                                                          <th scope="col">Adres</th>
+                                                          <th scope="col">Adres Nr.</th>
+                                                        </tr>
+                                                      </thead>
+                                                      <tbody>
+                                                        <tr>
+                                                          <td>WAYACA STRAAT</td>
+                                                          <td>9</td>             
+                                                        </tr>
+                                                        <tr>
+                                                          <td>TRIANGEL WEG</td>
+                                                          <td>10b</td>                  
+                                                        </tr>                              
+                                                      </tbody>
+                                                    </table>
+                                                    <!-- End Table with stripped rows -->
+                        
+                                                  </div>
+                        
+                        
+                                              </div>
+                               
+                                          <!-- End Eerder bewoonde adressen --> 
+                          
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                      <!-- End Gemachtigde informatie -->
+            
+
+            <!-- Aanvragen overzicht -->
+
+            <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
+              <li class="nav-item">
+                  <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#ao-nav" data-bs-toggle="collapse" href="#">
+                      <span class="title-text-color">Aanvragen overzicht</span>
+                      <i class="bi bi-chevron-down ms-auto icon-color"></i>
+                  </a>
+                  <ul id="ao-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
+              
+                    <div class="card-body pt-2 custom-card-body">
+
+                            <div class="d-flex flex-row justify-content-end align-items-center">
+                          
+                            <div>
+                              <button type="button" class="btn custom-blue-btn">Excel</button>
+                              <button type="button" class="btn custom-blue-btn">PDF</button>
+              
+                            </div>
+              
+                            </div>
+                          <div class="table-responsive ml-1">
+              
+                            <!-- Table with stripped rows -->
+
+                           <table class="table table-striped table-hover datatable">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Aanvraag nr</th>
+                                  <th scope="col">Registratie datum</th>
+                                  <th scope="col">Hoofddoel</th>
+                                  <th scope="col">Subdoel</th>
+                                  <th scope="col">Datum geldig tot</th>
+                                  <th scope="col">Bron</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><a href="aanvragen.html">#1</a></td>
+                                  <td>23/03/2003</td>
+                                  <td>VTV</td>
+                                  <td>Verblijfsvergunning</td>
+                                  <td>-</td>
+                                  <td>NAVAS</td>                  
+                                </tr>
+                                <tr>
+                                  <td><a href="aanvragen.html">#2</a></td>
+                                  <td>23/03/2003</td>
+                                  <td>VTV</td>
+                                  <td>Verblijfsvergunning</td>
+                                  <td>-</td>
+                                  <td>FMS1</td>                   
+                                </tr>                              </tbody>
+                            </table>
+                            <!-- End Table with stripped rows -->
+
+                          </div>
+
+                          <div class="line-container2 d-flex justify-content-right">
+                            <hr class="my-hr2">
+                          </div>
+
+                          <div class="row justify-content-end mt-3">
+                            <div class="col-auto">
+                                <button type="button" class="btn custom-button">SLUITEN</button>
+                            </div>
+                        </div>
+
+                      </div>
+                       
+
+
+          
+
+                </ul>
+              </li>
+            </ul>
+            <!-- End Aanvragen overzicht -->     
+
+          </div>  
+          <!-- End Card Body  -->
+
+          
+        
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="assets/vendor/evocalendar/evo-calendar.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
