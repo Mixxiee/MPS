@@ -58,6 +58,8 @@ h6 {
 --------------------------------------------------------------*/
 .pagetitle {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .pagetitle h1 {
@@ -65,6 +67,14 @@ h6 {
   margin-bottom: 0;
   font-weight: 600;
   color: #012970;
+}
+
+.back-button {
+  margin-right: 10px;
+  font-size: 32px;
+  color: #012970;
+  border: none;
+  background: none;
 }
 
 /*--------------------------------------------------------------
@@ -797,6 +807,16 @@ h6 {
   border: 2px solid rgba(0, 123, 255, 0.25);
 }
 
+.filled-borders {
+  background-color: #ececec;
+}
+
+.form-control.filled-borders:focus {
+  border-color: transparent;
+  box-shadow: none;
+  background-color: #ececec;
+}
+
 .form-check-input[type="radio"] {
   /* Change the background color of the radio circle */
   border: 2px solid rgba(32, 59, 102, 0.9);
@@ -837,6 +857,65 @@ h6 {
   background-color: #203b66; 
   border-color: #203b66; 
 }
+
+.tablenl a {
+  color: black;
+}
+
+.tablenl a:hover {
+  color: blue;
+}
+
+.line-container2 {
+  display: flex;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.my-hr2 {
+  width: 100%;
+  height: 2px; 
+  background-color: blue;
+}
+
+.custom-card-body {
+  margin-right: 30px;
+}
+
+.custom-button {
+  color: rgb(219, 4, 4);
+  background-color: #fff; 
+  border-color: rgb(219, 4, 4);
+  border-width: 2px;
+  padding: 10px 50px;
+}
+
+.custom-button:hover {
+  background-color: rgba(204, 110, 110, 0.521);
+  border-color: rgb(219, 4, 4); 
+  color: rgb(219, 4, 4);
+}
+
+.simpletable tbody td:first-child,
+.simpletable thead th:first-child {
+  width: 250px; /* Adjust the width as needed */
+}
+
+.simpletable thead th {
+    vertical-align: bottom;
+    text-align: left;
+    background-color: #D3D3D3;
+    color: #203b66;
+  }
+
+  .table-striped.custom-striped tbody tr:nth-child(odd) {
+  background-color: #f0f0f0; /* Custom color for odd rows */
+}
+
+.table-striped.custom-striped tbody tr:nth-child(even) {
+  background-color: #c22020; /* Custom color for even rows */
+}
+
 /*--------------------------------------------------------------
 # Dashboard
 --------------------------------------------------------------*/
