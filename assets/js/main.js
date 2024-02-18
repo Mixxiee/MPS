@@ -302,7 +302,20 @@
   const datatables = select('.datatable', true)
   datatables.forEach(datatable => {
     new simpleDatatables.DataTable(datatable);
+    
   })
+
+// Initialize a table with search bar disabled
+document.addEventListener("DOMContentLoaded", function () {
+  const tablesWithoutSearch = document.querySelectorAll('.datatable-without-search');
+  tablesWithoutSearch.forEach(table => {
+    new simpleDatatables.DataTable(table, {
+      searchable: false,
+      perPage: 5
+    });
+  });
+});
+ 
 
   /**
    * Autoresize echart charts
@@ -317,5 +330,6 @@
       }).observe(mainContainer);
     }, 200);
   }
+
 
 })();
