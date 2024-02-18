@@ -407,55 +407,45 @@
                   </a>
                   <ul id="ao-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
               
-                    <div class="card-body pt-2 custom-card-body">
-                      <div class="container">
-                        <div class="row">
-
-                            <div class="d-flex flex-row justify-content-end align-items-center">
-                          
-                            <div>
-                              <button type="button" class="btn custom-blue-btn">Excel</button>
-                              <button type="button" class="btn custom-blue-btn">PDF</button>
-              
-                            </div>
-              
-                            </div>
-                          <div class="table-responsive">
-              
-                            <!-- Table with stripped rows -->
-
-                           <table class="table table-striped table-hover datatable">
-                              <thead>
-                                <tr>
-                                  <th scope="col">Aanvraag nr</th>
-                                  <th scope="col">Registratie datum</th>
-                                  <th scope="col">Hoofddoel</th>
-                                  <th scope="col">Subdoel</th>
-                                  <th scope="col">Datum geldig tot</th>
-                                  <th scope="col">Bron</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td><a href="aanvragen.html">#1</a></td>
-                                  <td>23/03/2003</td>
-                                  <td>VTV</td>
-                                  <td>Verblijfsvergunning</td>
-                                  <td>-</td>
-                                  <td>NAVAS</td>                  
-                                </tr>
-                                <tr>
-                                  <td><a href="aanvragen.html">#2</a></td>
-                                  <td>23/03/2003</td>
-                                  <td>VTV</td>
-                                  <td>Verblijfsvergunning</td>
-                                  <td>-</td>
-                                  <td>FMS1</td>                   
-                                </tr>                              </tbody>
-                            </table>
-                            <!-- End Table with stripped rows -->
-
-                          </div>
+                   <!-- inner Aanvraag details -->      
+                
+                   <div class="card-body pt-5">
+                    <!-- Container with border style -->
+                    <div class="border p-5 filter-border"> 
+                     <!-- The heading -->           
+                     <div class="filter-heading">Aanvraag details</div> 
+           
+                     
+                   <div class="container">
+                     <div class="row">
+                     <div class="col-lg-3 mb-5">
+                       <label for="filter1" class= "filter-label">Aanvraag Nummer</label>
+                       <input type="number" class="form-control filled-borders" value="8001000914" id="filter1" readonly>
+                     </div>
+                     <div class="col-lg-3 mb-5">
+                       <label for="filter2" class= "filter-label">Registratie datum</label>
+                       <input type="text" class="form-control filled-borders" value="23/07/2066" id="filter2" readonly>
+                     </div>
+                     <div class="col-lg-3 mb-5">
+                       <label for="filter3" class= "filter-label">Hoofddoel</label>
+                       <input type="text" class="form-control filled-borders" value="Verblijfsvergunning" id="filter3" readonly>
+                     </div>
+                     <div class="col-lg-3 mb-5">
+                       <label for="filter4" class= "filter-label">Subdoel</label>
+                       <input type="text" class="form-control filled-borders" value="VTV" id="filter4" readonly>
+                     </div>
+                     <div class="col-lg-3 mb-5">
+                       <label for="filter5" class= "filter-label">Verlengd tot</label>
+                       <input type="text" class="form-control filled-borders" id="filter5" readonly>
+                     </div>
+                   
+                     </div>
+                   </div>
+                       
+   
+                    </div>
+                   </div>   
+                   <!-- End inner Aanvraag details -->
 
                           <div class="line-container2 d-flex justify-content-right">
                             <hr class="my-hr2">
@@ -466,9 +456,6 @@
                               <a href="index.html"><button type="button" class="btn sluiten-button">SLUITEN</button></a>
                             </div>
                         </div>
-
-                        </div>
-                        </div> <!-- test --> 
 
                     </div> <!-- End card body --> 
                        
