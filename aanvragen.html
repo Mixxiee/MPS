@@ -223,10 +223,47 @@
 
   <main id="main" class="main">
 
-    <div class="pagetitle">
-      <button type="button" class="back-button" onclick="history.back()" class="back-button"><i class="bi bi-arrow-left-circle-fill"></i></button>
-      <h1>Aanvraag details</h1>
-    </div><!-- End Page Title -->
+    <div class="container">
+      <div class="pagetitle">
+        <button type="button" class="back-button" onclick="history.back()"><i class="bi bi-arrow-left-circle-fill"></i></button>
+        <h1 style="margin-right: 30px;">Aanvraag details</h1> 
+        <div class="info-box"> 
+          <div class="info-icon">
+            <i class="bi bi-info-circle"></i>
+          </div>
+          <div class="info-content">
+            <table class="top-table">
+              <thead>
+                <tr>
+                  <th>CVR-Nummer</th>
+                  <th>Naam</th>
+                  <th>Geboortedatum</th>
+                  <th>Burgerlijke staat</th>
+                  <th>Land</th>
+                  <th>Nationaliteit</th>
+                  <th>Geslacht</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Add your content here -->
+                <tr>
+                  <td>10203928</td>
+                  <td>Maria Ospina</td>
+                  <td>03/11/1964</td>
+                  <td>Ongehuwd</td>
+                  <td>Colombia</td>
+                  <td>Nederlandse</td>
+                  <td>Vrouw</td>
+                </tr>
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table><!-- End Custom Table -->
+          </div>
+        </div><!-- End Info Box -->
+      </div><!-- End Page Title -->
+    </div><!-- End Container -->
+    
+    <!-- End Page Title -->
 
     <div class="line-container d-flex justify-content-center">
       <hr class="my-hr">
@@ -366,7 +403,7 @@
                                      <div class="card-body pt-2">
                           
                                     
-                                      <div class="table-responsive ml-1">
+                                      <div class="table-responsive">
                           
                                         <!-- Table with stripped rows -->
             
@@ -462,13 +499,13 @@
                                       <div class="col-lg-3 mb-5">                    
                                         <legend class="filter-label">Geslacht</legend>
                                           <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="gender" id="maleRadio" value="male" checked onclick="return false";>
+                                            <input class="form-check-input" type="radio" name="gender2" id="maleRadio" value="male" checked onclick="return false";>
                                             <label class="form-check-label" for="maleRadio">
                                               Man
                                             </label>
                                           </div>
                                           <div class="form-check-inline">
-                                            <input class="form-check-input" type="radio" name="gender" id="femaleRadio" value="female" onclick="return false">
+                                            <input class="form-check-input" type="radio" name="gender2" id="femaleRadio" value="female" onclick="return false">
                                             <label class="form-check-label" for="femaleRadio">
                                               Vrouw
                                             </label>
@@ -543,7 +580,7 @@
                     <ul id="wi-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
                 
   
-                      <!-- Werkgever -->      
+                      <!-- inner garant -->      
                   
                   <div class="card-body pt-5">
                    <!-- Container with border style -->
@@ -660,7 +697,7 @@
   
                    </div>
                   </div>   
-                  <!-- Werkgever -->
+                  <!-- end inner garant -->
   
   
                   </ul>
@@ -668,270 +705,278 @@
               </ul>
               <!-- End Garantsteller informatie -->
 
-                                      <!-- Adres informatie -->
-                                      <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
-                                        <li class="nav-item">
-                                            <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#ai-nav" data-bs-toggle="collapse" href="#">
-                                                <span class="title-text-color">Adres Informatie</span>
-                                                <i class="bi bi-chevron-down ms-auto icon-color"></i>
-                                            </a>
-                                            <ul id="ai-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
-                                        
-                          
-                                              <!-- Adres -->      
-                                          
-                                          <div class="card-body pt-5">
-                                           <!-- Container with border style -->
-                                           <div class="border p-5 filter-border"> 
-                                            <!-- The heading -->           
-                                            <div class="filter-heading">Adres</div> 
-                                  
-                                                              
-                                                          <div class="container">
-                                                            <div class="row">
-                                                              <div class="col-lg-3 mb-5">
-                                                                <label for="filter1" class= "filter-label">Straatnaam</label>
-                                                                <input type="text" class="form-control filled-borders" value="Weg naar westpunt" id="filter1" readonly>
-                                                              </div>
-                                                              <div class="col-lg-3 mb-5">
-                                                                <label for="filter2" class= "filter-label">Nr</label>
-                                                                <input type="number" class="form-control filled-borders" value="18" id="filter2" readonly>
-                                                              </div>
-                                                              <div class="col-lg-3 mb-5">
-                                                                <label for="filter3" class= "filter-label">Locatie omschrijving</label>
-                                                                <input type="text" class="form-control filled-borders" value="Verblijfsvergunning" id="filter3" readonly>
-                                                              </div>
-                                                              <div class="col-lg-3 mb-5">
-                                                                <label for="filter4" class= "filter-label">Postcode</label>
-                                                                <input type="text" class="form-control filled-borders" value="233233" id="filter4" readonly>
-                                                              </div>
-                                                              <div class="col-lg-3 mb-5">
-                                                                <label for="filter5" class= "filter-label">Plaats</label>
-                                                                <input type="text" class="form-control filled-borders" id="filter5" readonly>
-                                                              </div>
-                                                              <div class="col-lg-3 mb-5">
-                                                                <label for="filter6" class= "filter-label">Datum vestiging</label>
-                                                                <input type="text" class="form-control filled-borders" value="23/07/2006" id="filter6" readonly>
-                                                              </div>
-                                                              <div class="col-lg-3 mb-5">
-                                                                <label for="filter7" class= "filter-label">Telefoon</label>
-                                                                <input type="number" class="form-control filled-borders" value="2334123223" id="filter7" readonly>
-                                                              </div>
-                                          
-                                                            </div>
-                                                          </div>
-                                              
-                          
-                                           </div>
-                                          </div>   
-                                          <!-- End Adres -->
-                          
-                                          
-                          
-                                          <!-- Eerder bewoonde adressen-->      
-                                          
-                                          <div class="card-body pt-5">
-                                                <!-- Container with border style -->
-                                                <div class="border p-5 filter-border"> 
-                                                 <!-- The heading -->           
-                                                 <div class="filter-heading">Eerder bewoonde adressen</div> 
-                                       
-                                                 
-                                                 <div class="card-body pt-2">
-                                      
-                                                
-                                                  <div class="table-responsive ml-1">
-                                      
-                                                    <!-- Table with stripped rows -->
-                        
-                                                   <table class="table table-striped table-hover simpletable">
-                                                      <thead>
-                                                        <tr>
-                                                          <th scope="col">Adres</th>
-                                                          <th scope="col">Adres Nr.</th>
-                                                        </tr>
-                                                      </thead>
-                                                      <tbody>
-                                                        <tr>
-                                                          <td>WAYACA STRAAT</td>
-                                                          <td>9</td>             
-                                                        </tr>
-                                                        <tr>
-                                                          <td>TRIANGEL WEG</td>
-                                                          <td>10b</td>                  
-                                                        </tr>                              
-                                                      </tbody>
-                                                    </table>
-                                                    <!-- End Table with stripped rows -->
-                        
+
+
+            <!-- Gemachtigde informatie -->
+<ul class="nav nav-pills flex-column" style="margin-top: 40px;">
+  <li class="nav-item">
+    <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#ai-nav" data-bs-toggle="collapse" href="#">
+      <span class="title-text-color">Gemachtigde Informatie</span>
+      <i class="bi bi-chevron-down ms-auto icon-color"></i>
+    </a>
+    <ul id="ai-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
+
+      <!-- Gemachtigde natuurlijke persoon -->
+      <div class="card-body pt-5">
+        <!-- Container with border style -->
+        <div class="border p-5 filter-border">
+          <!-- The heading -->
+          <div class="filter-heading">Gemachtigde Natuurlijke Persoon</div>
+          <!-- Gegevens --> 
+            <div class="container">
+                                                  <div class="row">
+                                                  <h4 class="custom-h5heading">Gegevens</h4>
+                                                    <div class="col-lg-3 mb-5">
+                                                      <label for="filter1" class= "filter-label">Naam Persoon</label>
+                                                      <input type="text" class="form-control filled-borders" value="Gressman" id="filter1" readonly>
+                                                    </div>
+
+                                                    <hr class="striped-line">
                                                   </div>
-                        
-                        
-                                              </div>
-                               
-                                          <!-- End Eerder bewoonde adressen --> 
-                          
-                                          </ul>
-                                        </li>
-                                      </ul>
-                                      <!-- End Adres informatie -->
+            </div>
+         <!-- End Gegevens --> 
 
-                                      <!-- Gemachtigde informatie -->
-                                      <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
-                                        <li class="nav-item">
-                                            <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#ai-nav" data-bs-toggle="collapse" href="#">
-                                                <span class="title-text-color">Gemachtigde Informatie</span>
-                                                <i class="bi bi-chevron-down ms-auto icon-color"></i>
-                                            </a>
-                                            <ul id="ai-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
-                                        
-                          
-                                              <!-- Gemachtigde natuurlijke persoon -->      
-                                          
-                                          <div class="card-body pt-5">
-                                           <!-- Container with border style -->
-                                           <div class="border p-5 filter-border"> 
-                                            <!-- The heading -->           
-                                            <div class="filter-heading">Gemachtigde Natuurlijke Persoon</div> 
-                                                <!-- Gegevens --> 
-                                                          <div class="container">
-                                                            <div class="row">
-                                                            <h4 class="custom-h5heading">Gegevens</h4>
-                                                              <div class="col-lg-3 mb-5">
-                                                                <label for="filter1" class= "filter-label">Naam Persoon</label>
-                                                                <input type="text" class="form-control filled-borders" value="Gressman" id="filter1" readonly>
-                                                              </div>
+         <!-- Adres --> 
+            <div class="container">
+                                                      <div class="row">
+                                                      <h4 class="custom-h5heading">Adres</h4>
+                                                        <div class="col-lg-3 mb-5">
+                                                          <label for="filter1" class= "filter-label">Adres</label>
+                                                          <input type="text" class="form-control filled-borders" value="Kaya pachi jan bakhuis" id="filter1" readonly>
+                                                        </div>
+                                                        <div class="col-lg-3 mb-5">
+                                                          <label for="filter2" class= "filter-label">Adres nummer</label>
+                                                          <input type="number" class="form-control filled-borders" value="15" id="filter2" readonly>
+                                                        </div>
 
-                                                              <hr class="striped-line"> 
-                                                <!-- End Gegevens --> 
+                                                        <hr class="striped-line">
+                                                      </div>
+            </div>
+         <!-- End Adres -->
 
-                                                <!-- Adres --> 
-                                                              <div class="container">
-                                                                <div class="row">
-                                                                <h4 class="custom-h5heading">Adres</h4>
-                                                                  <div class="col-lg-3 mb-5">
-                                                                    <label for="filter1" class= "filter-label">Adres</label>
-                                                                    <input type="text" class="form-control filled-borders" value="Kaya pachi jan bakhuis" id="filter1" readonly>
-                                                                  </div>
-                                                                  <div class="col-lg-3 mb-5">
-                                                                    <label for="filter2" class= "filter-label">Adres nummer</label>
-                                                                    <input type="number" class="form-control filled-borders" value="15" id="filter2" readonly>
-                                                                  </div>
-
-                                                                  <hr class="striped-line">
-                                                <!-- End Adres -->
-
-                                                
-                                                <!-- Contact telefoon --> 
-                                                                  <div class="container">
-                                                                    <div class="row">
-                                                                    <h4 class="custom-h5heading">Contact telefon</h4>
-                                                                      <div class="col-lg-3 mb-5">
-                                                                        <label for="filter1" class= "filter-label">Telefoon werk 1</label>
-                                                                        <input type="number" class="form-control filled-borders" value="Weg naar westpunt" id="filter1" readonly>
-                                                                      </div>
-                                                                      <div class="col-lg-3 mb-5">
-                                                                        <label for="filter2" class= "filter-label">Telefoon werk 2</label>
-                                                                        <input type="number" class="form-control filled-borders" value="18" id="filter2" readonly>
-                                                                      </div>
-                                                                      <div class="col-lg-3 mb-5">
-                                                                        <label for="filter3" class= "filter-label">Telefoon Mobiel</label>
-                                                                        <input type="number" class="form-control filled-borders" value="Verblijfsvergunning" id="filter3" readonly>
-                                                                      </div>
-                                                                      <div class="col-lg-3 mb-5">
-                                                                        <label for="filter4" class= "filter-label">Fax</label>
-                                                                        <input type="number" class="form-control filled-borders" value="233233" id="filter4" readonly>
-                                                                      </div>
-                                                                      <div class="col-lg-6 mb-5">
-                                                                        <label for="filter5" class= "filter-label">E-mail Adres</label>
-                                                                        <input type="text" class="form-control filled-borders" id="filter5" readonly>
-                                                                      </div>
-                                                <!-- End Contact telefoon -->
-
-
-                                          
+         <!-- Contact telefoon --> 
+            <div class="container">
+                <div class="row">
+                                                          <h4 class="custom-h5heading">Contact telefon</h4>
+                                                            <div class="col-lg-3 mb-5">
+                                                              <label for="filter1" class= "filter-label">Telefoon werk 1</label>
+                                                              <input type="number" class="form-control filled-borders" value="Weg naar westpunt" id="filter1" readonly>
                                                             </div>
+                                                            <div class="col-lg-3 mb-5">
+                                                              <label for="filter2" class= "filter-label">Telefoon werk 2</label>
+                                                              <input type="number" class="form-control filled-borders" value="18" id="filter2" readonly>
+                                                            </div>
+                                                            <div class="col-lg-3 mb-5">
+                                                              <label for="filter3" class= "filter-label">Telefoon Mobiel</label>
+                                                              <input type="number" class="form-control filled-borders" value="Verblijfsvergunning" id="filter3" readonly>
+                                                            </div>
+                                                            <div class="col-lg-3 mb-5">
+                                                              <label for="filter4" class= "filter-label">Fax</label>
+                                                              <input type="number" class="form-control filled-borders" value="233233" id="filter4" readonly>
+                                                            </div>
+                                                            <div class="col-lg-6 mb-5">
+                                                              <label for="filter5" class= "filter-label">E-mail Adres</label>
+                                                              <input type="text" class="form-control filled-borders" id="filter5" readonly>
+                                                            </div>
+                </div>
+            </div>
+
+                                                       
+          <!-- table -->
+          <div class="table-responsive">
+            <!-- Table with stripped rows -->
+            <table class="table table-striped table-hover simpletable">
+              <thead>
+                <tr>
+                  <th scope="col">Document Name</th>
+                  <th scope="col">Document Upload</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Machtiging</td>
+                  <td>
+                    <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
+                    <div class="modal fade" id="documentModal" tabindex="-1">
+                      <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Documenten</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- End Modal-->
+                  <td class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown"><i class="bi bi-download"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Machtiging 2</td>
+                  <td>
+                    <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
+                    <div class="modal fade" id="documentModal" tabindex="-1">
+                      <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Documenten</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- End Modal-->
+                  </td>
+                  <td class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-target="#myModal"><i class="bi bi-download"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table><!-- End Table with stripped rows -->
+          </div>
+        </div><!-- End Container with border style -->
+      </div><!-- End card-body pt-5 -->
+    
+          <!-- Gemachtigde organisatie/rechtspersoon -->
+          <div class="card-body pt-5">
+            <!-- Container with border style -->
+            <div class="border p-5 filter-border">
+              <!-- The heading -->
+              <div class="filter-heading">Gemachtigde Organisatie/Rechtspersoon</div>
+              <!-- Gegevens --> 
+                <div class="container">
+                                                      <div class="row">
+                                                      <h4 class="custom-h5heading">Gegevens</h4>
+                                                        <div class="col-lg-3 mb-5">
+                                                          <label for="filter1" class= "filter-label">Naam </label>
+                                                          <input type="text" class="form-control filled-borders" value="Gressman" id="filter1" readonly>
+                                                        </div>
+    
+                                                        <hr class="striped-line">
+                                                      </div>
+                </div>
+             <!-- End Gegevens --> 
+    
+             <!-- Adres --> 
+                <div class="container">
+                                                          <div class="row">
+                                                          <h4 class="custom-h5heading">Adres</h4>
+                                                            <div class="col-lg-3 mb-5">
+                                                              <label for="filter1" class= "filter-label">Adres</label>
+                                                              <input type="text" class="form-control filled-borders" value="Kaya pachi jan bakhuis" id="filter1" readonly>
+                                                            </div>
+                                                            <div class="col-lg-3 mb-5">
+                                                              <label for="filter2" class= "filter-label">Adres nummer</label>
+                                                              <input type="number" class="form-control filled-borders" value="15" id="filter2" readonly>
+                                                            </div>
+    
+                                                            <hr class="striped-line">
                                                           </div>
+                </div>
+             <!-- End Adres -->
+    
+             <!-- Contact telefoon --> 
+                <div class="container">
+                    <div class="row">
+                                                              <h4 class="custom-h5heading">Contact telefon</h4>
+                                                                <div class="col-lg-3 mb-5">
+                                                                  <label for="filter1" class= "filter-label">Telefoon werk 1</label>
+                                                                  <input type="number" class="form-control filled-borders" value="Weg naar westpunt" id="filter1" readonly>
+                                                                </div>
+                                                                <div class="col-lg-3 mb-5">
+                                                                  <label for="filter2" class= "filter-label">Telefoon werk 2</label>
+                                                                  <input type="number" class="form-control filled-borders" value="18" id="filter2" readonly>
+                                                                </div>
+                                                                <div class="col-lg-3 mb-5">
+                                                                  <label for="filter3" class= "filter-label">Telefoon Mobiel</label>
+                                                                  <input type="number" class="form-control filled-borders" value="Verblijfsvergunning" id="filter3" readonly>
+                                                                </div>
+                                                                <div class="col-lg-3 mb-5">
+                                                                  <label for="filter4" class= "filter-label">Fax</label>
+                                                                  <input type="number" class="form-control filled-borders" value="233233" id="filter4" readonly>
+                                                                </div>
+                                                                <div class="col-lg-6 mb-5">
+                                                                  <label for="filter5" class= "filter-label">E-mail Adres</label>
+                                                                  <input type="text" class="form-control filled-borders" id="filter5" readonly>
+                                                                </div>
+                    </div>
+                </div>
+    
+                                                           
+              <!-- table -->
+              <div class="table-responsive">
+                <!-- Table with stripped rows -->
+                <table class="table table-striped table-hover simpletable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Document Name</th>
+                      <th scope="col">Document Upload</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Machtiging</td>
+                      <td>
+                        <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
+                        <div class="modal fade" id="documentModal" tabindex="-1">
+                          <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title">Documenten</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- End Modal-->
+                      <td class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown"><i class="bi bi-download"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Machtiging 2</td>
+                      <td>
+                        <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
+                        <div class="modal fade" id="documentModal" tabindex="-1">
+                          <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title">Documenten</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- End Modal-->
+                      </td>
+                      <td class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-target="#myModal"><i class="bi bi-download"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table><!-- End Table with stripped rows -->
+              </div>
+            </div><!-- End Container with border style -->
+          </div><!-- End card-body pt-5 -->
+
+    </ul><!-- End of nav-content show -->
+  </li><!-- End of nav-item -->
+</ul><!-- End of nav-pills flex-column -->
+<!-- End Gemachtigde informatie -->
 
 
-                                              <!-- table -->                                                          
-                                      
-                                                
-                                                            <div class="table-responsive ml-1">
-                                                
-                                                              <!-- Table with stripped rows -->
-                                  
-                                                             <table class="table table-striped table-hover simpletable">
-                                                                <thead>
-                                                                  <tr>
-                                                                    <th scope="col">Document Name</th>
-                                                                    <th scope="col">Document Upload</th>
-                                                                    <th scope="col"></th>
-                                                                  </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                  <tr>
-                                                                    <td>Machtiging</td>
-                                                                    <td>
-                                                                      <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
-                                                                      <div class="modal fade" id="documentModal" tabindex="-1">
-                                                                        <div class="modal-dialog modal-xl">
-                                                                          <div class="modal-content">
-                                                                            <div class="modal-header">
-                                                                              <h5 class="modal-title">Documenten</h5>
-                                                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                            </div>
-                                                                            <div class="modal-body">
-                                                                              <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
-                                                                              </div>
-                                                                          </div>
-                                                                        </div>
-                                                                      </div><!-- End Modal-->    
-                                                                    <td class="d-flex justify-content-end">
-                                                                        <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown"><i class="bi bi-download"></i></button>
-  
-                                                                    </td>             
-                                                                  </tr>
-                                                                  <tr>
-                                                                    <td>Machtiging 2</td>
-                                                                    <td>
-                                                                    <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
-                                                                    <div class="modal fade" id="documentModal" tabindex="-1">
-                                                                      <div class="modal-dialog modal-xl">
-                                                                        <div class="modal-content">
-                                                                          <div class="modal-header">
-                                                                            <h5 class="modal-title">Documenten</h5>
-                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                          </div>
-                                                                          <div class="modal-body">
-                                                                            <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
-                                                                            </div>
-                                                                        </div>
-                                                                      </div>
-                                                                    </div><!-- End Modal-->    
-                                                                    </td>
-                                                                    <td class="d-flex justify-content-end">
-                                                                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-target="#myModal"><i class="bi bi-download"></i></button>                                                                        
-                                                                    </td>                 
-                                                                  </tr>                              
-                                                                </tbody>
-                                                              </table>
-                                                              <!-- End Table with stripped rows -->
-                                  
-                                                            </div>
-                          
-                                           </div>
-                                          </div>  
 
-                                           
-                                          <!-- End 4 sections -->
-                       
-
-
-                </ul>
-              </li>
-            </ul>
-            <!-- End Aanvragen overzicht -->
 
 
             <!-- Voorwaarden/Bescheiden -->
@@ -957,11 +1002,11 @@
                                                            <div class="card-body pt-2">
                                                 
                                                           
-                                                            <div class="table-responsive ml-1">
+                                                            <div class="table-responsive">
                                                 
                                                               <!-- Table with stripped rows -->
                                   
-                                                             <table class="table table-striped table-hover othertable">
+                                                             <table class="table table-striped table-hover othertable datatable-without-search">
                                                                 <thead>
                                                                   <tr>
                                                                     <th scope="col">Voorwaarden Verblijf</th>
@@ -993,6 +1038,7 @@
                                                 </ul>
                                                 <!-- End voorwaarden/bescheiden -->
 
+
             <!-- Gezinsoverzicht -->
             <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
               <li class="nav-item">
@@ -1004,7 +1050,7 @@
 
                 
 
-                <!--Inner gezinsoverzicht -->
+                <!--inner gezinsoverzicht-->
                 
                 <div class="card-body pt-5">
                       <!-- Container with border style -->
@@ -1016,11 +1062,11 @@
                        <div class="card-body pt-2">
             
                       
-                        <div class="table-responsive ml-1">
+                        <div class="table-responsive">
             
                           <!-- Table with stripped rows -->
 
-                         <table class="table table-striped table-hover normaltable">
+                         <table class="table table-striped table-hover normaltable datatable-without-search">
                             <thead>
                               <tr>
                                 <th scope="col">CRV Nummer</th>
@@ -1038,24 +1084,21 @@
                                 <td>23/03/2000</td> 
                                 <td>MAN</td> 
                                 <td>Nederlandse</td> 
-                                <td>Zoon</td>           
-                              </tr>
-                              <tr>
-                                <td>8001003916</td>
-                                <td>RIOS OSPINA, DUVAN ANDRES</td>
-                                <td>23/03/2000</td> 
-                                <td>MAN</td> 
-                                <td>Nederlandse</td> 
-                                <td>Zoon</td>                  
-                              </tr>
-                              <tr>
-                                <td>8001003916</td>
-                                <td>RIOS OSPINA, DUVAN ANDRES</td>
-                                <td>23/03/2000</td> 
-                                <td>MAN</td> 
-                                <td>Nederlandse</td> 
-                                <td>Zoon</td>                  
-                              </tr>                            
+                                <td>Zoon</td>
+                                <tr>
+                                  <td>8001003916</td>
+                                  <td>RIOS OSPINA, DUVAN ANDRES</td>
+                                  <td>23/03/2000</td> 
+                                  <td>MAN</td> 
+                                  <td>Nederlandse</td> 
+                                  <td>Zoon</td>
+                                  <tr>
+                                    <td>8001003916</td>
+                                    <td>RIOS OSPINA, DUVAN ANDRES</td>
+                                    <td>23/03/2000</td> 
+                                    <td>MAN</td> 
+                                    <td>Nederlandse</td> 
+                                    <td>Zoon</td>                                         
                             </tbody>
                           </table>
                           <!-- End Table with stripped rows -->
@@ -1070,7 +1113,9 @@
                 </ul>
               </li>
             </ul>
-            <!-- End Gezinsoverzicht -->
+            <!-- End gezinsoverzicht -->
+                                                
+
 
                                      <!-- Vragen -->
                                      <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
@@ -1096,11 +1141,11 @@
                                                 <legend class="filter-label">BENT U VOOR 31 DECEMBER 2001 DE NEDERLANDSE ANTILLEN BINNENGEREISD?</legend>
                                                 <div class="form-inline">
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="gender" id="maleRadio" value="male" checked onclick="return false;">
+                                                        <input class="form-check-input" type="radio" name="boolean1" id="maleRadio" value="male" checked onclick="return false;">
                                                         <label class="form-check-label" for="maleRadio">Ja</label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="gender" id="femaleRadio" value="female" onclick="return false;">
+                                                        <input class="form-check-input" type="radio" name="boolean1" id="femaleRadio" value="female" onclick="return false;">
                                                         <label class="form-check-label" for="femaleRadio">Nee</label>
                                                     </div>
                                                 </div>
@@ -1131,11 +1176,11 @@
                                                      <legend class="filter-label">BENT U TUSSEN 1 JANUARI 2002 T/M 31 DECEMBER 2005 DE NEDERLANDSE ANTILLEN BINNENGEREISD?</legend>
                                                      <div class="form-inline">
                                                          <div class="form-check form-check-inline">
-                                                             <input class="form-check-input" type="radio" name="gender" id="maleRadio" value="male" checked onclick="return false;">
+                                                             <input class="form-check-input" type="radio" name="boolean2" id="maleRadio" value="male" checked onclick="return false;">
                                                              <label class="form-check-label" for="maleRadio">Ja</label>
                                                          </div>
                                                          <div class="form-check form-check-inline">
-                                                             <input class="form-check-input" type="radio" name="gender" id="femaleRadio" value="female" onclick="return false;">
+                                                             <input class="form-check-input" type="radio" name="boolean2" id="femaleRadio" value="female" onclick="return false;">
                                                              <label class="form-check-label" for="femaleRadio">Nee</label>
                                                          </div>
                                                      </div>
@@ -1183,6 +1228,8 @@
                                       </li>
                                     </ul>
                                     <!-- End Vraag -->
+
+
 
                                      <!-- Motivering -->
                                      <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
@@ -1260,11 +1307,705 @@
                                     </ul>
                                     <!-- End Opmerking -->
 
+            <!-- Vergunningen -->
+            <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
+              <li class="nav-item">
+                  <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#ve-nav" data-bs-toggle="collapse" href="#">
+                      <span class="title-text-color">Vergunningen</span>
+                      <i class="bi bi-chevron-down ms-auto icon-color"></i>
+                  </a>
+                  <ul id="ve-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
 
-                                                                        
+                
+
+                <!-- inner Vergunning -->
+                
+                <div class="card-body pt-5">
+                      <!-- Container with border style -->
+                      <div class="border p-5 filter-border"> 
+                       <!-- The heading -->           
+                       <div class="filter-heading">Vergunningen</div> 
+             
+                       
+                       <div class="card-body pt-2">
+            
+                      
+                        <div class="table-responsive">
+            
+                          <!-- Table with stripped rows -->
+
+                         <table class="table table-striped table-hover normaltable datatable-without-search">
+                            <thead>
+                              <tr>
+                                <tr>
+                                  <th scope="col">CRV Nummer</th>
+                                  <th scope="col">Achternaam & Voornaam</th>
+                                  <th scope="col">Geboortedatum</th>
+                                  <th scope="col">Hoofddoel</th>
+                                  <th scope="col">Subdoel</th>
+                                  <th scope="col">Status</th>
+                                  <th scope="col">Datum geldig tot</th>
+                                </tr>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>8001003916</td>
+                                <td>RIOS OSPINA, DUVAN ANDRES</td>
+                                <td>23/03/2000</td>
+                                <td>Voorbeeldtekst van het motief</td>
+                                <td>Voorbeeldtekst van het motief</td>
+                                <td>Zoon</td>
+                                <td>23/03/2023</td>             
+                              </tr>
+                              <tr>
+                                <td>8001003916</td>
+                                <td>RIOS OSPINA, DUVAN ANDRES</td>
+                                <td>23/03/2000</td>
+                                <td>Voorbeeldtekst van het motief</td>
+                                <td>Voorbeeldtekst van het motief</td>
+                                <td>Zoon</td>
+                                <td>23/03/2023</td>             
+                              </tr>
+                              <tr>
+                                <td>8001003916</td>
+                                <td>RIOS OSPINA, DUVAN ANDRES</td>
+                                <td>23/03/2000</td>
+                                <td>Voorbeeldtekst van het motief</td>
+                                <td>Voorbeeldtekst van het motief</td>
+                                <td>Zoon</td>
+                                <td>23/03/2023</td>             
+                              </tr>                              
+                            </tbody>
+                          </table>
+                          <!-- End Table with stripped rows -->
+
+                        </div>
+
+
+                    </div>
+     
+                <!-- End inner vergunning --> 
+
+                </ul>
+              </li>
+            </ul>
+            <!-- End vergunningen -->
+
+            <!-- Controle Uitgeprinte Documenten -->
+<ul class="nav nav-pills flex-column" style="margin-top: 40px;">
+  <li class="nav-item">
+    <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#cud-nav" data-bs-toggle="collapse" href="#">
+      <span class="title-text-color">Controle Uitgeprinte Documenten</span>
+      <i class="bi bi-chevron-down ms-auto icon-color"></i>
+    </a>
+    <ul id="cud-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
+
+      <!-- Uitgeprinte Documenten -->
+      <div class="card-body pt-5">
+        <!-- Container with border style -->
+        <div class="border p-5 filter-border">
+          <!-- The heading -->
+          <div class="filter-heading">Uitgeprinte Documenten</div>
+ 
+
+                                                       
+          <!-- table -->
+          <div class="table-responsive">
+            <!-- Table with stripped rows -->
+            <table class="table table-striped table-hover simpletable datatable-without-searc">
+              <thead>
+                <tr>
+                  <th scope="col">Datum</th>
+                  <th scope="col">Tijd</th>
+                  <th scope="col">Gebruiker</th>
+                  <th scope="col">Document</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>23/03/2003</td>
+                  <td>04:48:08 PM</td>
+                  <td>KCVD9083</td>
+                  <td>
+                    <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
+                    <div class="modal fade" id="documentModal" tabindex="-1">
+                      <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Documenten</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- End Modal-->
+                  <td class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown"><i class="bi bi-download"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23/03/2003</td>
+                  <td>04:48:08 PM</td>
+                  <td>KCVD9083</td>
+                  <td>
+                    <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
+                    <div class="modal fade" id="documentModal" tabindex="-1">
+                      <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Documenten</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- End Modal-->
+                  <td class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown"><i class="bi bi-download"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>23/03/2003</td>
+                  <td>04:48:08 PM</td>
+                  <td>KCVD9083</td>
+                  <td>
+                    <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
+                    <div class="modal fade" id="documentModal" tabindex="-1">
+                      <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Documenten</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- End Modal-->
+                  <td class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown"><i class="bi bi-download"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table><!-- End Table with stripped rows -->
+          </div>
+        </div><!-- End Container with border style -->
+      </div><!-- End card-body pt-5 -->
+    
+          <!-- Verplichte Documenten: Aanvrager -->
+          <div class="card-body pt-5">
+            <!-- Container with border style -->
+            <div class="border p-5 filter-border">
+              <!-- The heading -->
+              <div class="filter-heading">Verplichte Documenten: Aanvrager</div>
+    
+                                                           
+              <!-- table -->
+              <div class="table-responsive">
+                <!-- Table with stripped rows -->
+                <table class="table table-striped table-hover datatable-without-search">
+                  <thead>
+                    <tr>
+                      <th scope="col" style="width: 80%;">Document</th>
+                      <th scope="col" style="width: 80%;"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
+                        <div class="modal fade" id="documentModal" tabindex="-1">
+                          <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title">Documenten</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- End Modal-->
+                        <td>
+                          <div class="d-flex justify-content-end">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-target="#myModal">
+                                  <i class="bi bi-download"></i>
+                              </button>
+                          </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
+                        <div class="modal fade" id="documentModal" tabindex="-1">
+                          <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title">Documenten</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- End Modal-->
+                      </td>
+                      <td>
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-target="#myModal">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+                    </td>
+                    </tr>
+                  </tbody>
+                </table><!-- End Table with stripped rows -->
+              </div>
+            </div><!-- End Container with border style -->
+          </div><!-- End card-body pt-5 -->
+
+    </ul><!-- End of nav-content show -->
+  </li><!-- End of nav-item -->
+</ul><!-- End of nav-pills flex-column -->
+<!-- End Controle uitgeprinte documenten -->                                                                       
                                       
+            <!-- Beschikking -->
+            <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
+              <li class="nav-item">
+                <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#be-nav" data-bs-toggle="collapse" href="#">
+                  <span class="title-text-color">Beschikking</span>
+                  <i class="bi bi-chevron-down ms-auto icon-color"></i>
+                </a>
+                <ul id="be-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
             
+                  <!-- Inner beschikking-->
+                  <div class="card-body pt-5">
+                    <!-- Container with border style -->
+                    <div class="border p-5 filter-border">
+                      <!-- The heading -->
+                      <div class="filter-heading">Beschikking</div>
+             
             
+                                                                   
+                      <!-- table -->
+                      <div class="table-responsive">
+                        <!-- Table with stripped rows -->
+                        <table class="table table-striped table-hover simpletable datatable-without-search">
+                          <thead>
+                            <tr>
+                              <th scope="col">Aanvrager</th>
+                              <th scope="col">Status Aanvraag</th>
+                              <th scope="col">Rol</th>
+                              <th scope="col">Gemaakt op</th>
+                              <th scope="col">Gemaakt door</th>
+                              <th scope="col">Document</th>
+                              <th scope="col"></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>LAUZANDIER RULAND</td>
+                              <td>Ingewilligd</td>
+                              <td>Aanvrager</td>
+                              <td>2015-04-29</td>
+                              <td>CABENDA JERITZA</td>
+                              <td>
+                                <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
+                                <div class="modal fade" id="documentModal" tabindex="-1">
+                                  <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title">Documenten</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div><!-- End Modal-->
+                              <td class="d-flex justify-content-end">
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown"><i class="bi bi-download"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>LAUZANDIER RULAND</td>
+                              <td>Ingewilligd</td>
+                              <td>Aanvrager</td>
+                              <td>2015-04-29</td>
+                              <td>CABENDA JERITZA</td>
+                              <td>
+                                <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
+                                <div class="modal fade" id="documentModal" tabindex="-1">
+                                  <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title">Documenten</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div><!-- End Modal-->
+                              <td class="d-flex justify-content-end">
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown"><i class="bi bi-download"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>LAUZANDIER RULAND</td>
+                              <td>Ingewilligd</td>
+                              <td>Aanvrager</td>
+                              <td>2015-04-29</td>
+                              <td>CABENDA JERITZA</td>
+                              <td>
+                                <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
+                                <div class="modal fade" id="documentModal" tabindex="-1">
+                                  <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title">Documenten</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div><!-- End Modal-->
+                              </td>
+                              <td class="d-flex justify-content-end">
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown"><i class="bi bi-download"></i></button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table><!-- End Table with stripped rows -->
+                      </div>
+                    </div><!-- End Container with border style -->
+                  </div><!-- End card-body pt-5 -->
+
+            
+                </ul><!-- End of nav-content show -->
+              </li><!-- End of nav-item -->
+            </ul><!-- End of nav-pills flex-column -->
+            <!-- End Beschikking -->    
+            
+
+            <!-- Adres in het buitenland -->
+            <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
+              <li class="nav-item">
+                  <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#adbu-nav" data-bs-toggle="collapse" href="#">
+                      <span class="title-text-color">Adres in het buitenland</span>
+                      <i class="bi bi-chevron-down ms-auto icon-color"></i>
+                  </a>
+                  <ul id="adbu-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
+              
+
+                    <!-- adres buitenland -->      
+                
+                <div class="card-body pt-5">
+                 <!-- Container with border style -->
+                 <div class="border p-5 filter-border"> 
+                  <!-- The heading -->           
+                  <div class="filter-heading">Adres buitenland</div> 
+        
+									
+								<div class="container">
+								  <div class="row">
+									<div class="col-lg-3 mb-5">
+									  <label for="filter1" class= "filter-label">Adres</label>
+									  <input type="text" class="form-control filled-borders" value="Cas Coraweg" id="filter1" readonly>
+									</div>
+									<div class="col-lg-3 mb-5">
+									  <label for="filter2" class= "filter-label">Adresnummer</label>
+									  <input type="text" class="form-control filled-borders" value="66d" id="filter2" readonly>
+									</div>
+									<div class="col-lg-3 mb-5">
+									  <label for="filter3" class= "filter-label">Stad</label>
+									  <input type="text" class="form-control filled-borders" value="Willemstad" id="filter3" readonly>
+									</div>
+									<div class="col-lg-3 mb-5">
+									  <label for="filter4" class= "filter-label">Staat/Provincie</label>
+									  <input type="text" class="form-control filled-borders" value="Korsou" id="filter4" readonly>
+									</div>
+									<div class="col-lg-3 mb-5">
+									  <label for="filter5" class= "filter-label">Zip Code/Post Code</label>
+									  <input type="text" class="form-control filled-borders" value="4210" id="filter5" readonly>
+									</div>
+                  <div class="col-lg-3 mb-5">
+									  <label for="filter6" class= "filter-label">Woonplaats</label>
+									  <input type="text" class="form-control filled-borders" value="CURACAO" id="filter6" readonly>
+									</div>
+                
+								  </div>
+								</div>
+                    
+
+                 </div>
+                </div>   
+                <!-- End adres buitenland-->
+
+                </ul>
+              </li>
+            </ul>
+            <!-- End adres in het buitenland -->
+
+
+
+            <!-- Afgehandelde aanvraag -->
+            <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
+              <li class="nav-item">
+                <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#aa-nav" data-bs-toggle="collapse" href="#">
+                  <span class="title-text-color">Afgehandelde Aanvraag</span>
+                  <i class="bi bi-chevron-down ms-auto icon-color"></i>
+                </a>
+                <ul id="aa-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
+            
+                  <!-- Afgite -->
+                  <div class="card-body pt-5">
+                    <!-- Container with border style -->
+                    <div class="border p-5 filter-border">
+                      <!-- The heading -->
+                      <div class="filter-heading">Afgifte</div>
+
+                      <!-- table -->
+                      <div class="table-responsive">
+                        <!-- Table with stripped rows -->
+                        <table class="table table-striped table-hover simpletable">
+                          <thead>
+                            <tr>
+                              <th scope="col">Voornaam</th>
+                              <th scope="col">Achternaam</th>
+                              <th scope="col">CVR-Nummer</th>
+                              <th scope="col">Type</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>LAUZANDIER RULAND</td>
+                              <td>CASTILLO</td>
+                              <td>FMSCRV20135178/1 <br>
+                                <span class="highlighted">advies nr: 0</span><br>
+                                <span class="highlighted">advies nr: 1</span><br>
+                                <span class="highlighted2">advies nr: 2</span>
+                              </td>
+                              <td>Aanvrager</td>
+                            </tr>
+                          </tbody>
+                        </table><!-- End Table with stripped rows -->
+                      </div>
+
+                      <div>Afgifte voor:</div>
+                      <div><strong>KENIA GOMEZ</strong></div>
+                      <div style="margin-bottom: 20px;">TYPE: AANVRAGER</div>
+                      
+                      <div class="container"> 
+                      <div class="col-lg-12 mb-5">
+                        <label for="filter1" class= "filter-label">Commentaar van Hoofdcontrole</label>
+                        <textarea class="form-control filled-borders" id="filter1" readonly rows="3">Some multiline text here</textarea>
+                      </div>
+                      </div>
+
+                      <!-- Aanvraag vr--> 
+                        <div class="container">
+                                                              <div class="row">
+                                                              <h4 class="custom-h5heading">Aanvraag voor vergunning wordt </h4>
+                                                                  <div class="col-lg-2 mb-5">                    
+                                                                    <legend class="filter-label"></legend>
+                                                                    <div class="form-inline">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio" name="an" id="maleRadio" value="male" onclick="return false;">
+                                                                            <label class="form-check-label" for="maleRadio">Afgewezen</label>
+                                                                        </div>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input" type="radio" name="an" id="femaleRadio" value="female" checked onclick="return false;">
+                                                                            <label class="form-check-label" for="femaleRadio">Ingewilligd</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-7 mb-5">
+                                                                    <label for="filter2" class="filter-label">Toelichting</label>
+                                                                    <textarea class="form-control filled-borders" id="filter1" readonly rows="3">Some multiline text here</textarea>
+                                                                </div>      
+                                              
+                                                                </div>
+                                                              </div>
+                     <!-- End Aanvraag vr --> 
+
+                      <!-- Medische zv--> 
+                      <div class="container">
+                        <div class="row">
+                        <h4 class="custom-h5heading">Is een medische ziektekostenverzekering overlegd </h4>
+                            <div class="col-lg-2 mb-5">                    
+                              <legend class="filter-label"></legend>
+                              <div class="form-inline">
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="bool" id="maleRadio" value="male" checked onclick="return false;">
+                                      <label class="form-check-label" for="maleRadio">Ja</label>
+                                  </div>
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="bool" id="femaleRadio" value="female" onclick="return false;">
+                                      <label class="form-check-label" for="femaleRadio">Nee</label>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-7 mb-5">
+                              <label for="filter2" class="filter-label">Toelichting</label>
+                              <textarea class="form-control filled-borders" id="filter1" readonly rows="3">Some multiline text here</textarea>
+                          </div>      
+        
+                          </div>
+                        </div>
+                      <!-- End medische zv --> 
+
+                      <!-- table -->
+                      <div class="table-responsive">
+                        <!-- Table with stripped rows -->
+                        <table class="table table-striped table-hover simpletable">
+                          <thead>
+                            <tr>
+                              <th scope="col">Verplichte document naam</th>
+                              <th scope="col">Document naam</th>
+                              <th scope="col">Link</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>MEDISCHE ZIEKTEKOSTEN VERZEKERING</td>
+                              <td>Documentnaam2.pdf</td>
+                              <td>
+                                <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#documentModal">FMSCRV202114751-3 VO OTNIEL 17-03-2021.doc</a>
+                                <div class="modal fade" id="documentModal" tabindex="-1">
+                                  <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title">Documenten</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <embed src="assets/img/test.pdf" frameborder="0" width="100%" height="800px">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div><!-- End Modal-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table><!-- End Table with stripped rows -->
+                      </div>
+
+
+
+
+                    </div><!-- End Container with border style -->
+                  </div><!-- End card-body pt-5 -->
+                
+            
+                </ul><!-- End of nav-content show -->
+              </li><!-- End of nav-item -->
+            </ul><!-- End of nav-pills flex-column -->
+            <!-- End afgehandelde aanvraag -->
+
+
+           <!-- Commentaar-->
+           <ul class="nav nav-pills flex-column" style="margin-top: 40px;">
+            <li class="nav-item">
+                <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#co-nav" data-bs-toggle="collapse" href="#">
+                    <span class="title-text-color">Commentaar</span>
+                    <i class="bi bi-chevron-down ms-auto icon-color"></i>
+                </a>
+                <ul id="co-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
+
+              
+
+              <!-- inner commentaar -->
+              
+              <div class="card-body pt-5">
+                    <!-- Container with border style -->
+                    <div class="border p-5 filter-border"> 
+                     <!-- The heading -->           
+                     <div class="filter-heading">Commentaar</div> 
+           
+                     
+                     <div class="card-body pt-2">
+          
+                    
+                      <div class="table-responsive">
+          
+                        <!-- Table with stripped rows -->
+
+                       <table class="table table-striped table-hover normaltable">
+                          <thead>
+                            <tr>
+                              <tr>
+                                <th scope="col">Datum</th>
+                                <th scope="col">Tijd</th>
+                                <th scope="col">Gebruiker</th>
+                                <th scope="col">Commentaar</th>
+                              </tr>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>10/12/2023</td>
+                              <td>11:15</td>
+                              <td>Ostiana Cleotis</td>
+                              <td>Lorem Ipsum</td>
+                            </tr>
+                            <tr>
+                              <td>10/12/2023</td>
+                              <td>11:15</td>
+                              <td>Ostiana Cleotis</td>
+                              <td>Lorem Ipsum</td>
+                            </tr>
+                            <tr>
+                              <td>10/12/2023</td>
+                              <td>11:15</td>
+                              <td>Ostiana Cleotis</td>
+                              <td>Lorem Ipsum</td>
+                            </tr>                              
+                          </tbody>
+                        </table>
+                        <!-- End Table with stripped rows -->
+
+                      </div>
+
+
+                     </div>
+                    </div>
+                    <!-- End inner commentaar -->
+
+                    <!--Buttons-->
+                    <div class="row justify-content-end mt-3">
+                      <div class="col-auto mr-3">
+                        <a href="aanvragen.html"></a><button type="button" class="btn nieuwc-button">NIEUW COMMENTAAR</button></a>
+                      </div>
+                      <div class="col-auto" style="margin-right: 30px;">
+                        <a href="personalinfo.html"><button type="button" class="btn sluiten-button">SLUITEN</button></a>
+                      </div>
+                    </div>
+                    <!--End Buttons-->
+
+
+              
+              </div>              
+
+
+
+              </ul>
+            </li>
+          </ul>
+          <!-- End commentaar -->
 
           </div>  
           <!-- End Card Body  -->
