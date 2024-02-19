@@ -1025,19 +1025,6 @@ h6 {
   font-weight: 800;
 }
 
-/*--------------------------------------------------------------
-# Toggle Sections
---------------------------------------------------------------*/
-/* Hide the collapse section by default */
-.collapse {
-  display: none;
-}
-
-/* Display the collapse section when it's the target */
-.collapse:target {
-  display: block;
-}
-
 
 /*--------------------------------------------------------------
 # Dashboard
