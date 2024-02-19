@@ -1016,13 +1016,20 @@ h6 {
   border: none;
   height: 2px;
   background-image: linear-gradient(to right, #000 40%, transparent 25%, transparent 90%, #000 75%);
-  background-size: 4px 50%; /* Adjust stripe width as needed */
+  background-size: 4px 50%;
 }
 
 h6 {
   margin-bottom: 20px;
   color: #203b66;
   font-weight: 800;
+}
+
+  /*--------------------------------------------------------------
+# Collapsable section
+--------------------------------------------------------------*/
+.bold-text {
+  font-weight: bold;
 }
 
 
