@@ -98,10 +98,9 @@ h6 {
 
 .info-box {
   display: flex;
-  background-color: #f0f0f0;
-  padding: 15px;
+  background-color: #f8f8f8;
+  padding: 10px;
   border-radius: 5px;
-  height: 60px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
@@ -113,8 +112,6 @@ h6 {
 .info-icon i {
   color: #FFC000;
 }
-
-
 
 .top-table th {
   font-size: 9px;
@@ -1027,6 +1024,20 @@ h6 {
   color: #203b66;
   font-weight: 800;
 }
+
+/*--------------------------------------------------------------
+# Toggle Sections
+--------------------------------------------------------------*/
+/* Hide the collapse section by default */
+.collapse {
+  display: none;
+}
+
+/* Display the collapse section when it's the target */
+.collapse:target {
+  display: block;
+}
+
 
 /*--------------------------------------------------------------
 # Dashboard
