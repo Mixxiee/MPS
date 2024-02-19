@@ -340,14 +340,25 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault(); // Prevent default link behavior
             const targetId = this.getAttribute('data-bs-target');
             const target = document.querySelector(targetId);
+            const offsetTop = target.offsetTop; // Get the offset top of the collapsed section
+
             if (target.classList.contains('show')) {
                 target.classList.remove('show');
             } else {
                 target.classList.add('show');
             }
+
+            // Toggle bold font weight on click
+            this.classList.toggle('font-bold');
+
+            // Scroll to the collapsed section
+            target.scrollIntoView({
+                behavior: 'smooth' // Smooth scrolling
+            });
         });
     });
 });
+
 
 
 })();
