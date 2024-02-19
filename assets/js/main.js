@@ -337,7 +337,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleCollapseElements = document.querySelectorAll('.toggle-collapse');
     toggleCollapseElements.forEach(function (element) {
         element.addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent default behavior
+            event.preventDefault(); // Prevent default link behavior
             const targetId = this.getAttribute('data-bs-target');
             const target = document.querySelector(targetId);
             if (target.classList.contains('show')) {
@@ -345,8 +345,6 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 target.classList.add('show');
             }
-            // Toggle bold styling
-            this.classList.toggle('bold-text');
         });
     });
 });
