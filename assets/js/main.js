@@ -359,6 +359,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+  // Close current tab
+function closeCurrentTab() {
+  window.close(); 
+}
+
 
 
 })();
