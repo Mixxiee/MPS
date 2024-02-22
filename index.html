@@ -401,7 +401,7 @@
                     <!-- Aanvrager -->
                     <div data-bs-toggle="collapse" data-bs-target="#aanvrager" aria-expanded="false" aria-controls="aanvrager">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sector" id="aanvrager_sector" value="0">
+                            <input class="form-check-input collapse-trigger" type="radio" name="sector" id="aanvrager_sector" value="0">
                             <label class="form-check-label" for="aanvrager_sector">Aanvrager</label>
                         </div>
                     </div>
@@ -445,8 +445,8 @@
         
                     <!-- Aanvraag -->
                     <div data-bs-toggle="collapse" data-bs-target="#aanvraag" aria-expanded="false" aria-controls="aanvraag">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sector" id="aanvrager_sector" value="1">
+                        <div class="form-check form-check-inline collapse-trigger">
+                            <input class="form-check-input" type="radio" name="sector" id="aanvraag_sector" value="1">
                             <label class="form-check-label" for="aanvraag_sector">Aanvraag</label>
                         </div>
                     </div>
@@ -612,18 +612,21 @@
                  </div>   
 
 
-                 <div class="row justify-content-end mt-3">
-                  <div class="col-auto">
-                    <a href="index.html"><button type="button" class="btn sluiten-button">SLUITEN</button></a>
+                <!-- Sluiten button -->
+                <div class="row justify-content-end mt-3">
+                  <div class="col-auto pe-5">
+                    <button type="button" class="btn sluiten-button" onclick="closeCurrentTab()">SLUITEN</button>
                   </div>
                 </div>
+                <!-- End Sluiten button -->
 
                  </ul>
               </li><!-- End Filter -->
             </ul>
 
+        <!-- Collapse section Aanvrager -->
+        <div class="collapse" id="aanvrager" data-bs-parent="#sector_descriptions">
 
-        
         <div class="card-body pt-2">
         <div class="line-container d-flex justify-content-center">
 				<hr class="my-hr">
@@ -638,7 +641,6 @@
 
               </div>
             <div class="table-responsive">
-
               <!-- Table with stripped rows -->
               <table class="table tablenl table-striped table-hover datatable">
                 <thead>
@@ -712,7 +714,429 @@
               </table>
               <!-- End Table with stripped rows -->
             </div>
-        </div>
+        
+          </div> 
+          </div><!-- End Collapse section aanvraager -->
+
+          <!-- Collapse section Aanvraag -->
+        <div class="collapse" id="aanvraag" data-bs-parent="#sector_descriptions">
+
+          <div class="card-body pt-2">
+          <div class="line-container d-flex justify-content-center">
+          <hr class="my-hr">
+          </div>
+                <div class="d-flex flex-row justify-content-end align-items-center">
+              
+                <div>
+                  <button type="button" class="btn custom-blue-btn">Excel</button>
+                  <button type="button" class="btn custom-blue-btn">PDF</button>
+  
+                </div>
+  
+                </div>
+              <div class="table-responsive">
+                <!-- Table with stripped rows -->
+                <table class="table tablenl table-striped table-hover datatable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Aanvraag Nummer</th>
+                      <th scope="col">Online Nummer</th>
+                      <th scope="col">Achternaam</th>
+                      <th scope="col">Voornaam</th>
+                      <th scope="col">Geboortedatum</th>
+                      <th scope="col">Hoofddoel</th>
+
+  
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="personalinfo.html">OSPINA</a></td>
+                      <td><a href="personalinfo.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>EERST</td>                   
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="personalinfo.html">OSPINA</a></td>
+                      <td><a href="personalinfo.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>EERST</td>                        
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="personalinfo.html">OSPINA</a></td>
+                      <td><a href="personalinfo.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>EERST</td>                         
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="personalinfo.html">OSPINA</a></td>
+                      <td><a href="personalinfo.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>EERST</td>                     
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="personalinfo.html">OSPINA</a></td>
+                      <td><a href="personalinfo.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>EERST</td>                         
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="personalinfo.html">OSPINA</a></td>
+                      <td><a href="personalinfo.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>EERST</td>                       
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="personalinfo.html">OSPINA</a></td>
+                      <td><a href="personalinfo.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>EERST</td>                         
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="personalinfo.html">OSPINA</a></td>
+                      <td><a href="personalinfo.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>EERST</td>                      
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End Table with stripped rows -->
+              </div>
+          
+            </div> 
+            </div><!-- End Collapse section aanvraag -->
+
+          
+                      <!-- Collapse section WNP -->
+        <div class="collapse" id="wnp" data-bs-parent="#sector_descriptions">
+
+          <div class="card-body pt-2">
+          <div class="line-container d-flex justify-content-center">
+          <hr class="my-hr">
+          </div>
+                <div class="d-flex flex-row justify-content-end align-items-center">
+              
+                <div>
+                  <button type="button" class="btn custom-blue-btn">Excel</button>
+                  <button type="button" class="btn custom-blue-btn">PDF</button>
+  
+                </div>
+  
+                </div>
+              <div class="table-responsive">
+                <!-- Table with stripped rows -->
+                <table class="table tablenl table-striped table-hover datatable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Werkgever Achternaam</th>
+                      <th scope="col">Werkgever Voornaam</th>
+                      <th scope="col">Geboortedatum</th>
+                      <th scope="col">Nationaliteit</th>
+                      <th scope="col">Adres</th>
+                      <th scope="col">Aanvraag Nummer</th>
+  
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>COLOMBIAANESE</td>
+                      <td>WEG NAAR WESTPUNT 18</td>
+                      <td>350908798</td>                  
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>NEDERLANDSE</td>
+                      <td>WEG NAAR WESTPUNT 18</td>
+                      <td>3509087989</td>  
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>COLOMBIAANESE</td>
+                      <td>WEG NAAR WESTPUNT 18</td>
+                      <td>3509087989</td>                       
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>NEDERLANDSE</td>
+                      <td>WEG NAAR WESTPUNT 18</td>
+                      <td>3509087989</td>                     
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>COLOMBIAANESE</td>
+                      <td>WEG NAAR WESTPUNT 18</td>
+                      <td>3509087989</td>                      
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End Table with stripped rows -->
+              </div>
+          
+            </div> 
+            </div><!-- End Collapse section WNP -->
+
+                      <!-- Collapse section WO -->
+        <div class="collapse" id="wo" data-bs-parent="#sector_descriptions">
+
+          <div class="card-body pt-2">
+          <div class="line-container d-flex justify-content-center">
+          <hr class="my-hr">
+          </div>
+                <div class="d-flex flex-row justify-content-end align-items-center">
+              
+                <div>
+                  <button type="button" class="btn custom-blue-btn">Excel</button>
+                  <button type="button" class="btn custom-blue-btn">PDF</button>
+  
+                </div>
+  
+                </div>
+              <div class="table-responsive">
+                <!-- Table with stripped rows -->
+                <table class="table tablenl table-striped table-hover datatable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Bedrijf/Organisatie</th>
+                      <th scope="col">Aanvraag Nummer</th>
+                      <th scope="col">Online Nummer</th>
+                      <th scope="col">Achternaam</th>
+                      <th scope="col">Voornaam</th>
+                      <th scope="col">Geboortedatum</th>
+
+                      
+  
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">3509087989</a></td>
+                      <td>3509087989</td>
+                      <td>OSPINA</td>
+                      <td>DANIEL</td>
+                      <td>11/12/2000</td>                  
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">3509087989</a></td>
+                      <td>3509087989</td>
+                      <td>OSPINA</td>
+                      <td>DANIEL</td>
+                      <td>11/12/2000</td> 
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">3509087989</a></td>
+                      <td>3509087989</td>
+                      <td>OSPINA</td>
+                      <td>DANIEL</td>
+                      <td>11/12/2000</td>                     
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">3509087989</a></td>
+                      <td>3509087989</td>
+                      <td>OSPINA</td>
+                      <td>DANIEL</td>
+                      <td>11/12/2000</td>                    
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">3509087989</a></td>>
+                      <td>3509087989</td>
+                      <td>OSPINA</td>
+                      <td>DANIEL</td>
+                      <td>11/12/2000</td>                     
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End Table with stripped rows -->
+              </div>
+          
+            </div> 
+            </div><!-- End Collapse section WO -->
+
+                      <!-- Collapse section GNP -->
+        <div class="collapse" id="gnp" data-bs-parent="#sector_descriptions">
+
+          <div class="card-body pt-2">
+          <div class="line-container d-flex justify-content-center">
+          <hr class="my-hr">
+          </div>
+                <div class="d-flex flex-row justify-content-end align-items-center">
+              
+                <div>
+                  <button type="button" class="btn custom-blue-btn">Excel</button>
+                  <button type="button" class="btn custom-blue-btn">PDF</button>
+  
+                </div>
+  
+                </div>
+              <div class="table-responsive">
+                <!-- Table with stripped rows -->
+                <table class="table tablenl table-striped table-hover datatable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Garantsteller Achternaam</th>
+                      <th scope="col">Garantsteller Voornaam</th>
+                      <th scope="col">Geboortedatum</th>
+                      <th scope="col">Nationaliteit</th>
+                      <th scope="col">Adres</th>
+                      <th scope="col">Aanvraag Nummer</th>
+
+                      
+  
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>COLOMBIAANESE</td>
+                      <td>WEG NAAR WESTPUNT 18</td>
+                      <td>350908798</td>                                   
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>NEDERLANDSE</td>
+                      <td>WEG NAAR WESTPUNT 18</td>
+                      <td>350908798</td>                  
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>COLOMBIAANESE</td>
+                      <td>WEG NAAR WESTPUNT 18</td>
+                      <td>350908798</td>                   
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>NEDERLANDSE</td>
+                      <td>WEG NAAR WESTPUNT 18</td>
+                      <td>350908798</td>                 
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">DANIEL</a></td>
+                      <td>11/12/2000</td>
+                      <td>COLOMBIAANESE</td>
+                      <td>WEG NAAR WESTPUNT 18</td>
+                      <td>350908798</td>                    
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End Table with stripped rows -->
+              </div>
+          
+            </div> 
+            </div><!-- End Collapse section GNP -->
+
+                                  <!-- Collapse section GO -->
+        <div class="collapse" id="go" data-bs-parent="#sector_descriptions">
+
+          <div class="card-body pt-2">
+          <div class="line-container d-flex justify-content-center">
+          <hr class="my-hr">
+          </div>
+                <div class="d-flex flex-row justify-content-end align-items-center">
+              
+                <div>
+                  <button type="button" class="btn custom-blue-btn">Excel</button>
+                  <button type="button" class="btn custom-blue-btn">PDF</button>
+  
+                </div>
+  
+                </div>
+              <div class="table-responsive">
+                <!-- Table with stripped rows -->
+                <table class="table tablenl table-striped table-hover datatable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Bedrijf/Organisatie</th>
+                      <th scope="col">Aanvraag Nummer</th>
+                      <th scope="col">Online Nummer</th>
+                      <th scope="col">Achternaam</th>
+                      <th scope="col">Voornaam</th>
+                      <th scope="col">Geboortedatum</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">3509087989</a></td>
+                      <td>3509087989</td>
+                      <td>OSPINA</td>
+                      <td>DANIEL</td>
+                      <td>11/12/2000</td>                                    
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">3509087989</a></td>
+                      <td>3509087989</td>
+                      <td>OSPINA</td>
+                      <td>DANIEL</td>
+                      <td>11/12/2000</td>                  
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">3509087989</a></td>
+                      <td>3509087989</td>
+                      <td>OSPINA</td>
+                      <td>DANIEL</td>
+                      <td>11/12/2000</td>                 
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">3509087989</a></td>
+                      <td>3509087989</td>
+                      <td>OSPINA</td>
+                      <td>DANIEL</td>
+                      <td>11/12/2000</td>                
+                    </tr>
+                    <tr>
+                      <td><a href="aanvragen.html">OSPINA</a></td>
+                      <td><a href="aanvragen.html">3509087989</a></td>
+                      <td>3509087989</td>
+                      <td>OSPINA</td>
+                      <td>DANIEL</td>
+                      <td>11/12/2000</td>                    
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End Table with stripped rows -->
+              </div>
+          
+            </div> 
+            </div><!-- End Collapse section GO -->
            
           </div>
 
