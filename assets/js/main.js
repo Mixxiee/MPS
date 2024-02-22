@@ -359,6 +359,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+  // Initialize collapse trigger
+const radioButtons = document.querySelectorAll('.collapse-trigger');
+radioButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const collapsibleSections = document.querySelectorAll('.collapse');
+        collapsibleSections.forEach(function(section) {
+            if (section.id !== targetId) {
+                section.classList.remove('show'); // Collapse other sections
+            }
+        });
+    });
+});
+
   // Close current tab
 function closeCurrentTab() {
   window.close(); 
