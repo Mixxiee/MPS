@@ -334,30 +334,156 @@ document.addEventListener('DOMContentLoaded', function() {
   // Get reference to all input fields
   const inputFields = document.querySelectorAll('.input-borders');
 
+  // Function to check if any input field has value
+  function checkInputFields() {
+      return Array.from(inputFields).some(function(input) {
+          return input.value.trim() !== '';
+      });
+  }
+
+  // Function to enable or disable submit button
+  function updateSubmitButton() {
+      submitButton.disabled = !checkInputFields();
+  }
+
   // Add input event listener to each input field
   inputFields.forEach(function(inputField) {
       inputField.addEventListener('input', function() {
-          // Check if any input field has value
-          const hasValue = Array.from(inputFields).some(function(input) {
-              return input.value.trim() !== '';
-          });
-
           // Enable or disable the submit button based on whether any input field has value
-          submitButton.disabled = !hasValue;
+          updateSubmitButton();
       });
   });
 
-  // Add click event listener to the submit button
-  submitButton.addEventListener('click', function() {
-      // Determine which form to submit based on some condition
-      const condition = true; // Modify this condition as needed
 
-      // Determine which form to submit based on the condition
-      const formToSubmit = condition ? document.getElementById('form-aanvrager') : document.getElementById('form2');
+ // test
 
-      // Submit the chosen form
-      formToSubmit.submit();
+ 
+ document.addEventListener('DOMContentLoaded', function() {
+  const formTable1 = document.getElementById('form-aanvrager');
+  const formTable2 = document.getElementById('form-aanvraag');
+  const tableContainer = document.getElementById('table-container');
+  const submitButton = document.getElementById('submit-button');
+
+  // Add input event listeners to enable/disable submit button
+  const inputFields1 = formTable1.querySelectorAll('.input-borders');
+  const inputFields2 = formTable2.querySelectorAll('.input-borders');
+
+  inputFields1.forEach(function(inputField) {
+      inputField.addEventListener('input', function() {
+          updateSubmitButton(formTable1);
+      });
   });
+
+  inputFields2.forEach(function(inputField) {
+      inputField.addEventListener('input', function() {
+          updateSubmitButton(formTable2);
+      });
+  });
+
+  // Function to check if any input field in the form has value
+  function checkInputFields(form) {
+      const inputFields = form.querySelectorAll('.input-borders');
+      return Array.from(inputFields).some(function(input) {
+          return input.value.trim() !== '';
+      });
+  }
+
+  // Function to enable or disable submit button based on input field values
+  function updateSubmitButton(form) {
+      submitButton.disabled = !checkInputFields(form);
+  }
+
+    formTable1.addEventListener('submit', function(event) {
+        event.preventDefault();
+        displayTable1();
+    });
+
+    formTable2.addEventListener('submit', function(event) {
+        event.preventDefault();
+        displayTable2();
+    });
+
+    function displayTable1() {
+        const table1HTML = `
+            <div class="table-responsive">
+                <table class="table tablenl table-striped table-hover datatable">
+                    <!-- Table 1 content -->
+                </table>
+            </div>
+        `;
+        tableContainer.innerHTML = table1HTML;
+        // Populate Table 1 with sample data
+        // You can replace this with your actual table content
+        const table1 = document.querySelector('.table-container .table');
+        table1.innerHTML = `
+            <thead>
+                <tr>
+                    <th scope="col">Achternaam</th>
+                    <th scope="col">Voornaam</th>
+                    <th scope="col">Geboortedatum</th>
+                    <th scope="col">Nationaliteit</th>
+                    <th scope="col">Adres</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table 1 rows -->
+            </tbody>
+        `;
+        // Add sample rows to Table 1
+        for (let i = 0; i < 5; i++) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td><a href="personalinfo.html">OSPINA</a></td>
+                <td><a href="personalinfo.html">DANIEL</a></td>
+                <td>11/12/2000</td>
+                <td>COLOMBIAANESE</td>
+                <td>WEG NAAR WESTPUNT 18</td>
+            `;
+            table1.querySelector('tbody').appendChild(row);
+        }
+    }
+
+    function displayTable2() {
+        const table2HTML = `
+            <div class="table-responsive">
+                <table class="table tablenl table-striped table-hover datatable">
+                    <!-- Table 2 content -->
+                </table>
+            </div>
+        `;
+        tableContainer.innerHTML = table2HTML;
+        // Populate Table 2 with sample data
+        // You can replace this with your actual table content
+        const table2 = document.querySelector('.table-container .table');
+        table2.innerHTML = `
+            <thead>
+                <tr>
+                    <th scope="col">Aanvraag Nummer</th>
+                    <th scope="col">Online Nummer</th>
+                    <th scope="col">Achternaam</th>
+                    <th scope="col">Voornaam</th>
+                    <th scope="col">Geboortedatum</th>
+                    <th scope="col">Hoofddoel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table 2 rows -->
+            </tbody>
+        `;
+        // Add sample rows to Table 2
+        for (let i = 0; i < 5; i++) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td><a href="aanvragen.html">8001000914</a></td>
+                <td><a href="aanvragen.html">8001000914</a></td>
+                <td><a href="personalinfo.html">OSPINA</a></td>
+                <td><a href="personalinfo.html">DANIEL</a></td>
+                <td>11/12/2000</td>
+                <td>EERST</td>
+            `;
+            table2.querySelector('tbody').appendChild(row);
+        }
+    }
 });
  
 
@@ -403,18 +529,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-  // Initialize collapse trigger
-const radioButtons = document.querySelectorAll('.collapse-trigger');
-radioButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-        const targetId = this.getAttribute('data-target');
-        const collapsibleSections = document.querySelectorAll('.collapse');
-        collapsibleSections.forEach(function(section) {
-            if (section.id !== targetId) {
-                section.classList.remove('show');
-            }
-        });
-    });
+   // Initialize collapse trigger
+   const radioButtons = document.querySelectorAll('.collapse-trigger');
+   radioButtons.forEach(function(button) {
+       button.addEventListener('click', function() {
+           const targetId = this.getAttribute('data-target');
+           const collapsibleSections = document.querySelectorAll('.collapse');
+           collapsibleSections.forEach(function(section) {
+               if (section.id !== targetId) {
+                   section.classList.remove('show');
+               }
+           });
+
+           // Clear input fields
+           inputFields.forEach(function(input) {
+               input.value = ''; // Reset input field value to empty
+           });
+
+           // Update submit button state after clearing input fields
+           updateSubmitButton();
+       });
+   });
 });
 
   // Close current tab
