@@ -484,36 +484,36 @@
 
 
                 
-					<!-- Werkgever Natuurlijk persoon -->
-          <div data-bs-toggle="collapse" data-bs-target="#wnp" aria-expanded="false" aria-controls="wnp">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input collapse-trigger" type="radio" name="sector" id="wnp_sector" value="0">
-                <label class="form-check-label" for="wnp_sector">Werkgever Natuurlijk persoon</label>
-            </div>
-        </div>
-        
-        <div class="row" id="sector_descriptions">
-            <div class="col-lg-12">
-                <div class="collapse" id="wnp" data-bs-parent="#sector_descriptions">
-                    <div class="card card-body shadow-none">
-                      <form id="form-wnp" method="post"></form>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-4 mb-3">
-                                    <label for="filter1" class="filter-label">Werkgever persoon</label>
-                                    <input type="text" class="form-control input-borders" id="filter1">
-                                </div>
-                                <div class="col-lg-4 mb-3">
-                                    <label for="filter2" class="filter-label">Snel zoeken</label>
-                                    <input type="text" class="form-control input-borders" id="filter2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eerste twee letters achternaam + voornaam + geboortejaar">
-                                </div>
-                            </div>
-                        </div>
-                      </form>
+                  <!-- Werkgever Natuurlijk persoon -->
+                  <div data-bs-toggle="collapse" data-bs-target="#wnp" aria-expanded="false" aria-controls="wnp">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input collapse-trigger" type="radio" name="sector" id="wnp_sector" value="0">
+                        <label class="form-check-label" for="wnp_sector">Werkgever Natuurlijk persoon</label>
                     </div>
                 </div>
-            </div>
-        </div>
+                
+                <div class="row" id="sector_descriptions">
+                    <div class="col-lg-12">
+                        <div class="collapse" id="wnp" data-bs-parent="#sector_descriptions">
+                            <div class="card card-body shadow-none">
+                              <form id="form-wnp" method="post"></form>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4 mb-3">
+                                            <label for="filter1" class="filter-label">Werkgever persoon</label>
+                                            <input type="text" class="form-control input-borders" id="filter1">
+                                        </div>
+                                        <div class="col-lg-4 mb-3">
+                                            <label for="filter2" class="filter-label">Snel zoeken</label>
+                                            <input type="text" class="form-control input-borders" id="filter2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eerste twee letters achternaam + voornaam + geboortejaar">
+                                        </div>
+                                    </div>
+                                </div>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     
 				
 									<!-- Werkgever Organisatie -->
@@ -543,9 +543,8 @@
                     </div>
                 </div>
                 
-						
-						
-											<!-- Garantsteller Natuurlijke persoon  -->
+		
+							     <!-- Garantsteller Natuurlijke persoon  -->
                       <div data-bs-toggle="collapse" data-bs-target="#gnp" aria-expanded="false" aria-controls="gnp">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input collapse-trigger" type="radio" name="sector" id="gnp_sector" value="0">
@@ -576,7 +575,7 @@
                         </div>
                     </div>
 						
-											<!-- Garantsteller Organisatie -->
+										<!-- Garantsteller Organisatie -->
                       <div data-bs-toggle="collapse" data-bs-target="#go" aria-expanded="false" aria-controls="go">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input collapse-trigger" type="radio" name="sector" id="go_sector" value="0">
@@ -604,24 +603,27 @@
                     </div>
 
 
-                <!-- buttons -->
-                <div class="row justify-content-end mt-3">
-                  <div class="col-auto mb-3">
-                    <button type="button" class="btn zoeken-button" id="submit-button" disabled>
-                        <i class="bi bi-search me-2"></i>
-                        Zoeken
-                    </button>
-                </div>
-                
-                  <div class="col-auto mb-3 pe-5">
-                    <button type="button" class="btn sluiten-button" onclick="closeCurrentTab()">SLUITEN</button>
-                  </div>
-                </div>
-                <!-- End buttons -->
+
+
 
                  </ul>
+                 
               </li><!-- End Filter -->
             </ul>
+
+            <!-- buttons -->
+            <div class="row justify-content-end mt-3">
+              <div class="col-md-auto mb-3">
+                  <button type="button" class="btn zoeken-button" id="submit-button" disabled>
+                      <i class="bi bi-search me-2"></i>
+                      Zoeken
+                  </button>
+              </div>
+              <div class="col-md-auto mb-3 pe-5">
+                  <button type="button" class="btn sluiten-button" onclick="closeCurrentTab()">SLUITEN</button>
+              </div>
+            </div>
+            <!-- End buttons -->
 
         <!-- Collapse section Aanvrager -->
         <div class="collapse" id="aanvrager" data-bs-parent="#sector_descriptions">
