@@ -337,10 +337,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleCollapseElements = document.querySelectorAll('.toggle-collapse');
     toggleCollapseElements.forEach(function (element) {
         element.addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent default link behavior
+            event.preventDefault();
             const targetId = this.getAttribute('data-bs-target');
             const target = document.querySelector(targetId);
-            const offsetTop = target.offsetTop; // Get the offset top of the collapsed section
+            const offsetTop = target.offsetTop;
 
             if (target.classList.contains('show')) {
                 target.classList.remove('show');
@@ -348,12 +348,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 target.classList.add('show');
             }
 
-            // Toggle bold font weight on click
+            
             this.classList.toggle('font-bold');
 
-            // Scroll to the collapsed section
+            
             target.scrollIntoView({
-                behavior: 'smooth' // Smooth scrolling
+                behavior: 'smooth'
             });
         });
     });
@@ -367,7 +367,7 @@ radioButtons.forEach(function(button) {
         const collapsibleSections = document.querySelectorAll('.collapse');
         collapsibleSections.forEach(function(section) {
             if (section.id !== targetId) {
-                section.classList.remove('show'); // Collapse other sections
+                section.classList.remove('show');
             }
         });
     });
@@ -377,6 +377,17 @@ radioButtons.forEach(function(button) {
 function closeCurrentTab() {
   window.close(); 
 }
+
+  // Confirmation prompt
+  document.getElementById('saveButton').addEventListener('click', function() {
+    if (confirm("Weet je zeker dat je dit commentaar wilt opslaan?")) {
+      // If the user confirms, submit the form or perform other actions
+      // For example, you can submit the form using JavaScript:
+      // document.getElementById('yourFormId').submit();
+    } else {
+      
+    }
+  });
 
 
 
