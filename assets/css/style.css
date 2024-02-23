@@ -948,6 +948,14 @@ h6 {
   color: rgb(219, 4, 4);
 }
 
+.zoeken-button {
+  color: #fff;
+  background-color: #203b66 ;
+  border-color: #203b66 ;
+  border-width: 2px;
+  padding: 10px 40px;
+}
+
 .nieuwc-button {
   color: #fff;
   background-color: #203b66 ;
