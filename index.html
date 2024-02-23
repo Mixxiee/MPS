@@ -400,225 +400,224 @@
 
                     <!-- Aanvrager -->
                     <div data-bs-toggle="collapse" data-bs-target="#aanvrager" aria-expanded="false" aria-controls="aanvrager">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input collapse-trigger" type="radio" name="sector" id="aanvrager_sector" value="0">
-                            <label class="form-check-label" for="aanvrager_sector">Aanvrager</label>
-                        </div>
-                    </div>
-                    <div class="row" id="sector_descriptions">
-                        <div class="col-lg-12">
-                            <div class="collapse" id="aanvrager" data-bs-parent="#sector_descriptions">
-                                <div class="card card-body shadow-none">
-                                    
-									
-								<div class="container">
-								  <div class="row">
-									<div class="col-lg-3 mb-3">
-									  <label for="filter1" class= "filter-label">Achternaam</label>
-									  <input type="text" class="form-control input-borders" id="filter1">
-									</div>
-									<div class="col-lg-3 mb-3">
-									  <label for="filter2" class= "filter-label">Voornaam</label>
-									  <input type="text" class="form-control input-borders" id="filter2">
-									</div>
-									<div class="col-lg-3 mb-3">
-									  <label for="filter3" class= "filter-label">Geboortedatum</label>
-									  <input type="date" class="form-control input-borders" id="filter3">
-									</div>
-									<div class="col-lg-3 mb-3">
-									  <label for="filter4" class= "filter-label">Adres</label>
-									  <input type="text" class="form-control input-borders" id="filter4">
-									</div>
-									<div class="col-lg-3 mb-3">
-									  <label for="filter5" class= "filter-label">Snelzoeken</label>
-									  <input type="text" class="form-control input-borders" id="filter5">
-									</div>
-								  </div>
-								</div>
-
-																		
-									
-                                </div>
-                            </div>
-                        </div>
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input collapse-trigger" type="radio" name="sector" id="aanvrager_sector" value="0">
+                          <label class="form-check-label" for="aanvrager_sector">Aanvrager</label>
+                      </div>
+                  </div>
+                  
+                  <div class="row" id="sector_descriptions">
+                      <div class="col-lg-12">
+                          <div class="collapse" id="aanvrager" data-bs-parent="#sector_descriptions">
+                              <div class="card card-body shadow-none">
+                                  <form id="form-aanvrager" method="post">
+                                      <div class="container">
+                                          <div class="row">
+                                              <div class="col-lg-3 mb-3">
+                                                  <label for="filter1" class="filter-label">Achternaam</label>
+                                                  <input type="text" class="form-control input-borders" id="filter1">
+                                              </div>
+                                              <div class="col-lg-3 mb-3">
+                                                  <label for="filter2" class="filter-label">Voornaam</label>
+                                                  <input type="text" class="form-control input-borders" id="filter2">
+                                              </div>
+                                              <div class="col-lg-3 mb-3">
+                                                  <label for="filter3" class="filter-label">Geboortedatum</label>
+                                                  <input type="date" class="form-control input-borders" id="filter3">
+                                              </div>
+                                              <div class="col-lg-3 mb-3">
+                                                  <label for="filter4" class="filter-label">Adres</label>
+                                                  <input type="text" class="form-control input-borders" id="filter4">
+                                              </div>
+                                              <div class="col-lg-3 mb-3">
+                                                  <label for="filter5" class="filter-label">Snelzoeken</label>
+                                                  <input type="text" class="form-control input-borders" id="filter5">
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
                     
         
                     <!-- Aanvraag -->
+
                     <div data-bs-toggle="collapse" data-bs-target="#aanvraag" aria-expanded="false" aria-controls="aanvraag">
-                        <div class="form-check form-check-inline collapse-trigger">
-                            <input class="form-check-input collapse-trigger" type="radio" name="sector" id="aanvraag_sector" value="1">
-                            <label class="form-check-label" for="aanvraag_sector">Aanvraag</label>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="collapse" id="aanvraag" data-bs-parent="#sector_descriptions">
-                            <div class="card card-body shadow-none">
-                                
-                              
-                              <div class="container">
-                                <div class="row">
-                                <div class="col-lg-3 mb-3">
-                                  <label for="filter1" class= "filter-label">Aanvraag nummer</label>
-                                  <input type="number" class="form-control input-borders" id="filter1">
-                                </div>
-                                <div class="col-lg-3 mb-3">
-                                  <label for="filter2" class= "filter-label">Online Aanvraag</label>
-                                  <input type="text" class="form-control input-borders" id="filter2">
-                                </div>
-                                <div class="col-lg-3 mb-3">
-                                  <label for="filter3" class= "filter-label">CRV/MPS nummer</label>
-                                  <input type="number" class="form-control input-borders" id="filter3">
-                                </div>
-                                <div class="col-lg-3 mb-3">
-                                  <label for="filter4" class= "filter-label">Aanvraagtype</label>
-                                  <input type="text" class="form-control input-borders" id="filter4">
-                                </div>
-                                </div>
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input collapse-trigger" type="radio" name="sector" id="aanvraag_sector" value="0">
+                          <label class="form-check-label" for="aanvraag_sector">Aanvraag</label>
+                      </div>
+                  </div>
+                  
+                  <div class="row" id="sector_descriptions">
+                      <div class="col-lg-12">
+                          <div class="collapse" id="aanvraag" data-bs-parent="#sector_descriptions">
+                              <div class="card card-body shadow-none">
+                                  <form id="form-aanvraag" method="post">
+                                      <div class="container">
+                                          <div class="row">
+                                            <div class="col-lg-3 mb-3">
+                                              <label for="filter1" class="filter-label">Aanvraag nummer</label>
+                                              <input type="number" class="form-control input-borders" id="filter1">
+                                          </div>
+                                          <div class="col-lg-3 mb-3">
+                                              <label for="filter2" class="filter-label">Online Aanvraag</label>
+                                              <input type="text" class="form-control input-borders" id="filter2">
+                                          </div>
+                                          <div class="col-lg-3 mb-3">
+                                              <label for="filter3" class="filter-label">CRV/MPS nummer</label>
+                                              <input type="number" class="form-control input-borders" id="filter3">
+                                          </div>
+                                          <div class="col-lg-3 mb-3">
+                                              <label for="filter4" class="filter-label">Aanvraagtype</label>
+                                              <input type="text" class="form-control input-borders" id="filter4">
+                                          </div>
+                                          </div>
+                                      </div>
+                                  </form>
                               </div>
+                          </div>
+                      </div>
+                  </div>
 
 
-                            </div>
-                        </div>
-                    </div>
                 
 					<!-- Werkgever Natuurlijk persoon -->
-				    <div data-bs-toggle="collapse" data-bs-target="#wnp" aria-expanded="false" aria-controls="wnp">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input collapse-trigger" type="radio" name="sector" id="wnp_sector" value="0">
-                            <label class="form-check-label" for="wnp_sector">Werkgever Natuurlijk persoon</label>
-                        </div>
+          <div data-bs-toggle="collapse" data-bs-target="#wnp" aria-expanded="false" aria-controls="wnp">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input collapse-trigger" type="radio" name="sector" id="wnp_sector" value="0">
+                <label class="form-check-label" for="wnp_sector">Werkgever Natuurlijk persoon</label>
             </div>
-                    <div class="row" id="sector_descriptions">
-                        <div class="col-lg-12">
-                            <div class="collapse" id="wnp" data-bs-parent="#sector_descriptions">
-                                <div class="card card-body shadow-none">
-                                    
-                                  <div class="container">
-                                    <div class="row">
-                                    <div class="col-lg-4 mb-3">
-                                      <label for="filter1" class= "filter-label">Werkgever persoon</label>
-                                      <input type="text" class="form-control input-borders" id="filter1">
-                                    </div>
-                                    <div class="col-lg-4 mb-3">
-                                      <label for="filter2" class= "filter-label">Snel zoeken</label>
-                                      <input type="text" class="form-control input-borders" id="filter2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eerste twee letters achternaam + voornaam + geboortejaar">
-                                    </div>
-                                    </div>
-                                  </div>
-                  
-
-
+        </div>
+        
+        <div class="row" id="sector_descriptions">
+            <div class="col-lg-12">
+                <div class="collapse" id="wnp" data-bs-parent="#sector_descriptions">
+                    <div class="card card-body shadow-none">
+                      <form id="form-wnp" method="post"></form>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4 mb-3">
+                                    <label for="filter1" class="filter-label">Werkgever persoon</label>
+                                    <input type="text" class="form-control input-borders" id="filter1">
+                                </div>
+                                <div class="col-lg-4 mb-3">
+                                    <label for="filter2" class="filter-label">Snel zoeken</label>
+                                    <input type="text" class="form-control input-borders" id="filter2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eerste twee letters achternaam + voornaam + geboortejaar">
                                 </div>
                             </div>
                         </div>
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
                     
 				
 									<!-- Werkgever Organisatie -->
-				    <div data-bs-toggle="collapse" data-bs-target="#wo" aria-expanded="false" aria-controls="wo">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input collapse-trigger" type="radio" name="sector" id="wo_sector" value="0">
-                            <label class="form-check-label" for="wo_sector">Werkgever Organisatie</label>
-                        </div>
+                  <div data-bs-toggle="collapse" data-bs-target="#wo" aria-expanded="false" aria-controls="wo">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input collapse-trigger" type="radio" name="sector" id="wo_sector" value="0">
+                        <label class="form-check-label" for="wo_sector">Werkgever Organisatie</label>
                     </div>
-                    <div class="row" id="sector_descriptions">
-                        <div class="col-lg-12">
-                            <div class="collapse" id="wo" data-bs-parent="#sector_descriptions">
-                                <div class="card card-body shadow-none">
-                                    
-                                  <div class="container">
+                </div>
+                
+                <div class="row" id="sector_descriptions">
+                    <div class="col-lg-12">
+                        <div class="collapse" id="wo" data-bs-parent="#sector_descriptions">
+                            <div class="card card-body shadow-none">
+                              <form id="form-wo" method="post"></form>
+                                <div class="container">
                                     <div class="row">
-                                    <div class="col-lg-4 mb-3">
-                                      <label for="filter1" class= "filter-label">Werkgever organisatie</label>
-                                      <input type="text" class="form-control input-borders" id="filter1">
+                                        <div class="col-lg-4 mb-3">
+                                            <label for="filter1" class="filter-label">Werkgever organisatie</label>
+                                            <input type="text" class="form-control input-borders" id="filter1">
+                                        </div>
                                     </div>
-                                    </div>
-                                  </div>
-
-
                                 </div>
+                              </form>
                             </div>
                         </div>
+                    </div>
+                </div>
+                
 						
 						
 											<!-- Garantsteller Natuurlijke persoon  -->
-				    <div data-bs-toggle="collapse" data-bs-target="#gnp" aria-expanded="false" aria-controls="gnp">
+                      <div data-bs-toggle="collapse" data-bs-target="#gnp" aria-expanded="false" aria-controls="gnp">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input collapse-trigger" type="radio" name="sector" id="gnp_sector" value="0">
                             <label class="form-check-label" for="gnp_sector">Garantsteller Natuurlijke persoon</label>
                         </div>
                     </div>
+                    
                     <div class="row" id="sector_descriptions">
                         <div class="col-lg-12">
                             <div class="collapse" id="gnp" data-bs-parent="#sector_descriptions">
                                 <div class="card card-body shadow-none">
-                                    
-                                  <div class="container">
-                                    <div class="row">
-                                    <div class="col-lg-4 mb-3">
-                                      <label for="filter1" class= "filter-label">Garantsteller Persoon</label>
-                                      <input type="text" class="form-control input-borders" id="filter1">
+                                  <form id="form-gnp" method="post"></form>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-4 mb-3">
+                                                <label for="filter1" class="filter-label">Garantsteller Persoon</label>
+                                                <input type="text" class="form-control input-borders" id="filter1">
+                                            </div>
+                                            <div class="col-lg-4 mb-3">
+                                                <label for="filter2" class="filter-label">Snel zoeken</label>
+                                                <input type="text" class="form-control input-borders" id="filter2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eerste twee letters achternaam + voornaam + geboortejaar">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-4 mb-3">
-                                      <label for="filter2" class= "filter-label">Snel zoeken</label>
-                                      <input type="text" class="form-control input-borders" id="filter2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eerste twee letters achternaam + voornaam + geboortejaar">
-                                    </div>
-                                    </div>
-                                  </div>
-
-
-
-
-
-
+                                  </form>
                                 </div>
                             </div>
                         </div>
+                    </div>
 						
 											<!-- Garantsteller Organisatie -->
-				    <div data-bs-toggle="collapse" data-bs-target="#go" aria-expanded="false" aria-controls="go">
+                      <div data-bs-toggle="collapse" data-bs-target="#go" aria-expanded="false" aria-controls="go">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input collapse-trigger" type="radio" name="sector" id="go_sector" value="0">
                             <label class="form-check-label" for="go_sector">Garantsteller Organisatie</label>
                         </div>
                     </div>
+                    
                     <div class="row" id="sector_descriptions">
                         <div class="col-lg-12">
                             <div class="collapse" id="go" data-bs-parent="#sector_descriptions">
                                 <div class="card card-body shadow-none">
-
-
-                                  <div class="container">
-                                    <div class="row">
-                                    <div class="col-lg-4 mb-3">
-                                      <label for="filter1" class= "filter-label">Garantsteller organisatie</label>
-                                      <input type="text" class="form-control input-borders" id="filter1">
+                                  <form id="form-go" method="post"></form>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-4 mb-3">
+                                                <label for="filter1" class="filter-label">Garantsteller organisatie</label>
+                                                <input type="text" class="form-control input-borders" id="filter1">
+                                            </div>
+                                        </div>
                                     </div>
-                                    </div>
-                                  </div>
-
-
-
+                                  </form>
                                 </div>
                             </div>
                         </div>
-						
-                </div>
-  
-              </div>
-            </div>
                     </div>
-                      </div>
-
-                 </div>   
 
 
-                <!-- Sluiten button -->
+                <!-- buttons -->
                 <div class="row justify-content-end mt-3">
-                  <div class="col-auto pe-5">
+                  <div class="col-auto mb-3">
+                    <button type="button" class="btn zoeken-button" id="submit-button" disabled>
+                        <i class="bi bi-search me-2"></i>
+                        Zoeken
+                    </button>
+                </div>
+                
+                  <div class="col-auto mb-3 pe-5">
                     <button type="button" class="btn sluiten-button" onclick="closeCurrentTab()">SLUITEN</button>
                   </div>
                 </div>
-                <!-- End Sluiten button -->
+                <!-- End buttons -->
 
                  </ul>
               </li><!-- End Filter -->
@@ -662,14 +661,14 @@
 		                <td>WEG NAAR WESTPUNT 18</td>                    
                   </tr>
                   <tr>
-                    <td><a href="personalinfo.html">OSPINA</a></td>
+                    <td><a href="personalinfo.html">Zimmer</a></td>
                     <td><a href="personalinfo.html">DANIEL</a></td>
                     <td>11/12/2000</td>
 		                <td>NEDERLANDSE</td>
 		                <td>WEG NAAR WESTPUNT 18</td>                    
                   </tr>
                   <tr>
-                    <td><a href="users-profile.html">OSPINA</a></td>
+                    <td><a href="users-profile.html">Blank</a></td>
                     <td><a href="users-profile.html">DANIEL</a></td>
                     <td>11/12/2000</td>
 		                <td>COLOMBIAANESE</td>
@@ -759,16 +758,16 @@
                       <td>EERST</td>                   
                     </tr>
                     <tr>
-                      <td><a href="aanvragen.html">8001000914</a></td>
-                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="aanvragen.html">8002000914</a></td>
+                      <td><a href="aanvragen.html">8002000914</a></td>
                       <td><a href="personalinfo.html">OSPINA</a></td>
                       <td><a href="personalinfo.html">DANIEL</a></td>
                       <td>11/12/2000</td>
                       <td>EERST</td>                        
                     </tr>
                     <tr>
-                      <td><a href="aanvragen.html">8001000914</a></td>
-                      <td><a href="aanvragen.html">8001000914</a></td>
+                      <td><a href="aanvragen.html">8003000914</a></td>
+                      <td><a href="aanvragen.html">8003000914</a></td>
                       <td><a href="personalinfo.html">OSPINA</a></td>
                       <td><a href="personalinfo.html">DANIEL</a></td>
                       <td>11/12/2000</td>
