@@ -326,6 +326,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// submit button trigger
+document.addEventListener('DOMContentLoaded', function() {
+  // Get reference to the submit button
+  const submitButton = document.getElementById('submit-button');
+  // Get reference to all input fields
+  const inputFields = document.querySelectorAll('.input-borders');
+
+  // Add input event listener to each input field
+  inputFields.forEach(function(inputField) {
+      inputField.addEventListener('input', function() {
+          // Check if any input field has value
+          const hasValue = Array.from(inputFields).some(function(input) {
+              return input.value.trim() !== '';
+          });
+
+          // Enable or disable the submit button based on whether any input field has value
+          submitButton.disabled = !hasValue;
+      });
+  });
+
+  // Add click event listener to the submit button
+  submitButton.addEventListener('click', function() {
+      // Determine which form to submit based on some condition
+      const condition = true; // Modify this condition as needed
+
+      // Determine which form to submit based on the condition
+      const formToSubmit = condition ? document.getElementById('form-aanvrager') : document.getElementById('form2');
+
+      // Submit the chosen form
+      formToSubmit.submit();
+  });
+});
  
 
   /**
