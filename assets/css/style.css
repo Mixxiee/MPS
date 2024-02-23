@@ -956,6 +956,14 @@ h6 {
   padding: 10px 40px;
 }
 
+/* Style for disabled button */
+.btn:disabled {
+  background-color: #6c757d;
+  color: #ffffff;
+  cursor: not-allowed; 
+  border-color: #6c757d;
+}
+
 .nieuwc-button {
   color: #fff;
   background-color: #203b66 ;
