@@ -325,52 +325,7 @@ document.addEventListener("DOMContentLoaded", function () {
       perPage: 5
     });
   });
-});
-
-// submit button trigger
-document.addEventListener('DOMContentLoaded', function() {
-  // Get reference to the submit button
-  const submitButton = document.getElementById('submit-button');
-  // Get reference to all input fields
-  const inputFields = document.querySelectorAll('.input-borders');
-
-  // Function to check if any input field has value
-  function checkInputFields() {
-      return Array.from(inputFields).some(function(input) {
-          return input.value.trim() !== '';
-      });
-  }
-
-  // Function to enable or disable submit button
-  function updateSubmitButton() {
-      submitButton.disabled = !checkInputFields();
-  }
-
-  // Add input event listener to each input field
-  inputFields.forEach(function(inputField) {
-      inputField.addEventListener('input', function() {
-          // Enable or disable the submit button based on whether any input field has value
-          updateSubmitButton();
-      });
-  });
-
-  // test
-  document.addEventListener('DOMContentLoaded', function() {
-    const submitButton = document.getElementById('submit-button');
-    const tableContainer = document.getElementById('table-container');
-
-    // Add event listener to the submit button
-    submitButton.addEventListener('click', function() {
-        // Toggle the display style of the table container
-        if (tableContainer.style.display === 'none') {
-            tableContainer.style.display = 'block';
-        } else {
-            tableContainer.style.display = 'none';
-        }
-    });
-});
-
- 
+}); 
 
   /**
    * Autoresize echart charts
@@ -415,26 +370,69 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
    // Initialize collapse trigger
-   const radioButtons = document.querySelectorAll('.collapse-trigger');
-   radioButtons.forEach(function(button) {
-       button.addEventListener('click', function() {
-           const targetId = this.getAttribute('data-target');
-           const collapsibleSections = document.querySelectorAll('.collapse');
-           collapsibleSections.forEach(function(section) {
-               if (section.id !== targetId) {
-                   section.classList.remove('show');
-               }
-           });
+   document.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.querySelectorAll('.collapse-trigger');
 
-           // Clear input fields
-           inputFields.forEach(function(input) {
-               input.value = ''; // Reset input field value to empty
-           });
+    radioButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const collapsibleSections = document.querySelectorAll('.collapse');
+            const sectionToExpand = document.getElementById(targetId);
 
-           // Update submit button state after clearing input fields
-           updateSubmitButton();
-       });
-   });
+            collapsibleSections.forEach(function(section) {
+                if (section.id !== targetId) {
+                    section.classList.remove('show');
+                }
+            });
+
+            // Expand the clicked section
+            sectionToExpand.classList.add('show');
+        });
+    });
+
+    // Get reference to the submit button
+    const submitButton = document.getElementById('submit-button');
+    // Get reference to all input fields
+    const inputFields = document.querySelectorAll('.input-borders');
+
+    // Function to check if any input field has value
+    function checkInputFields() {
+        return Array.from(inputFields).some(function(input) {
+            return input.value.trim() !== '';
+        });
+    }
+
+    // Function to enable or disable submit button
+    function updateSubmitButton() {
+        submitButton.disabled = !checkInputFields();
+    }
+
+    // Add input event listener to each input field
+    inputFields.forEach(function(inputField) {
+        inputField.addEventListener('input', function() {
+            // Enable or disable the submit button based on whether any input field has value
+            updateSubmitButton();
+        });
+    });
+
+    // Add click event listener to the submit button
+    submitButton.addEventListener('click', function() {
+        // Determine which form to submit based on some condition
+        const condition = true; // Modify this condition as needed
+
+        // Determine which form to submit based on the condition
+        const formToSubmit = condition ? document.getElementById('form-aanvrager') : document.getElementById('form2');
+
+        // Submit the chosen form
+        formToSubmit.submit();
+
+        // Get the corresponding section based on the form's data-section attribute
+        const sectionId = formToSubmit.getAttribute('data-section');
+        const section = document.getElementById(sectionId);
+
+        // Expand the corresponding section
+        section.classList.add('show');
+    });
 });
 
   // Close current tab
