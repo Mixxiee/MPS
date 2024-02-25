@@ -357,97 +357,6 @@
     }, 200);
   }
 
-  // Initialize a collapsing a section
-
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   const toggleCollapseElements = document.querySelectorAll(".toggle-collapse");
-  //   toggleCollapseElements.forEach(function (element) {
-  //     element.addEventListener("click", function (event) {
-  //       event.preventDefault();
-  //       const targetId = this.getAttribute("data-bs-target");
-  //       const target = document.querySelector(targetId);
-  //       const offsetTop = target.offsetTop;
-
-  //       if (target.classList.contains("show")) {
-  //         target.classList.remove("show");
-  //       } else {
-  //         target.classList.add("show");
-  //       }
-
-  //       this.classList.toggle("font-bold");
-
-  //       target.scrollIntoView({
-  //         behavior: "smooth",
-  //       });
-  //     });
-  //   });
-  // });
-
-  // // Initialize collapse trigger
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   const radioButtons = document.querySelectorAll(".collapse-trigger");
-
-  //   radioButtons.forEach(function (button) {
-  //     button.addEventListener("click", function () {
-  //       const targetId = this.getAttribute("data-target");
-  //       const collapsibleSections = document.querySelectorAll(".collapse");
-  //       const sectionToExpand = document.getElementById(targetId);
-
-  //       collapsibleSections.forEach(function (section) {
-  //         if (section.id !== targetId) {
-  //           section.classList.remove("show");
-  //         }
-  //       });
-
-  //       // Expand the clicked section
-  //       sectionToExpand.classList.add("show");
-  //     });
-  //   });
-
-  //   // Get reference to the submit button
-  //   const submitButton = document.getElementById("submit-button");
-  //   // Get reference to all input fields
-  //   const inputFields = document.querySelectorAll(".input-borders");
-
-  //   // Function to check if any input field has value
-  //   function checkInputFields() {
-  //     return Array.from(inputFields).some(function (input) {
-  //       return input.value.trim() !== "";
-  //     });
-  //   }
-
-  //   // Function to enable or disable submit button
-  //   function updateSubmitButton() {
-  //     submitButton.disabled = !checkInputFields();
-  //   }
-
-  //   // Add input event listener to each input field
-  //   inputFields.forEach(function (inputField) {
-  //     inputField.addEventListener("input", function () {
-  //       // Enable or disable the submit button based on whether any input field has value
-  //       updateSubmitButton();
-  //     });
-  //   });
-
-  //   // Add click event listener to the submit button
-  //   submitButton.addEventListener("click", function () {
-  //     // Determine which form to submit based on some condition
-  //     const condition = true; // Modify this condition as needed
-
-  //     // Determine which form to submit based on the condition
-  //     const formToSubmit = condition ? document.getElementById("form-aanvrager") : document.getElementById("form2");
-
-  //     // Submit the chosen form
-  //     formToSubmit.submit();
-
-  //     // Get the corresponding section based on the form's data-section attribute
-  //     const sectionId = formToSubmit.getAttribute("data-section");
-  //     const section = document.getElementById(sectionId);
-
-  //     // Expand the corresponding section
-  //     section.classList.add("show");
-  //   });
-  // });
 
   // Close current tab
   function closeCurrentTab() {
@@ -470,6 +379,9 @@
   }
 })();
 
+  /**
+   * Submit button functionalities
+   */
 document.addEventListener("DOMContentLoaded", () => {
   const radioButtons = document.querySelectorAll('#radio__wrapper input[type="radio"]');
   const description = document.querySelectorAll("#sector_descriptions");
@@ -478,11 +390,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const sectionElements = document.querySelectorAll(".collapsable__section");
   const cancelButton = document.getElementById("cancel__button");
   const cancelButtonDestination = document.querySelectorAll(".datatable-pagination");
+  const cancelButtonOriginalLocation = document.querySelector('.cancel-button-original-location');
+
+  let originalSubmitButtonParent;
+
+  // Function to move cancel button to its original location
+  function moveCancelButtonBack() {
+    cancelButtonOriginalLocation.appendChild(cancelButton);
+    originalSubmitButtonParent.appendChild(submitButton);
+  }
+
+  // Function to hide all sections
+  function hideAllSections() {
+    sectionElements.forEach(section => {
+      section.style.display = "none";
+    });
+  }
 
   // Collapse Previous details and expand current one + activate the current button
   radioButtons.forEach((radioButton) => {
     radioButton.addEventListener("click", function (event) {
       description.forEach((el) => (el.style.height = "0px"));
+      hideAllSections(); // Hide all sections first
       const closestParent = radioButton.closest(".main__wrapper");
       const closestParentDesc = closestParent.querySelector("#sector_descriptions");
       const currentForm = closestParent.querySelector("form");
@@ -510,17 +439,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // When Click Submit opens relevent table
+  // When Click Submit opens relevant table
   submitButton.addEventListener("click", () => {
+    hideAllSections(); // Hide all sections first
     radioEl.forEach((radio, i) => {
       if (radio.checked) {
         if (radio.id == sectionElements[i].id) {
           sectionElements[i].style.display = "block";
+          originalSubmitButtonParent = submitButton.parentElement;
           cancelButtonDestination[i].appendChild(cancelButton);
         }
-      } else {
-        sectionElements[i].style.display = "none";
       }
     });
   });
+
+  // Handle cancel button click event
+  cancelButton.addEventListener("click", () => {
+    moveCancelButtonBack();
+    hideAllSections(); // Hide all sections when cancel button is clicked
+  });
+
+  // When Click cancel button destination, move cancel button back to its original location
+  cancelButtonDestination.forEach((destination) => {
+    destination.addEventListener("click", () => {
+      moveCancelButtonBack();
+      hideAllSections(); // Hide all sections when cancel button destination is clicked
+    });
+  });
 });
+
+
+
