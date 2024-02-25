@@ -110,7 +110,7 @@ h6 {
 }
 
 .info-icon i {
-  color: #FFC000;
+  color: #ffc000;
 }
 
 .top-table th {
@@ -523,7 +523,7 @@ h6 {
   list-style: none;
 }
 
-.header-nav>ul {
+.header-nav > ul {
   margin: 0;
   padding: 0;
 }
@@ -692,7 +692,6 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-
   #main,
   #footer {
     margin-left: 300px;
@@ -706,7 +705,6 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-
   .toggle-sidebar #main,
   .toggle-sidebar #footer {
     margin-left: 0;
@@ -822,19 +820,19 @@ h6 {
 /*--------------------------------------------------------------
 # Filters
 --------------------------------------------------------------*/
-.nav-link.custom-bg-blue{
+.nav-link.custom-bg-blue {
   background-color: #203b66;
   border-radius: 0;
 }
 
 .title-text-color {
-  color: #FFFFFF; 
+  color: #ffffff;
   font-weight: 600;
   font-size: 18px;
 }
 
 .icon-color {
-  color: #FFFFFF; 
+  color: #ffffff;
 }
 
 .card-body .filter-border {
@@ -851,7 +849,7 @@ h6 {
   padding: 5px 20px;
   border-radius: 5px;
   border: 2px solid rgba(244, 187, 68, 1);
-  color: #FFC000;
+  color: #ffc000;
   font-weight: 600;
 }
 
@@ -884,9 +882,9 @@ h6 {
 }
 
 .filter-label {
-  font-size: 14px; 
-  color: #203b66; 
-  font-weight: bold
+  font-size: 14px;
+  color: #203b66;
+  font-weight: bold;
 }
 
 /*--------------------------------------------------------------
@@ -895,19 +893,19 @@ h6 {
 
 .my-hr {
   width: 100%;
-  height: 2px; 
+  height: 2px;
   background-color: blue;
 }
 
 .custom-blue-btn {
-  color: #203b66; 
-  border-color: #203b66; 
+  color: #203b66;
+  border-color: #203b66;
 }
 
 .custom-blue-btn:hover {
   color: #fff;
-  background-color: #203b66; 
-  border-color: #203b66; 
+  background-color: #203b66;
+  border-color: #203b66;
 }
 
 .tablenl a {
@@ -926,7 +924,7 @@ h6 {
 
 .my-hr2 {
   width: 100%;
-  height: 2px; 
+  height: 2px;
   background-color: blue;
 }
 
@@ -934,54 +932,54 @@ h6 {
   margin-right: 30px;
 }
 
-.sluiten-button {
+button.sluiten-button {
   color: rgb(219, 4, 4);
-  background-color: #fff; 
+  background-color: #fff;
   border-color: rgb(219, 4, 4);
   border-width: 2px;
   padding: 10px 50px;
 }
 
-.sluiten-button:hover {
+button.sluiten-button:hover {
   background-color: rgba(204, 110, 110, 0.521);
-  border-color: rgb(219, 4, 4); 
+  border-color: rgb(219, 4, 4);
   color: rgb(219, 4, 4);
 }
 
 .zoeken-button {
   color: #fff;
-  background-color: #203b66 ;
-  border-color: #203b66 ;
+  background-color: #203b66;
+  border-color: #203b66;
   border-width: 2px;
   padding: 10px 40px;
 }
 
 .zoeken-button:hover {
   background-color: rgba(34, 35, 90, 0.37);
-  border-color: #203b66b9 ;
-  color: #203b66 ;
+  border-color: #203b66b9;
+  color: #203b66;
 }
 
 /* Style for disabled button */
 .btn:disabled {
   background-color: #6c757d;
   color: #ffffff;
-  cursor: not-allowed; 
+  cursor: not-allowed;
   border-color: #6c757d;
 }
 
 .nieuwc-button {
   color: #fff;
-  background-color: #203b66 ;
-  border-color: #203b66 ;
+  background-color: #203b66;
+  border-color: #203b66;
   border-width: 2px;
   padding: 10px 10px;
 }
 
 .nieuwc-button:hover {
   background-color: rgba(34, 35, 90, 0.37);
-  border-color: #203b66b9 ;
-  color: #203b66 ;
+  border-color: #203b66b9;
+  color: #203b66;
 }
 
 .simpletable tbody td:first-child,
@@ -995,47 +993,47 @@ h6 {
 }
 
 .simpletable thead th {
-    vertical-align: bottom;
-    text-align: left;
-    background-color: #D3D3D3;
-    color: #203b66;
-  }
-
-  .othertable thead th {
-    vertical-align: bottom;
-    text-align: left;
-    background-color: #D3D3D3;
-    color: #203b66;
-  }
-
-  .normaltable thead th {
-    vertical-align: bottom;
-    text-align: left;
-    background-color: #D3D3D3;
-    color: #203b66;
-  }
-
-  .highlighted {
-    color: #203b66;
-  }
-
-  .highlighted2 {
-    font-weight: bold;
-    color: #203b66;
-  }
-  .highlightedul {
-    color: #203b66;
-    text-decoration: underline;
+  vertical-align: bottom;
+  text-align: left;
+  background-color: #d3d3d3;
+  color: #203b66;
 }
 
-  /*--------------------------------------------------------------
+.othertable thead th {
+  vertical-align: bottom;
+  text-align: left;
+  background-color: #d3d3d3;
+  color: #203b66;
+}
+
+.normaltable thead th {
+  vertical-align: bottom;
+  text-align: left;
+  background-color: #d3d3d3;
+  color: #203b66;
+}
+
+.highlighted {
+  color: #203b66;
+}
+
+.highlighted2 {
+  font-weight: bold;
+  color: #203b66;
+}
+.highlightedul {
+  color: #203b66;
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
 # Boxs
 --------------------------------------------------------------*/
 
 .custom-h5heading {
-  color: #203b66; 
-  font-size: 20px; 
-  font-weight: bold; 
+  color: #203b66;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .striped-line {
@@ -1051,13 +1049,12 @@ h6 {
   font-weight: 800;
 }
 
-  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 # Collapsable section
 --------------------------------------------------------------*/
 .font-bold {
   font-weight: bold;
 }
-
 
 /*--------------------------------------------------------------
 # Dashboard
@@ -1163,7 +1160,6 @@ h6 {
   padding: 0;
 }
 
-
 .dashboard .card-icon {
   font-size: 25px;
   line-height: 0;
@@ -1260,7 +1256,7 @@ h6 {
 }
 
 /* News & Updates */
-.dashboard .news .post-item+.post-item {
+.dashboard .news .post-item + .post-item {
   margin-top: 15px;
 }
 
@@ -1526,7 +1522,7 @@ h6 {
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: #4154f1;
   border: 0;
   padding: 10px 30px;
@@ -1535,7 +1531,7 @@ h6 {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #5969f3;
 }
 
@@ -1607,4 +1603,90 @@ h6 {
   text-align: center;
   font-size: 13px;
   color: #012970;
+}
+
+.table-responsive {
+  position: relative;
+}
+
+.datatable-dropdown {
+  position: relative;
+  left: 130px;
+}
+
+.table__custom-buttons {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  z-index: 50;
+}
+
+.collapsable__section {
+  display: none;
+}
+
+.section__details {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s all;
+}
+
+#radio__wrapper .form-check-label {
+  cursor: pointer;
+}
+
+#radio__wrapper input {
+  cursor: pointer;
+}
+
+.datatable-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (max-width: 767px) {
+  .nav-content {
+    padding: 0;
+  }
+
+  .nav-content .card-body {
+    padding: 0;
+  }
+
+  .nav-content .card-body .filter-border {
+    width: 100%;
+  }
+
+  .table__custom-buttons {
+    position: static;
+    justify-content: space-between !important;
+  }
+
+  .datatable-top {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5px;
+  }
+
+  .datatable-dropdown {
+    font-size: 12px;
+    left: 0;
+    margin-right: 5px;
+  }
+
+  .datatable-search {
+    width: 50%;
+  }
+
+  .datatable-search .datatable-input {
+    width: 100%;
+  }
+
+  .datatable-selector {
+    padding: 3px;
+    font-size: 13px;
+  }
 }
