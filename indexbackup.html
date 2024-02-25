@@ -390,7 +390,7 @@
                 
                 <div class="card-body pt-5">
                  <!-- Container with border style -->
-                 <div class="border p-5 filter-border fieldsWrapper"> 
+                 <div class="border p-5 filter-border"> 
                   <!-- The heading -->           
                   <div class="filter-heading">Zoekfilters</div> 
                 <!-- List of round radio buttons -->
@@ -399,17 +399,16 @@
 
 
                     <!-- Aanvrager -->
-                 <div class="main__wrapper">
-                     <div id="radio__wrapper">
+                    <div data-bs-toggle="collapse" data-bs-target="#aanvrager" aria-expanded="false" aria-controls="aanvrager">
                       <div class="form-check form-check-inline">
                           <input class="form-check-input collapse-trigger" type="radio" name="sector" id="aanvrager_sector" value="0">
                           <label class="form-check-label" for="aanvrager_sector">Aanvrager</label>
                       </div>
-                    </div>
+                  </div>
                   
-                  <div class="row section__details" id="sector_descriptions">
+                  <div class="row" id="sector_descriptions">
                       <div class="col-lg-12">
-                          <div id="aanvrager" data-bs-parent="#sector_descriptions">
+                          <div class="collapse" id="aanvrager" data-bs-parent="#sector_descriptions">
                               <div class="card card-body shadow-none">
                                   <form id="form-aanvrager">
                                       <div class="container" class="my-form" data-section="aanvrager">
@@ -441,25 +440,20 @@
                           </div>
                       </div>
                   </div>
-                 </div>
                     
         
                     <!-- Aanvraag -->
 
-                    <div class="main__wrapper">
-
-                    
-
-                    <div id="radio__wrapper">
+                    <div data-bs-toggle="collapse" data-bs-target="#aanvraag" aria-expanded="false" aria-controls="aanvraag">
                       <div class="form-check form-check-inline">
                           <input class="form-check-input collapse-trigger" type="radio" name="sector" id="aanvraag_sector" value="0">
                           <label class="form-check-label" for="aanvraag_sector">Aanvraag</label>
                       </div>
                   </div>
                   
-                  <div class="row section__details" id="sector_descriptions">
+                  <div class="row" id="sector_descriptions">
                       <div class="col-lg-12">
-                          <div id="aanvraag" data-bs-parent="#sector_descriptions">
+                          <div class="collapse" id="aanvraag" data-bs-parent="#sector_descriptions">
                               <div class="card card-body shadow-none">
                                   <form id="form-aanvraag" class="my-form" data-section="aanvraag">
                                       <div class="container">
@@ -488,25 +482,21 @@
                       </div>
                   </div>
 
-</div>
+
                 
                   <!-- Werkgever Natuurlijk persoon -->
-                  <div class="main__wrapper">
-
-                  
-                  
-                  <div id="radio__wrapper">
+                  <div data-bs-toggle="collapse" data-bs-target="#wnp" aria-expanded="false" aria-controls="wnp">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input collapse-trigger" type="radio" name="sector" id="wnp_sector" value="0">
                         <label class="form-check-label" for="wnp_sector">Werkgever Natuurlijk persoon</label>
                     </div>
                 </div>
                 
-                <div class="row section__details" id="sector_descriptions">
+                <div class="row" id="sector_descriptions">
                     <div class="col-lg-12">
-                        <div id="wnp" data-bs-parent="#sector_descriptions">
+                        <div class="collapse" id="wnp" data-bs-parent="#sector_descriptions">
                             <div class="card card-body shadow-none">
-                              <form id="form-wnp" class="my-form" data-section="wnp">
+                              <form id="form-wnp" class="my-form" data-section="wnp"></form>
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-lg-4 mb-3">
@@ -524,25 +514,21 @@
                         </div>
                     </div>
                 </div>
-              </div>
                     
 				
 									<!-- Werkgever Organisatie -->
-
-                  <div class="main__wrapper">
-
-                  <div id="radio__wrapper">
+                  <div data-bs-toggle="collapse" data-bs-target="#wo" aria-expanded="false" aria-controls="wo">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input collapse-trigger" type="radio" name="sector" id="wo_sector" value="0">
                         <label class="form-check-label" for="wo_sector">Werkgever Organisatie</label>
                     </div>
                 </div>
                 
-                <div class="row section__details" id="sector_descriptions">
+                <div class="row" id="sector_descriptions">
                     <div class="col-lg-12">
-                        <div id="wo" data-bs-parent="#sector_descriptions">
+                        <div class="collapse" id="wo" data-bs-parent="#sector_descriptions">
                             <div class="card card-body shadow-none">
-                              <form id="form-wo" class="my-form" data-section="wo">
+                              <form id="form-wo" class="my-form" data-section="wo"></form>
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-lg-4 mb-3">
@@ -556,26 +542,21 @@
                         </div>
                     </div>
                 </div>
-
-                </div>
                 
 		
 							     <!-- Garantsteller Natuurlijke persoon  -->
-
-
-                   <div class="main__wrapper">
-                      <div id="radio__wrapper">
+                      <div data-bs-toggle="collapse" data-bs-target="#gnp" aria-expanded="false" aria-controls="gnp">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input collapse-trigger" type="radio" name="sector" id="gnp_sector" value="0">
                             <label class="form-check-label" for="gnp_sector">Garantsteller Natuurlijke persoon</label>
                         </div>
                     </div>
                     
-                    <div class="row section__details" id="sector_descriptions">
+                    <div class="row" id="sector_descriptions">
                         <div class="col-lg-12">
-                            <div id="gnp" data-bs-parent="#sector_descriptions">
+                            <div class="collapse" id="gnp" data-bs-parent="#sector_descriptions">
                                 <div class="card card-body shadow-none">
-                                  <form id="form-gnp" class="my-form" data-section="gnp">
+                                  <form id="form-gnp" class="my-form" data-section="gnp"></form>
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-lg-4 mb-3">
@@ -593,25 +574,20 @@
                             </div>
                         </div>
                     </div>
-
-                    </div>
 						
 										<!-- Garantsteller Organisatie -->
-
-                    <div class="main__wrapper">
-
-                      <div id="radio__wrapper">
+                      <div data-bs-toggle="collapse" data-bs-target="#go" aria-expanded="false" aria-controls="go">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input collapse-trigger" type="radio" name="sector" id="go_sector" value="0">
                             <label class="form-check-label" for="go_sector">Garantsteller Organisatie</label>
                         </div>
                     </div>
                     
-                    <div class="row section__details" id="sector_descriptions">
+                    <div class="row" id="sector_descriptions">
                         <div class="col-lg-12">
-                            <div id="go" data-bs-parent="#sector_descriptions">
+                            <div class="collapse" id="go" data-bs-parent="#sector_descriptions">
                                 <div class="card card-body shadow-none">
-                                  <form id="form-go" class="my-form" data-section="go">
+                                  <form id="form-go" class="my-form" data-section="go"></form>
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-lg-4 mb-3">
@@ -624,8 +600,11 @@
                                 </div>
                             </div>
                         </div>
-                      </div>
                     </div>
+
+
+
+
 
                  </ul>
                  
@@ -641,14 +620,14 @@
                   </button>
               </div>
               <div class="col-md-auto mb-3 pe-5">
-                  <button id="cancel__button" type="button" class="btn sluiten-button" onclick="closeCurrentTab()">SLUITEN</button>
+                  <button type="button" class="btn sluiten-button" onclick="closeCurrentTab()">SLUITEN</button>
               </div>
             </div>
             <!-- End buttons -->
 
 
         <!-- Collapse section Aanvrager -->
-        <div class="collapsable__section" id="aanvrager_sector" >
+        <div class="collapse" id="aanvrager">
 
           <div class="card-body pt-2">
           <div class="line-container d-flex justify-content-center">
@@ -665,7 +644,7 @@
                 <table class="table tablenl table-striped table-hover datatable">
                   <thead>
                     <tr>
-                      <th scope="col">Achternaam [1]</th>
+                      <th scope="col">Achternaam</th>
                       <th scope="col">Voornaam</th>
                       <th scope="col">Geboortedatum</th>
                       <th scope="col">Nationaliteit</th>
@@ -735,12 +714,11 @@
                 <!-- End Table with stripped rows -->
               </div>
           
-            </div>
+            </div> 
             </div><!-- End Collapse section aanvraager -->
 
           <!-- Collapse section Aanvraag -->
-
-          <div class="collapsable__section" id="aanvraag_sector" >
+        <div class="collapse" id="aanvraag">
 
           <div class="card-body pt-2">
           <div class="line-container d-flex justify-content-center">
@@ -758,7 +736,7 @@
                 <table class="table tablenl table-striped table-hover datatable">
                   <thead>
                     <tr>
-                      <th scope="col">Aanvraag Nummer [2]</th>
+                      <th scope="col">Aanvraag Nummer</th>
                       <th scope="col">Online Nummer</th>
                       <th scope="col">Achternaam</th>
                       <th scope="col">Voornaam</th>
@@ -843,7 +821,7 @@
 
           
                       <!-- Collapse section WNP -->
-          <div class="collapsable__section" id="wnp_sector" >
+        <div class="collapse" id="wnp">
 
           <div class="card-body pt-2">
           <div class="line-container d-flex justify-content-center">
@@ -862,7 +840,7 @@
                 <table class="table tablenl table-striped table-hover datatable">
                   <thead>
                     <tr>
-                      <th scope="col">Werkgever Achternaam [3]</th>
+                      <th scope="col">Werkgever Achternaam</th>
                       <th scope="col">Werkgever Voornaam</th>
                       <th scope="col">Geboortedatum</th>
                       <th scope="col">Nationaliteit</th>
@@ -920,7 +898,7 @@
             </div><!-- End Collapse section WNP -->
 
                       <!-- Collapse section WO -->
-          <div class="collapsable__section" id="wo_sector" >
+        <div class="collapse" id="wo">
 
           <div class="card-body pt-2">
           <div class="line-container d-flex justify-content-center">
@@ -935,7 +913,7 @@
                 <table class="table tablenl table-striped table-hover datatable">
                   <thead>
                     <tr>
-                      <th scope="col">Bedrijf/Organisatie [4]</th>
+                      <th scope="col">Bedrijf/Organisatie</th>
                       <th scope="col">Aanvraag Nummer</th>
                       <th scope="col">Online Nummer</th>
                       <th scope="col">Achternaam</th>
@@ -993,7 +971,7 @@
             <!-- End Collapse section WO -->
 
                       <!-- Collapse section GNP -->
-          <div class="collapsable__section" id="gnp_sector" >
+        <div class="collapse" id="gnp">
 
           <div class="card-body pt-2">
           <div class="line-container d-flex justify-content-center">
@@ -1015,7 +993,7 @@
                 <table class="table tablenl table-striped table-hover datatable">
                   <thead>
                     <tr>
-                      <th scope="col">Garantsteller Achternaam [5]</th>
+                      <th scope="col">Garantsteller Achternaam</th>
                       <th scope="col">Garantsteller Voornaam</th>
                       <th scope="col">Geboortedatum</th>
                       <th scope="col">Nationaliteit</th>
@@ -1075,7 +1053,7 @@
             </div><!-- End Collapse section GNP -->
 
                                   <!-- Collapse section GO -->
-        <div class="collapsable__section" id="go_sector">
+        <div class="collapse" id="go">
 
           <div class="card-body pt-2">
           <div class="line-container d-flex justify-content-center">
@@ -1095,7 +1073,7 @@
                 <table class="table tablenl table-striped table-hover datatable">
                   <thead>
                     <tr>
-                      <th scope="col">Bedrijf/Organisatie [6]</th>
+                      <th scope="col">Bedrijf/Organisatie</th>
                       <th scope="col">Aanvraag Nummer</th>
                       <th scope="col">Online Nummer</th>
                       <th scope="col">Achternaam</th>
@@ -1175,10 +1153,6 @@
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-
-  <!-- Custom Script -->
-
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
