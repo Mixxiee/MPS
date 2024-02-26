@@ -1605,11 +1605,20 @@ h6 {
   color: #012970;
 }
 
+/*--------------------------------------------------------------
+# Other
+--------------------------------------------------------------*/
+
 .table-responsive {
   position: relative;
 }
 
-.datatable-dropdown {
+.collapsable__section .datatable-dropdown {
+  position: relative;
+  left: 130px;
+}
+
+#ao-nav .datatable-dropdown {
   position: relative;
   left: 130px;
 }
