@@ -379,9 +379,6 @@
   }
 })();
 
-  /**
-   * Submit button functionalities
-   */
 document.addEventListener("DOMContentLoaded", () => {
   const radioButtons = document.querySelectorAll('#radio__wrapper input[type="radio"]');
   const description = document.querySelectorAll("#sector_descriptions");
@@ -407,11 +404,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Function to clear input fields of other radio buttons
+  function clearOtherInputFields(currentRadio) {
+    radioButtons.forEach(radioButton => {
+      if (radioButton !== currentRadio) {
+        const form = radioButton.closest('.main__wrapper').querySelector('form');
+        if (form) {
+          form.reset();
+        }
+      }
+    });
+  }
+
   // Collapse Previous details and expand current one + activate the current button
   radioButtons.forEach((radioButton) => {
     radioButton.addEventListener("click", function (event) {
       description.forEach((el) => (el.style.height = "0px"));
       hideAllSections(); // Hide all sections first
+      clearOtherInputFields(radioButton); // Clear input fields of other radio buttons
       const closestParent = radioButton.closest(".main__wrapper");
       const closestParentDesc = closestParent.querySelector("#sector_descriptions");
       const currentForm = closestParent.querySelector("form");
@@ -451,6 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
+    submitButton.disabled = true; // Disable the submit button when clicked
   });
 
   // Handle cancel button click event
@@ -467,6 +478,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+
+
 
 
 
