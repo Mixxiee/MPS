@@ -363,7 +363,7 @@
     window.close();
   }
 
-  //   // Confirmation prompt
+  // Confirmation prompt
 
   const saveButton = document.getElementById("saveButton");
 
@@ -379,6 +379,37 @@
   }
 })();
 
+  // Initialize a collapsing a section
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleCollapseElements = document.querySelectorAll('.toggle-collapse');
+    toggleCollapseElements.forEach(function (element) {
+        element.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('data-bs-target');
+            const target = document.querySelector(targetId);
+            const offsetTop = target.offsetTop;
+
+            if (target.classList.contains('show')) {
+                target.classList.remove('show');
+            } else {
+                target.classList.add('show');
+            }
+
+            
+            this.classList.toggle('font-bold');
+
+            
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+
+  /**
+   * Submit button/Radio button handlers 
+   */
 document.addEventListener("DOMContentLoaded", () => {
   const radioButtons = document.querySelectorAll('#radio__wrapper input[type="radio"]');
   const description = document.querySelectorAll("#sector_descriptions");
@@ -449,7 +480,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // When Click Submit opens relevant table
+  // Click Submit to open relevant table
   submitButton.addEventListener("click", () => {
     hideAllSections(); // Hide all sections first
     radioEl.forEach((radio, i) => {
@@ -470,7 +501,7 @@ document.addEventListener("DOMContentLoaded", () => {
     hideAllSections(); // Hide all sections when cancel button is clicked
   });
 
-  // When Click cancel button destination, move cancel button back to its original location
+  // Click cancel button destination, to move cancel button back to its original location
   cancelButtonDestination.forEach((destination) => {
     destination.addEventListener("click", () => {
       moveCancelButtonBack();
