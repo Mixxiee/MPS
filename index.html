@@ -17,8 +17,8 @@
   <link rel="stylesheet" type="text/css" href="assets/evo-calendar.css"/>
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/actslogo.png" rel="icon">
+  <link href="assets/img/actslogo.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -56,14 +56,16 @@
         <span class="d-none d-lg-block">ACTFMS</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
-    </div><!-- End Logo -->
+    </div>
+    <!-- End Logo -->
 
     <div class="search-bar">
       <form class="search-form d-flex align-items-center" method="POST" action="#">
         <input type="text" name="query" placeholder="Zoek" title="Enter search keyword">
         <button type="submit" title="Search"><i class="bi bi-search"></i></button>
       </form>
-    </div><!-- End Search Bar -->
+    </div>
+    <!-- End Search Bar -->
 
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
@@ -79,7 +81,8 @@
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-bell"></i>
             <span class="badge bg-primary badge-number">4</span>
-          </a><!-- End Notification Icon -->
+          </a>
+          <!-- End Notification Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
             <li class="dropdown-header">
@@ -145,9 +148,11 @@
               <a href="#">Show all notifications</a>
             </li>
 
-          </ul><!-- End Notification Dropdown Items -->
+          </ul>
+          <!-- End Notification Dropdown Items -->
 
-        </li><!-- End Notification Nav -->
+        </li>
+        <!-- End Notification Nav -->
 
         <li class="nav-item dropdown">
 
@@ -213,7 +218,8 @@
 
           </ul><!-- End Messages Dropdown Items -->
 
-        </li><!-- End Messages Nav -->
+        </li>
+        <!-- End Messages Nav -->
 
         
 
@@ -251,10 +257,12 @@
             </li>
 
           </ul><!-- End Profile Dropdown Items -->
-        </li><!-- End Profile Nav -->
+        </li>
+        <!-- End Profile Nav -->
 
       </ul>
-    </nav><!-- End Icons Navigation -->
+    </nav>
+    <!-- End Icons Navigation -->
 
   </header><!-- End Header -->
 
@@ -269,7 +277,7 @@
         </a>
         <ul id="settings-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-          <!-- Default Card -->
+          <!-- First Card -->
           <div class="card info-card revenue-card shadow">
             <div class="card-body">
                 <div class="pt-3">
@@ -293,11 +301,12 @@
                     </div>
                 </div>
             </div>
-        </div>
-		
-	<!-- End Default Card -->
-          </li>
+          </div>
+          <!-- End First Card -->
+          </li>			         
+          
           <li>
+            <!-- Second Card -->
             <div class="card info-card revenue-card shadow">
               <div class="card-body">
                   <div class="pt-3">
@@ -321,9 +330,12 @@
                       </div>
                   </div>
               </div>
-          </div>
+            </div>
+            <!-- End Second Card -->
           </li>
+
           <li>
+            <!-- Third Card -->
             <div class="card info-card revenue-card shadow">
               <div class="card-body">
                   <div class="pt-3">
@@ -347,20 +359,26 @@
                       </div>
                   </div>
               </div>
-          </div>
+            </div>
+            <!-- End Third Card -->
           </li>
         </ul>
-      </li><!-- End Settings Nav -->
-      </section>
+      </li>
+      <!-- End Historisch Nav -->
+      
 
       <li class="nav-item">
         <a class="nav-link " href="index.html">
           <i class="bi bi-house"></i>
           <span>Dashboard</span>
         </a>
-      </li><!-- End Dashboard Nav -->
+      </li>
+      <!-- End Dashboard Nav -->
+     </section>
     </ul>
-  </aside><!-- End Sidebar-->
+
+  </aside>
+  <!-- End Sidebar-->
 
   <main id="main" class="main">
 
@@ -385,29 +403,28 @@
                       <span class="title-text-color">Aanvrager</span>
                       <i class="bi bi-chevron-down ms-auto icon-color"></i>
                   </a>
-                  <ul id="support-nav" class="nav-content show" data-bs-parent="#sidebar-nav">
+                  <ul id="support-nav" class="nav-content show">
 
                 
-                <div class="card-body pt-5">
-                 <!-- Container with border style -->
-                 <div class="border p-5 filter-border fieldsWrapper"> 
-                  <!-- The heading -->           
-                  <div class="filter-heading">Zoekfilters</div> 
-                <!-- List of round radio buttons -->
-                <label class="form-label">Voer de gegevens in van het verzoek dat u wilt vinden</label>
+                   <div class="card-body pt-5">
+                     <!-- Container with border style -->
+                     <div class="border p-5 filter-border fieldsWrapper"> 
+                        <!-- The heading -->           
+                        <div class="filter-heading">Zoekfilters</div> 
+                           <!-- List of round radio buttons -->
+                           <label class="form-label">Voer de gegevens in van het verzoek dat u wilt vinden</label>
         
 
-
-                    <!-- Aanvrager -->
-                 <div class="main__wrapper">
+                  <!-- Aanvrager -->
+                  <div class="main__wrapper">
                      <div id="radio__wrapper">
                       <div class="form-check form-check-inline">
                           <input class="form-check-input collapse-trigger" type="radio" name="sector" id="aanvrager_sector" value="0">
                           <label class="form-check-label" for="aanvrager_sector">Aanvrager</label>
                       </div>
-                    </div>
+                     </div>
                   
-                  <div class="row section__details" id="sector_descriptions">
+                    <div class="row section__details" id="sector_descriptions">
                       <div class="col-lg-12">
                           <div id="aanvrager" data-bs-parent="#sector_descriptions">
                               <div class="card card-body shadow-none">
@@ -440,13 +457,12 @@
                               </div>
                           </div>
                       </div>
+                    </div>
                   </div>
-                 </div>
-                    
-        
-                    <!-- Aanvraag -->
-
-                    <div class="main__wrapper">
+                  <!-- End Aanvrager -->
+                           
+                  <!-- Aanvraag -->
+                  <div class="main__wrapper">
 
                     
 
@@ -455,7 +471,7 @@
                           <input class="form-check-input collapse-trigger" type="radio" name="sector" id="aanvraag_sector" value="0">
                           <label class="form-check-label" for="aanvraag_sector">Aanvraag</label>
                       </div>
-                  </div>
+                    </div>
                   
                   <div class="row section__details" id="sector_descriptions">
                       <div class="col-lg-12">
@@ -488,7 +504,8 @@
                       </div>
                   </div>
 
-                    </div>
+                  </div>
+                  <!-- End Aanvraag -->
                 
                   <!-- Werkgever Natuurlijk persoon -->
                   <div class="main__wrapper">
@@ -500,7 +517,7 @@
                         <input class="form-check-input collapse-trigger" type="radio" name="sector" id="wnp_sector" value="0">
                         <label class="form-check-label" for="wnp_sector">Werkgever Natuurlijk persoon</label>
                     </div>
-                </div>
+                  </div>
                 
                 <div class="row section__details" id="sector_descriptions">
                     <div class="col-lg-12">
@@ -524,12 +541,10 @@
                         </div>
                     </div>
                 </div>
-                </div>
-              
-                    
-				
+                  </div>
+                  <!-- End Werkgever Natuurlijk persoon -->
+                
 									<!-- Werkgever Organisatie -->
-
                   <div class="main__wrapper">
 
                   <div id="radio__wrapper">
@@ -537,7 +552,7 @@
                         <input class="form-check-input collapse-trigger" type="radio" name="sector" id="wo_sector" value="0">
                         <label class="form-check-label" for="wo_sector">Werkgever Organisatie</label>
                     </div>
-                </div>
+                  </div>
                 
                 <div class="row section__details" id="sector_descriptions">
                     <div class="col-lg-12">
@@ -558,19 +573,17 @@
                     </div>
                 </div>
 
-                </div>
-                
+                  </div>
+                  <!-- End Werkgever Organisatie -->
 		
-							     <!-- Garantsteller Natuurlijke persoon  -->
-
-
-                   <div class="main__wrapper">
+							    <!-- Garantsteller Natuurlijke persoon  -->
+                  <div class="main__wrapper">
                       <div id="radio__wrapper">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input collapse-trigger" type="radio" name="sector" id="gnp_sector" value="0">
                             <label class="form-check-label" for="gnp_sector">Garantsteller Natuurlijke persoon</label>
                         </div>
-                    </div>
+                      </div>
                     
                     <div class="row section__details" id="sector_descriptions">
                         <div class="col-lg-12">
@@ -595,18 +608,18 @@
                         </div>
                     </div>
 
-                    </div>
+                  </div>
+                  <!-- End Garantsteller Natuurlijke persoon  -->
 						
-										<!-- Garantsteller Organisatie -->
-
-                    <div class="main__wrapper">
+								  <!-- Garantsteller Organisatie -->
+                  <div class="main__wrapper">
 
                       <div id="radio__wrapper">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input collapse-trigger" type="radio" name="sector" id="go_sector" value="0">
                             <label class="form-check-label" for="go_sector">Garantsteller Organisatie</label>
                         </div>
-                    </div>
+                      </div>
                     
                     <div class="row section__details" id="sector_descriptions">
                         <div class="col-lg-12">
@@ -626,30 +639,34 @@
                             </div>
                         </div>
                       </div>
+                  </div>
+                  <!-- End Garantsteller Organisatie -->
+
+                     </div>
+                   </div>
+
+                   <!-- buttons -->
+                    <div class="row justify-content-end mt-3">
+                      <div class="col-md-auto mb-3">
+                        <button type="button" class="btn zoeken-button" id="submit-button" data-bs-target="aanvrager" disabled>
+                        <i class="bi bi-search me-2"></i>
+                        Zoeken
+                        </button>
+                      </div>
+                      <div class="col-md-auto mb-3 pe-5 cancel-button-original-location">
+                        <button id="cancel__button" type="button" class="btn sluiten-button">SLUITEN</button>
+                      </div>
                     </div>
+                   <!-- End buttons -->
 
                  </ul>
-                 
               </li><!-- End Filter -->
             </ul>
 
-            <!-- buttons -->
-            <div class="row justify-content-end mt-3">
-              <div class="col-md-auto mb-3">
-                  <button type="button" class="btn zoeken-button" id="submit-button" data-bs-target="aanvrager" disabled>
-                      <i class="bi bi-search me-2"></i>
-                      Zoeken
-                  </button>
-              </div>
-              <div class="col-md-auto mb-3 pe-5 cancel-button-original-location">
-                  <button id="cancel__button" type="button" class="btn sluiten-button">SLUITEN</button>
-              </div>
-            </div>
-            <!-- End buttons -->
 
 
-        <!-- Collapse section Aanvrager -->
-        <div class="collapsable__section" id="aanvrager_sector" >
+          <!-- Collapse section aanvrager -->
+          <div class="collapsable__section" id="aanvrager_sector" >
 
           <div class="card-body pt-2">
           <div class="line-container d-flex justify-content-center">
@@ -737,10 +754,10 @@
               </div>
           
             </div>
-            </div><!-- End Collapse section aanvraager -->
+          </div>
+          <!-- End Collapse section aanvraager -->
 
-          <!-- Collapse section Aanvraag -->
-
+          <!-- Collapse section aanvraag -->
           <div class="collapsable__section" id="aanvraag_sector" >
 
           <div class="card-body pt-2">
@@ -840,10 +857,10 @@
               </div>
           
             </div> 
-            </div><!-- End Collapse section aanvraag -->
+          </div>
+          <!-- End Collapse section aanvraag -->
 
-          
-                      <!-- Collapse section WNP -->
+          <!-- Collapse section WNP -->
           <div class="collapsable__section" id="wnp_sector" >
 
           <div class="card-body pt-2">
@@ -918,9 +935,10 @@
               </div>
           
             </div> 
-            </div><!-- End Collapse section WNP -->
+          </div>
+          <!-- End Collapse section WNP -->
 
-                      <!-- Collapse section WO -->
+          <!-- Collapse section WO -->
           <div class="collapsable__section" id="wo_sector" >
 
           <div class="card-body pt-2">
@@ -990,10 +1008,10 @@
               </div>
           
             </div> 
-            </div>
-            <!-- End Collapse section WO -->
+          </div>
+          <!-- End Collapse section WO -->
 
-                      <!-- Collapse section GNP -->
+          <!-- Collapse section GNP -->
           <div class="collapsable__section" id="gnp_sector" >
 
           <div class="card-body pt-2">
@@ -1073,10 +1091,11 @@
               </div>
           
             </div> 
-            </div><!-- End Collapse section GNP -->
+          </div>
+          <!-- End Collapse section GNP -->
 
-                      <!-- Collapse section GO -->
-        <div class="collapsable__section" id="go_sector">
+          <!-- Collapse section GO -->
+          <div class="collapsable__section" id="go_sector">
 
           <div class="card-body pt-2">
           <div class="line-container d-flex justify-content-center">
@@ -1150,7 +1169,8 @@
               </div>
           
             </div> 
-            </div><!-- End Collapse section GO -->
+          </div>
+          <!-- End Collapse section GO -->
            
           </div>
 
