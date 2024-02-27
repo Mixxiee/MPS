@@ -1,5 +1,5 @@
 /**
-* Template Name: NiceAdmin
+* Template Name: NiceAdmins
 * Updated: Aug 30 2023 with Bootstrap v5.3.1
 * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
 * Author: BootstrapMade.com
@@ -1054,6 +1054,32 @@ h6 {
 --------------------------------------------------------------*/
 .font-bold {
   font-weight: bold;
+}
+
+.collapse-button-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  margin-right: -35px;
+}
+
+#collapseBeschikkingButton,
+#collapseAdviesButton {
+  font-size: 26px;
+  color: #012970;
+  border: none;
+  background: none;
+  position: absolute;
+}
+
+#collapseBeschikkingButton{
+  top: 10px;
+  right: 10px;
+}
+
+#collapseAdviesButton {
+  top: 10px;
 }
 
 /*--------------------------------------------------------------
