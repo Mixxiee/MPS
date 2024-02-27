@@ -378,31 +378,58 @@
   }
 })();
 
-// Initialize a collapsing a section
+  // Initialize a collapsing a section
 
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleCollapseElements = document.querySelectorAll(".toggle-collapse");
-  toggleCollapseElements.forEach(function (element) {
-    element.addEventListener("click", function (event) {
-      event.preventDefault();
-      const targetId = this.getAttribute("data-bs-target");
-      const target = document.querySelector(targetId);
-      const offsetTop = target.offsetTop;
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleCollapseElements = document.querySelectorAll('.toggle-collapse');
+    toggleCollapseElements.forEach(function (element) {
+        element.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('data-bs-target');
+            const target = document.querySelector(targetId);
+            const offsetTop = target.offsetTop;
 
-      if (target.classList.contains("show")) {
-        target.classList.remove("show");
-      } else {
-        target.classList.add("show");
-      }
+            if (target.classList.contains('show')) {
+                target.classList.remove('show');
+            } else {
+                target.classList.add('show');
+            }
 
-      this.classList.toggle("font-bold");
+            this.classList.toggle('font-bold');
 
-      target.scrollIntoView({
-        behavior: "smooth",
-      });
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
-  });
+
+    // Function to collapse the specified section
+    function collapseSection(sectionId) {
+        const section = document.querySelector(sectionId);
+        if (section) {
+            if (section.classList.contains('show')) {
+                section.classList.remove('show');
+            }
+        }
+    }
+
+    // Function to handle collapsing Beschikking section
+    const collapseBeschikkingButton = document.getElementById('collapseBeschikkingButton');
+    if (collapseBeschikkingButton) {
+        collapseBeschikkingButton.addEventListener('click', function () {
+            collapseSection('#tableCollapse');
+        });
+    }
+
+    // Function to handle collapsing Advies section
+    const collapseAdviesButton = document.getElementById('collapseAdviesButton');
+    if (collapseAdviesButton) {
+        collapseAdviesButton.addEventListener('click', function () {
+            collapseSection('#sectiontCollapse');
+        });
+    }
 });
+
 
 /**
  * Submit button/Radio button handlers
