@@ -1,1219 +1,1156 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ACTFMS</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-  <title>ACTFMS</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Calendar -->
+    <link rel="stylesheet" type="text/css" href="assets/jsCalendar.css" />
+    <script type="text/javascript" src="assets/jsCalendar.js"></script>
 
-  <!-- Calendar -->
-  <link rel="stylesheet" type="text/css" href="assets/jsCalendar.css">
-  <script type="text/javascript" src="assets/jsCalendar.js"></script>
+    <!-- evoCalendar -->
+    <link rel="stylesheet" type="text/css" href="assets/evo-calendar.css" />
 
-  <!-- evoCalendar -->
-  <link rel="stylesheet" type="text/css" href="assets/evo-calendar.css"/>
+    <!-- Favicons -->
+    <link href="assets/img/actslogo.png" rel="icon" />
+    <link href="assets/img/actslogo.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/actslogo.png" rel="icon">
-  <link href="assets/img/actslogo.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet" />
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet" />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
+    <!-- =======================================================
   * Template Name: NiceAdmin
   * Updated: Aug 30 2023 with Bootstrap v5.3.1
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/actslogo.png" alt="" />
+          <span class="d-none d-lg-block">ACTFMS</span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+      </div>
+      <!-- End Logo -->
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
+      <div class="search-bar">
+        <form class="search-form d-flex align-items-center" method="POST" action="#">
+          <input type="text" name="query" placeholder="Zoek" title="Enter search keyword" />
+          <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+      <!-- End Search Bar -->
 
-    <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/actslogo.png" alt="">
-        <span class="d-none d-lg-block">ACTFMS</span>
-      </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
-    </div>
-    <!-- End Logo -->
+      <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+          <li class="nav-item d-block d-lg-none">
+            <a class="nav-link nav-icon search-bar-toggle" href="#">
+              <i class="bi bi-search"></i>
+            </a>
+          </li>
+          <!-- End Search Icon-->
 
-    <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Zoek" title="Enter search keyword">
-        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-      </form>
-    </div>
-    <!-- End Search Bar -->
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+              <i class="bi bi-bell"></i>
+              <span class="badge bg-primary badge-number">4</span>
+            </a>
+            <!-- End Notification Icon -->
 
-    <nav class="header-nav ms-auto">
-      <ul class="d-flex align-items-center">
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+              <li class="dropdown-header">
+                You have 4 new notifications
+                <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
 
-        <li class="nav-item d-block d-lg-none">
-          <a class="nav-link nav-icon search-bar-toggle " href="#">
-            <i class="bi bi-search"></i>
-          </a>
-        </li><!-- End Search Icon-->
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-bell"></i>
-            <span class="badge bg-primary badge-number">4</span>
-          </a>
-          <!-- End Notification Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-            <li class="dropdown-header">
-              You have 4 new notifications
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-exclamation-circle text-warning"></i>
-              <div>
-                <h4>Lorem Ipsum</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>30 min. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-x-circle text-danger"></i>
-              <div>
-                <h4>Atque rerum nesciunt</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>1 hr. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-check-circle text-success"></i>
-              <div>
-                <h4>Sit rerum fuga</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>2 hrs. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-info-circle text-primary"></i>
-              <div>
-                <h4>Dicta reprehenderit</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>4 hrs. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li class="dropdown-footer">
-              <a href="#">Show all notifications</a>
-            </li>
-
-          </ul>
-          <!-- End Notification Dropdown Items -->
-
-        </li>
-        <!-- End Notification Nav -->
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-chat-left-text"></i>
-            <span class="badge bg-success badge-number">3</span>
-          </a><!-- End Messages Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-            <li class="dropdown-header">
-              You have 3 new messages
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+              <li class="notification-item">
+                <i class="bi bi-exclamation-circle text-warning"></i>
                 <div>
-                  <h4>Maria Hudson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <h4>Lorem Ipsum</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>30 min. ago</p>
+                </div>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li class="notification-item">
+                <i class="bi bi-x-circle text-danger"></i>
+                <div>
+                  <h4>Atque rerum nesciunt</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>1 hr. ago</p>
+                </div>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li class="notification-item">
+                <i class="bi bi-check-circle text-success"></i>
+                <div>
+                  <h4>Sit rerum fuga</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>2 hrs. ago</p>
+                </div>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+
+              <li class="notification-item">
+                <i class="bi bi-info-circle text-primary"></i>
+                <div>
+                  <h4>Dicta reprehenderit</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
                   <p>4 hrs. ago</p>
                 </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+              </li>
 
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Anna Nelson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>6 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li class="dropdown-footer">
+                <a href="#">Show all notifications</a>
+              </li>
+            </ul>
+            <!-- End Notification Dropdown Items -->
+          </li>
+          <!-- End Notification Nav -->
 
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>David Muldon</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>8 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+              <i class="bi bi-chat-left-text"></i>
+              <span class="badge bg-success badge-number">3</span> </a
+            ><!-- End Messages Icon -->
 
-            <li class="dropdown-footer">
-              <a href="#">Show all messages</a>
-            </li>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+              <li class="dropdown-header">
+                You have 3 new messages
+                <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
 
-          </ul><!-- End Messages Dropdown Items -->
+              <li class="message-item">
+                <a href="#">
+                  <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle" />
+                  <div>
+                    <h4>Maria Hudson</h4>
+                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                    <p>4 hrs. ago</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
 
-        </li>
-        <!-- End Messages Nav -->
+              <li class="message-item">
+                <a href="#">
+                  <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle" />
+                  <div>
+                    <h4>Anna Nelson</h4>
+                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                    <p>6 hrs. ago</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
 
-        
+              <li class="message-item">
+                <a href="#">
+                  <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle" />
+                  <div>
+                    <h4>David Muldon</h4>
+                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                    <p>8 hrs. ago</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
 
-        <li class="nav-item dropdown pe-3">
+              <li class="dropdown-footer">
+                <a href="#">Show all messages</a>
+              </li>
+            </ul>
+            <!-- End Messages Dropdown Items -->
+          </li>
+          <!-- End Messages Nav -->
 
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">J. Doe</span>
-          </a><!-- End Profile Image Icon -->
+          <li class="nav-item dropdown pe-3">
+            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+              <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle" />
+              <span class="d-none d-md-block dropdown-toggle ps-2">J. Doe</span> </a
+            ><!-- End Profile Image Icon -->
 
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6>John Doe</h6>
-              <span>Employee</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+              <li class="dropdown-header">
+                <h6>John Doe</h6>
+                <span>Employee</span>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
 
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Forgot password?</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                  <i class="bi bi-question-circle"></i>
+                  <span>Forgot password?</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
 
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-login.html">
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
-              </a>
-            </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="pages-login.html">
+                  <i class="bi bi-box-arrow-right"></i>
+                  <span>Sign Out</span>
+                </a>
+              </li>
+            </ul>
+            <!-- End Profile Dropdown Items -->
+          </li>
+          <!-- End Profile Nav -->
+        </ul>
+      </nav>
+      <!-- End Icons Navigation -->
+    </header>
+    <!-- End Header -->
 
-          </ul><!-- End Profile Dropdown Items -->
-        </li>
-        <!-- End Profile Nav -->
-
-      </ul>
-    </nav>
-    <!-- End Icons Navigation -->
-
-  </header><!-- End Header -->
-
-  <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
-
-    <ul class="sidebar-nav" id="sidebar-nav">
-     <section class="section dashboard">  
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#settings-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-arrow-counterclockwise"></i><span>Historisch</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="settings-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-          <!-- First Card -->
-          <div class="card info-card revenue-card shadow">
-            <div class="card-body">
-                <div class="pt-3">
-                    <div class="d-flex">
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+      <ul class="sidebar-nav" id="sidebar-nav">
+        <section class="section dashboard">
+          <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#settings-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-arrow-counterclockwise"></i><span>Historisch</span><i class="bi bi-chevron-down ms-auto"></i> </a>
+            <ul id="settings-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+              <li>
+                <!-- First Card -->
+                <div class="card info-card revenue-card shadow">
+                  <div class="card-body">
+                    <div class="pt-3">
+                      <div class="d-flex">
                         <div class="card-icon d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="right" title="U heeft nog geen uitnodigingsbrief gegeneerd">
-                            <i class="bi bi-dash-circle"></i>
+                          <i class="bi bi-dash-circle"></i>
                         </div>
                         <div class="ps-2 d-flex flex-column">
-                            <h6>1748</h6>
-                            <span class="small fs-7 fw-bold">Edith D Abreau De Paulo</span>
+                          <h6>1748</h6>
+                          <span class="small fs-7 fw-bold">Edith D Abreau De Paulo</span>
                         </div>
-                    </div>
-                    <hr class="my-2 w-100">
-                    <div class="row">
+                      </div>
+                      <hr class="my-2 w-100" />
+                      <div class="row">
                         <div class="col-auto">
-                            <span class="small" style="color:cadetblue">Registratie datum</span>
+                          <span class="small" style="color: cadetblue">Registratie datum</span>
                         </div>
                         <div class="col-auto">
-                            <span class="small fs-7">12/10/2023</span>
+                          <span class="small fs-7">12/10/2023</span>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </div>
-          </div>
-          <!-- End First Card -->
-          </li>			         
-          
-          <li>
-            <!-- Second Card -->
-            <div class="card info-card revenue-card shadow">
-              <div class="card-body">
-                  <div class="pt-3">
+                <!-- End First Card -->
+              </li>
+
+              <li>
+                <!-- Second Card -->
+                <div class="card info-card revenue-card shadow">
+                  <div class="card-body">
+                    <div class="pt-3">
                       <div class="d-flex">
-                          <div class="card-icon d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="right" title="U heeft nog geen uitnodigingsbrief gegeneerd">
-                              <i class="bi bi-dash-circle"></i>
-                          </div>
-                          <div class="ps-2 d-flex flex-column">
-                              <h6>1748</h6>
-                              <span class="small fs-7 fw-bold">Edith D Abreau De Paulo</span>
-                          </div>
+                        <div class="card-icon d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="right" title="U heeft nog geen uitnodigingsbrief gegeneerd">
+                          <i class="bi bi-dash-circle"></i>
+                        </div>
+                        <div class="ps-2 d-flex flex-column">
+                          <h6>1748</h6>
+                          <span class="small fs-7 fw-bold">Edith D Abreau De Paulo</span>
+                        </div>
                       </div>
-                      <hr class="my-2 w-100">
+                      <hr class="my-2 w-100" />
                       <div class="row">
-                          <div class="col-auto">
-                              <span class="small" style="color:cadetblue">Registratie datum</span>
-                          </div>
-                          <div class="col-auto">
-                              <span class="small fs-7">12/10/2023</span>
-                          </div>
+                        <div class="col-auto">
+                          <span class="small" style="color: cadetblue">Registratie datum</span>
+                        </div>
+                        <div class="col-auto">
+                          <span class="small fs-7">12/10/2023</span>
+                        </div>
                       </div>
+                    </div>
                   </div>
-              </div>
-            </div>
-            <!-- End Second Card -->
-          </li>
+                </div>
+                <!-- End Second Card -->
+              </li>
 
-          <li>
-            <!-- Third Card -->
-            <div class="card info-card revenue-card shadow">
-              <div class="card-body">
-                  <div class="pt-3">
+              <li>
+                <!-- Third Card -->
+                <div class="card info-card revenue-card shadow">
+                  <div class="card-body">
+                    <div class="pt-3">
                       <div class="d-flex">
-                          <div class="card-icon d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="right" title="U heeft nog geen uitnodigingsbrief gegeneerd">
-                              <i class="bi bi-dash-circle"></i>
-                          </div>
-                          <div class="ps-2 d-flex flex-column">
-                              <h6>1748</h6>
-                              <span class="small fs-7 fw-bold">Edith D Abreau De Paulo</span>
-                          </div>
+                        <div class="card-icon d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="right" title="U heeft nog geen uitnodigingsbrief gegeneerd">
+                          <i class="bi bi-dash-circle"></i>
+                        </div>
+                        <div class="ps-2 d-flex flex-column">
+                          <h6>1748</h6>
+                          <span class="small fs-7 fw-bold">Edith D Abreau De Paulo</span>
+                        </div>
                       </div>
-                      <hr class="my-2 w-100">
+                      <hr class="my-2 w-100" />
                       <div class="row">
-                          <div class="col-auto">
-                              <span class="small" style="color:cadetblue">Registratie datum</span>
-                          </div>
-                          <div class="col-auto">
-                              <span class="small fs-7">12/10/2023</span>
-                          </div>
+                        <div class="col-auto">
+                          <span class="small" style="color: cadetblue">Registratie datum</span>
+                        </div>
+                        <div class="col-auto">
+                          <span class="small fs-7">12/10/2023</span>
+                        </div>
                       </div>
+                    </div>
                   </div>
-              </div>
-            </div>
-            <!-- End Third Card -->
+                </div>
+                <!-- End Third Card -->
+              </li>
+            </ul>
           </li>
-        </ul>
-      </li>
-      <!-- End Historisch Nav -->
-      
+          <!-- End Historisch Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link " href="index.html">
-          <i class="bi bi-house"></i>
-          <span>Dashboard</span>
-        </a>
-      </li>
-      <!-- End Dashboard Nav -->
-     </section>
-    </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="bi bi-house"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <!-- End Dashboard Nav -->
+        </section>
+      </ul>
+    </aside>
+    <!-- End Sidebar-->
 
-  </aside>
-  <!-- End Sidebar-->
+    <main id="main" class="main">
+      <div class="pagetitle">
+        <h1>Zoeken</h1>
+      </div>
+      <!-- End Page Title -->
 
-  <main id="main" class="main">
+      <div class="line-container d-flex justify-content-center">
+        <hr class="my-hr" />
+      </div>
 
-    <div class="pagetitle">
-      <h1>Zoeken</h1>
-    </div>
-    <!-- End Page Title -->
-
-    <div class="line-container d-flex justify-content-center">
-      <hr class="my-hr">
-    </div>
-
-
-    <section class="section">
-      <div class="row">
-        <div class="col-lg-12">
-
-          <div class="card" >
-            <ul class="nav nav-pills flex-column">
-              <li class="nav-item">
+      <section class="section">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card">
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
                   <a class="nav-link collapsed custom-bg-blue d-flex justify-content-between align-items-center" data-bs-target="#support-nav" data-bs-toggle="collapse" href="#">
-                      <span class="title-text-color">Aanvrager</span>
-                      <i class="bi bi-chevron-down ms-auto icon-color"></i>
+                    <span class="title-text-color">Aanvrager</span>
+                    <i class="bi bi-chevron-down ms-auto icon-color"></i>
                   </a>
                   <ul id="support-nav" class="nav-content show">
+                    <div class="card-body pt-5">
+                      <!-- Container with border style -->
+                      <div class="border p-5 filter-border fieldsWrapper">
+                        <!-- The heading -->
+                        <div class="filter-heading">Zoekfilters</div>
+                        <!-- List of round radio buttons -->
+                        <label class="form-label">Voer de gegevens in van het verzoek dat u wilt vinden</label>
 
-                
-                   <div class="card-body pt-5">
-                     <!-- Container with border style -->
-                     <div class="border p-5 filter-border fieldsWrapper"> 
-                        <!-- The heading -->           
-                        <div class="filter-heading">Zoekfilters</div> 
-                           <!-- List of round radio buttons -->
-                           <label class="form-label">Voer de gegevens in van het verzoek dat u wilt vinden</label>
-        
+                        <!-- Aanvrager -->
+                        <div class="main__wrapper">
+                          <div id="radio__wrapper">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input collapse-trigger" type="radio" name="sector" id="aanvrager_sector" value="0" />
+                              <label class="form-check-label" for="aanvrager_sector">Aanvrager</label>
+                            </div>
+                          </div>
 
-                  <!-- Aanvrager -->
-                  <div class="main__wrapper">
-                     <div id="radio__wrapper">
-                      <div class="form-check form-check-inline">
-                          <input class="form-check-input collapse-trigger" type="radio" name="sector" id="aanvrager_sector" value="0">
-                          <label class="form-check-label" for="aanvrager_sector">Aanvrager</label>
-                      </div>
-                     </div>
-                  
-                    <div class="row section__details" id="sector_descriptions">
-                      <div class="col-lg-12">
-                          <div id="aanvrager" data-bs-parent="#sector_descriptions">
-                              <div class="card card-body shadow-none">
+                          <div class="row section__details" id="sector_descriptions">
+                            <div class="col-lg-12">
+                              <div id="aanvrager" data-bs-parent="#sector_descriptions">
+                                <div class="card card-body shadow-none">
                                   <form id="form-aanvrager" class="my-form" data-section="aanvraag">
-                                      <div class="container">
-                                          <div class="row">
-                                            <div class="col-lg-3 mb-3">
-                                              <label for="aanvrager1" class="filter-label">Achternaam</label>
-                                              <input type="text" class="form-control input-borders" id="aanvrager1">
-                                          </div>
-                                          <div class="col-lg-3 mb-3">
-                                              <label for="aanvrager2" class="filter-label">Voornaam</label>
-                                              <input type="text" class="form-control input-borders" id="aanvrager2">
-                                          </div>
-                                          <div class="col-lg-3 mb-3">
-                                              <label for="aanvrager3" class="filter-label">Geboortedatum</label>
-                                              <input type="date" class="form-control input-borders" id="aanvrager3">
-                                          </div>
-                                          <div class="col-lg-3 mb-3">
-                                              <label for="aanvrager4" class="filter-label">Adres</label>
-                                              <input type="text" class="form-control input-borders" id="aanvrager4">
-                                          </div>
-                                          <div class="col-lg-3 mb-3">
-                                              <label for="aanvrager5" class="filter-label">Snelzoeken</label>
-                                              <input type="text" class="form-control input-borders" id="aanvrager5">
-                                          </div>
-                                          </div>
+                                    <div class="container">
+                                      <div class="row">
+                                        <div class="col-lg-3 mb-3">
+                                          <label for="aanvrager1" class="filter-label">Achternaam</label>
+                                          <input type="text" class="form-control input-borders" id="aanvrager1" />
+                                        </div>
+                                        <div class="col-lg-3 mb-3">
+                                          <label for="aanvrager2" class="filter-label">Voornaam</label>
+                                          <input type="text" class="form-control input-borders" id="aanvrager2" />
+                                        </div>
+                                        <div class="col-lg-3 mb-3">
+                                          <label for="aanvrager3" class="filter-label">Geboortedatum</label>
+                                          <input type="date" class="form-control input-borders" id="aanvrager3" />
+                                        </div>
+                                        <div class="col-lg-3 mb-3">
+                                          <label for="aanvrager4" class="filter-label">Adres</label>
+                                          <input type="text" class="form-control input-borders" id="aanvrager4" />
+                                        </div>
+                                        <div class="col-lg-3 mb-3">
+                                          <label for="aanvrager5" class="filter-label">Snelzoeken</label>
+                                          <input type="text" class="form-control input-borders" id="aanvrager5" />
+                                        </div>
                                       </div>
+                                    </div>
                                   </form>
+                                </div>
                               </div>
+                            </div>
                           </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- End Aanvrager -->
-                           
-                  <!-- Aanvraag -->
-                  <div class="main__wrapper">
+                        </div>
+                        <!-- End Aanvrager -->
 
-                    
+                        <!-- Aanvraag -->
+                        <div class="main__wrapper">
+                          <div id="radio__wrapper">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input collapse-trigger" type="radio" name="sector" id="aanvraag_sector" value="0" />
+                              <label class="form-check-label" for="aanvraag_sector">Aanvraag</label>
+                            </div>
+                          </div>
 
-                    <div id="radio__wrapper">
-                      <div class="form-check form-check-inline">
-                          <input class="form-check-input collapse-trigger" type="radio" name="sector" id="aanvraag_sector" value="0">
-                          <label class="form-check-label" for="aanvraag_sector">Aanvraag</label>
-                      </div>
-                    </div>
-                  
-                  <div class="row section__details" id="sector_descriptions">
-                      <div class="col-lg-12">
-                          <div id="aanvraag" data-bs-parent="#sector_descriptions">
-                              <div class="card card-body shadow-none">
+                          <div class="row section__details" id="sector_descriptions">
+                            <div class="col-lg-12">
+                              <div id="aanvraag" data-bs-parent="#sector_descriptions">
+                                <div class="card card-body shadow-none">
                                   <form id="form-aanvraag" class="my-form" data-section="aanvraag">
-                                      <div class="container">
-                                          <div class="row">
-                                            <div class="col-lg-3 mb-3">
-                                              <label for="aanvraag1" class="filter-label">Aanvraag nummer</label>
-                                              <input type="number" class="form-control input-borders" id="aanvraag1">
-                                            </div>
-                                            <div class="col-lg-3 mb-3">
-                                              <label for="aanvraag2" class="filter-label">Online Aanvraag nummer</label>
-                                              <input type="text" class="form-control input-borders" id="aanvraag2">
-                                            </div>
-                                            <div class="col-lg-3 mb-3">
-                                              <label for="aanvraag3" class="filter-label">CRV/MPS nummer</label>
-                                              <input type="number" class="form-control input-borders" id="aanvraag3">
-                                            </div>
-                                            <div class="col-lg-3 mb-3">
-                                              <label for="aanvraag4" class="filter-label">Aanvraagtype</label>
-                                              <input type="text" class="form-control input-borders" id="aanvraag4">
-                                            </div>
-                                          </div>
+                                    <div class="container">
+                                      <div class="row">
+                                        <div class="col-lg-3 mb-3">
+                                          <label for="aanvraag1" class="filter-label">Aanvraag nummer</label>
+                                          <input type="number" class="form-control input-borders" id="aanvraag1" />
+                                        </div>
+                                        <div class="col-lg-3 mb-3">
+                                          <label for="aanvraag2" class="filter-label">Online Aanvraag nummer</label>
+                                          <input type="text" class="form-control input-borders" id="aanvraag2" />
+                                        </div>
+                                        <div class="col-lg-3 mb-3">
+                                          <label for="aanvraag3" class="filter-label">CRV/MPS nummer</label>
+                                          <input type="number" class="form-control input-borders" id="aanvraag3" />
+                                        </div>
+                                        <div class="col-lg-3 mb-3">
+                                          <label for="aanvraag4" class="filter-label">Aanvraagtype</label>
+                                          <input type="text" class="form-control input-borders" id="aanvraag4" />
+                                        </div>
                                       </div>
+                                    </div>
                                   </form>
+                                </div>
                               </div>
+                            </div>
                           </div>
-                      </div>
-                  </div>
+                        </div>
+                        <!-- End Aanvraag -->
 
-                  </div>
-                  <!-- End Aanvraag -->
-                
-                  <!-- Werkgever Natuurlijk persoon -->
-                  <div class="main__wrapper">
+                        <!-- Werkgever Natuurlijk persoon -->
+                        <div class="main__wrapper">
+                          <div id="radio__wrapper">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input collapse-trigger" type="radio" name="sector" id="wnp_sector" value="0" />
+                              <label class="form-check-label" for="wnp_sector">Werkgever Natuurlijk persoon</label>
+                            </div>
+                          </div>
 
-                  
-                  
-                  <div id="radio__wrapper">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input collapse-trigger" type="radio" name="sector" id="wnp_sector" value="0">
-                        <label class="form-check-label" for="wnp_sector">Werkgever Natuurlijk persoon</label>
-                    </div>
-                  </div>
-                
-                <div class="row section__details" id="sector_descriptions">
-                    <div class="col-lg-12">
-                        <div id="wnp" data-bs-parent="#sector_descriptions">
-                            <div class="card card-body shadow-none">
-                              <form id="form-wnp" class="my-form" data-section="wnp">
-                                <div class="container">
-                                    <div class="row">
-                                      <div class="col-lg-4 mb-3">
-                                        <label for="wnp1" class="filter-label">Werkgever persoon</label>
-                                        <input type="text" class="form-control input-borders" id="wnp1">
-                                      </div>
-                                      <div class="col-lg-4 mb-3">
-                                        <label for="wnp2" class="filter-label">Snel zoeken</label>
-                                        <input type="text" class="form-control input-borders" id="wnp2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eerste twee letters achternaam + voornaam + geboortejaar">
+                          <div class="row section__details" id="sector_descriptions">
+                            <div class="col-lg-12">
+                              <div id="wnp" data-bs-parent="#sector_descriptions">
+                                <div class="card card-body shadow-none">
+                                  <form id="form-wnp" class="my-form" data-section="wnp">
+                                    <div class="container">
+                                      <div class="row">
+                                        <div class="col-lg-4 mb-3">
+                                          <label for="wnp1" class="filter-label">Werkgever persoon</label>
+                                          <input type="text" class="form-control input-borders" id="wnp1" />
+                                        </div>
+                                        <div class="col-lg-4 mb-3">
+                                          <label for="wnp2" class="filter-label">Snel zoeken</label>
+                                          <input type="text" class="form-control input-borders" id="wnp2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eerste twee letters achternaam + voornaam + geboortejaar" />
+                                        </div>
                                       </div>
                                     </div>
+                                  </form>
                                 </div>
-                              </form>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                </div>
-                  </div>
-                  <!-- End Werkgever Natuurlijk persoon -->
-                
-									<!-- Werkgever Organisatie -->
-                  <div class="main__wrapper">
+                        <!-- End Werkgever Natuurlijk persoon -->
 
-                  <div id="radio__wrapper">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input collapse-trigger" type="radio" name="sector" id="wo_sector" value="0">
-                        <label class="form-check-label" for="wo_sector">Werkgever Organisatie</label>
-                    </div>
-                  </div>
-                
-                <div class="row section__details" id="sector_descriptions">
-                    <div class="col-lg-12">
-                        <div id="wo" data-bs-parent="#sector_descriptions">
-                            <div class="card card-body shadow-none">
-                              <form id="form-wo" class="my-form" data-section="wo">
-                                <div class="container">
-                                    <div class="row">
-                                      <div class="col-lg-4 mb-3">
-                                        <label for="wo1" class="filter-label">Werkgever organisatie</label>
-                                        <input type="text" class="form-control input-borders" id="wo1">
+                        <!-- Werkgever Organisatie -->
+                        <div class="main__wrapper">
+                          <div id="radio__wrapper">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input collapse-trigger" type="radio" name="sector" id="wo_sector" value="0" />
+                              <label class="form-check-label" for="wo_sector">Werkgever Organisatie</label>
+                            </div>
+                          </div>
+
+                          <div class="row section__details" id="sector_descriptions">
+                            <div class="col-lg-12">
+                              <div id="wo" data-bs-parent="#sector_descriptions">
+                                <div class="card card-body shadow-none">
+                                  <form id="form-wo" class="my-form" data-section="wo">
+                                    <div class="container">
+                                      <div class="row">
+                                        <div class="col-lg-4 mb-3">
+                                          <label for="wo1" class="filter-label">Werkgever organisatie</label>
+                                          <input type="text" class="form-control input-borders" id="wo1" />
+                                        </div>
                                       </div>
                                     </div>
+                                  </form>
                                 </div>
-                              </form>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                </div>
+                        <!-- End Werkgever Organisatie -->
 
-                  </div>
-                  <!-- End Werkgever Organisatie -->
-		
-							    <!-- Garantsteller Natuurlijke persoon  -->
-                  <div class="main__wrapper">
-                      <div id="radio__wrapper">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input collapse-trigger" type="radio" name="sector" id="gnp_sector" value="0">
-                            <label class="form-check-label" for="gnp_sector">Garantsteller Natuurlijke persoon</label>
-                        </div>
-                      </div>
-                    
-                    <div class="row section__details" id="sector_descriptions">
-                        <div class="col-lg-12">
-                            <div id="gnp" data-bs-parent="#sector_descriptions">
+                        <!-- Garantsteller Natuurlijke persoon  -->
+                        <div class="main__wrapper">
+                          <div id="radio__wrapper">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input collapse-trigger" type="radio" name="sector" id="gnp_sector" value="0" />
+                              <label class="form-check-label" for="gnp_sector">Garantsteller Natuurlijke persoon</label>
+                            </div>
+                          </div>
+
+                          <div class="row section__details" id="sector_descriptions">
+                            <div class="col-lg-12">
+                              <div id="gnp" data-bs-parent="#sector_descriptions">
                                 <div class="card card-body shadow-none">
                                   <form id="form-gnp" class="my-form" data-section="gnp">
                                     <div class="container">
-                                        <div class="row">
-                                          <div class="col-lg-4 mb-3">
-                                            <label for="gnp1" class="filter-label">Garantsteller Persoon</label>
-                                            <input type="text" class="form-control input-borders" id="gnp1">
-                                          </div>
-                                          <div class="col-lg-4 mb-3">
-                                            <label for="gnp2" class="filter-label">Snel zoeken</label>
-                                            <input type="text" class="form-control input-borders" id="gnp2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eerste twee letters achternaam + voornaam + geboortejaar">
+                                      <div class="row">
+                                        <div class="col-lg-4 mb-3">
+                                          <label for="gnp1" class="filter-label">Garantsteller Persoon</label>
+                                          <input type="text" class="form-control input-borders" id="gnp1" />
                                         </div>
+                                        <div class="col-lg-4 mb-3">
+                                          <label for="gnp2" class="filter-label">Snel zoeken</label>
+                                          <input type="text" class="form-control input-borders" id="gnp2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eerste twee letters achternaam + voornaam + geboortejaar" />
                                         </div>
+                                      </div>
                                     </div>
                                   </form>
                                 </div>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                    </div>
+                        <!-- End Garantsteller Natuurlijke persoon  -->
 
-                  </div>
-                  <!-- End Garantsteller Natuurlijke persoon  -->
-						
-								  <!-- Garantsteller Organisatie -->
-                  <div class="main__wrapper">
+                        <!-- Garantsteller Organisatie -->
+                        <div class="main__wrapper">
+                          <div id="radio__wrapper">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input collapse-trigger" type="radio" name="sector" id="go_sector" value="0" />
+                              <label class="form-check-label" for="go_sector">Garantsteller Organisatie</label>
+                            </div>
+                          </div>
 
-                      <div id="radio__wrapper">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input collapse-trigger" type="radio" name="sector" id="go_sector" value="0">
-                            <label class="form-check-label" for="go_sector">Garantsteller Organisatie</label>
-                        </div>
-                      </div>
-                    
-                    <div class="row section__details" id="sector_descriptions">
-                        <div class="col-lg-12">
-                            <div id="go" data-bs-parent="#sector_descriptions">
+                          <div class="row section__details" id="sector_descriptions">
+                            <div class="col-lg-12">
+                              <div id="go" data-bs-parent="#sector_descriptions">
                                 <div class="card card-body shadow-none">
                                   <form id="form-go" class="my-form" data-section="go">
                                     <div class="container">
-                                        <div class="row">
-                                          <div class="col-lg-4 mb-3">
-                                            <label for="go1" class="filter-label">Garantsteller organisatie</label>
-                                            <input type="text" class="form-control input-borders" id="go1">
-                                          </div>
+                                      <div class="row">
+                                        <div class="col-lg-4 mb-3">
+                                          <label for="go1" class="filter-label">Garantsteller organisatie</label>
+                                          <input type="text" class="form-control input-borders" id="go1" />
                                         </div>
+                                      </div>
                                     </div>
                                   </form>
                                 </div>
+                              </div>
                             </div>
+                          </div>
                         </div>
+                        <!-- End Garantsteller Organisatie -->
                       </div>
-                  </div>
-                  <!-- End Garantsteller Organisatie -->
+                    </div>
 
-                     </div>
-                   </div>
-
-                   <!-- buttons -->
+                    <!-- buttons -->
                     <div class="row justify-content-end mt-3">
                       <div class="col-md-auto mb-3">
                         <button type="button" class="btn zoeken-button" id="submit-button" data-bs-target="aanvrager" disabled>
-                        <i class="bi bi-search me-2"></i>
-                        Zoeken
+                          <i class="bi bi-search me-2"></i>
+                          Zoeken
                         </button>
                       </div>
                       <div class="col-md-auto mb-3 pe-5 cancel-button-original-location">
                         <button id="cancel__button" type="button" class="btn sluiten-button" onclick="closeCurrentTab()">SLUITEN</button>
                       </div>
                     </div>
-                   <!-- End buttons -->
+                    <!-- End buttons -->
+                  </ul>
+                </li>
+                <!-- End Filter -->
+              </ul>
 
-                 </ul>
-              </li><!-- End Filter -->
-            </ul>
+              <!-- Collapse section aanvrager -->
+              <div class="collapsable__section" id="aanvrager_sector">
+                <div class="card-body pt-2">
+                  <div class="line-container d-flex justify-content-center">
+                    <hr class="my-hr" />
+                  </div>
 
+                  <div class="table-responsive">
+                    <div class="d-flex flex-row justify-content-start align-items-center table__custom-buttons">
+                      <button type="button" class="btn custom-blue-btn">Excel</button>
+                      <button type="button" class="btn custom-blue-btn mx-2">PDF</button>
+                    </div>
 
-
-          <!-- Collapse section aanvrager -->
-          <div class="collapsable__section" id="aanvrager_sector" >
-
-          <div class="card-body pt-2">
-          <div class="line-container d-flex justify-content-center">
-          <hr class="my-hr">
-          </div>
-
-              <div class="table-responsive">
-                <div class="d-flex flex-row justify-content-start align-items-center table__custom-buttons">
-                    <button type="button" class="btn custom-blue-btn">Excel</button>
-                    <button type="button" class="btn custom-blue-btn mx-2">PDF</button>
+                    <!-- Table with stripped rows -->
+                    <table class="table tablenl table-striped table-hover datatable">
+                      <thead>
+                        <tr>
+                          <th scope="col">Achternaam</th>
+                          <th scope="col">Voornaam</th>
+                          <th scope="col">Geboortedatum</th>
+                          <th scope="col">Nationaliteit</th>
+                          <th scope="col">Adres</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href="personalinfo.html">OSPINA</a></td>
+                          <td><a href="personalinfo.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>COLOMBIAANESE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                        </tr>
+                        <tr>
+                          <td><a href="personalinfo.html">OSPINA</a></td>
+                          <td><a href="personalinfo.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>NEDERLANDSE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                        </tr>
+                        <tr>
+                          <td><a href="users-profile.html">OSPINA</a></td>
+                          <td><a href="users-profile.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>COLOMBIAANESE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                        </tr>
+                        <tr>
+                          <td><a href="users-profile.html">OSPINA</a></td>
+                          <td><a href="users-profile.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>COLOMBIAANESE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                        </tr>
+                        <tr>
+                          <td><a href="users-profile.html">OSPINA</a></td>
+                          <td><a href="users-profile.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>COLOMBIAANESE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                        </tr>
+                        <tr>
+                          <td><a href="users-profile.html">OSPINA</a></td>
+                          <td><a href="users-profile.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>COLOMBIAANESE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                        </tr>
+                        <tr>
+                          <td><a href="users-profile.html">OSPINA</a></td>
+                          <td><a href="users-profile.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>COLOMBIAANESE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                        </tr>
+                        <tr>
+                          <td><a href="users-profile.html">OSPINA</a></td>
+                          <td><a href="users-profile.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>COLOMBIAANESE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- End Table with stripped rows -->
+                  </div>
                 </div>
-
-                <!-- Table with stripped rows -->
-                <table class="table tablenl table-striped table-hover datatable">
-                  <thead>
-                    <tr>
-                      <th scope="col">Achternaam</th>
-                      <th scope="col">Voornaam</th>
-                      <th scope="col">Geboortedatum</th>
-                      <th scope="col">Nationaliteit</th>
-                      <th scope="col">Adres</th>  
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><a href="personalinfo.html">OSPINA</a></td>
-                      <td><a href="personalinfo.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>COLOMBIAANESE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>                
-                    </tr>
-                    <tr>
-                      <td><a href="personalinfo.html">OSPINA</a></td>
-                      <td><a href="personalinfo.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>NEDERLANDSE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>                    
-                    </tr>
-                    <tr>
-                      <td><a href="users-profile.html">OSPINA</a></td>
-                      <td><a href="users-profile.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>COLOMBIAANESE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>                    
-                    </tr>
-                    <tr>
-                      <td><a href="users-profile.html">OSPINA</a></td>
-                      <td><a href="users-profile.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>COLOMBIAANESE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>                    
-                    </tr>
-                    <tr>
-                      <td><a href="users-profile.html">OSPINA</a></td>
-                      <td><a href="users-profile.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>COLOMBIAANESE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>                    
-                    </tr>
-                    <tr>
-                      <td><a href="users-profile.html">OSPINA</a></td>
-                      <td><a href="users-profile.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>COLOMBIAANESE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>                    
-                    </tr>
-                    <tr>
-                      <td><a href="users-profile.html">OSPINA</a></td>
-                      <td><a href="users-profile.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>COLOMBIAANESE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>                    
-                    </tr>
-                    <tr>
-                      <td><a href="users-profile.html">OSPINA</a></td>
-                      <td><a href="users-profile.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>COLOMBIAANESE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>                    
-                    </tr>
-                  </tbody>
-                </table>
-                <!-- End Table with stripped rows -->
               </div>
-          
+              <!-- End Collapse section aanvraager -->
+
+              <!-- Collapse section aanvraag -->
+              <div class="collapsable__section" id="aanvraag_sector">
+                <div class="card-body pt-2">
+                  <div class="line-container d-flex justify-content-center">
+                    <hr class="my-hr" />
+                  </div>
+
+                  <div class="table-responsive">
+                    <div class="d-flex flex-row justify-content-start align-items-center table__custom-buttons">
+                      <button type="button" class="btn custom-blue-btn">Excel</button>
+                      <button type="button" class="btn custom-blue-btn mx-2">PDF</button>
+                    </div>
+
+                    <!-- Table with stripped rows -->
+                    <table class="table tablenl table-striped table-hover datatable">
+                      <thead>
+                        <tr>
+                          <th scope="col">Aanvraag Nummer</th>
+                          <th scope="col">Online Nummer</th>
+                          <th scope="col">Achternaam</th>
+                          <th scope="col">Voornaam</th>
+                          <th scope="col">Geboortedatum</th>
+                          <th scope="col">Hoofddoel</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href="aanvragen.html">8001000914</a></td>
+                          <td><a href="aanvragen.html">8001000914</a></td>
+                          <td><a href="personalinfo.html">OSPINA</a></td>
+                          <td><a href="personalinfo.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>EERST</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">8002000914</a></td>
+                          <td><a href="aanvragen.html">8002000914</a></td>
+                          <td><a href="personalinfo.html">OSPINA</a></td>
+                          <td><a href="personalinfo.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>EERST</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">8003000914</a></td>
+                          <td><a href="aanvragen.html">8003000914</a></td>
+                          <td><a href="personalinfo.html">OSPINA</a></td>
+                          <td><a href="personalinfo.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>EERST</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">8001000914</a></td>
+                          <td><a href="aanvragen.html">8001000914</a></td>
+                          <td><a href="personalinfo.html">OSPINA</a></td>
+                          <td><a href="personalinfo.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>EERST</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">8001000914</a></td>
+                          <td><a href="aanvragen.html">8001000914</a></td>
+                          <td><a href="personalinfo.html">OSPINA</a></td>
+                          <td><a href="personalinfo.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>EERST</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">8001000914</a></td>
+                          <td><a href="aanvragen.html">8001000914</a></td>
+                          <td><a href="personalinfo.html">OSPINA</a></td>
+                          <td><a href="personalinfo.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>EERST</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">8001000914</a></td>
+                          <td><a href="aanvragen.html">8001000914</a></td>
+                          <td><a href="personalinfo.html">OSPINA</a></td>
+                          <td><a href="personalinfo.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>EERST</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">8001000914</a></td>
+                          <td><a href="aanvragen.html">8001000914</a></td>
+                          <td><a href="personalinfo.html">OSPINA</a></td>
+                          <td><a href="personalinfo.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>EERST</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- End Table with stripped rows -->
+                  </div>
+                </div>
+              </div>
+              <!-- End Collapse section aanvraag -->
+
+              <!-- Collapse section WNP -->
+              <div class="collapsable__section" id="wnp_sector">
+                <div class="card-body pt-2">
+                  <div class="line-container d-flex justify-content-center">
+                    <hr class="my-hr" />
+                  </div>
+
+                  <div class="table-responsive">
+                    <div class="d-flex flex-row justify-content-start align-items-center table__custom-buttons">
+                      <button type="button" class="btn custom-blue-btn">Excel</button>
+                      <button type="button" class="btn custom-blue-btn mx-2">PDF</button>
+                    </div>
+
+                    <!-- Table with stripped rows -->
+                    <table class="table tablenl table-striped table-hover datatable">
+                      <thead>
+                        <tr>
+                          <th scope="col">Werkgever Achternaam</th>
+                          <th scope="col">Werkgever Voornaam</th>
+                          <th scope="col">Geboortedatum</th>
+                          <th scope="col">Nationaliteit</th>
+                          <th scope="col">Adres</th>
+                          <th scope="col">Aanvraag Nummer</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>COLOMBIAANESE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                          <td>350908798</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>NEDERLANDSE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                          <td>3509087989</td>
+                        </tr>
+
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>COLOMBIAANESE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                          <td>3509087989</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>NEDERLANDSE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                          <td>3509087989</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>COLOMBIAANESE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                          <td>3509087989</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- End Table with stripped rows -->
+                  </div>
+                </div>
+              </div>
+              <!-- End Collapse section WNP -->
+
+              <!-- Collapse section WO -->
+              <div class="collapsable__section" id="wo_sector">
+                <div class="card-body pt-2">
+                  <div class="line-container d-flex justify-content-center">
+                    <hr class="my-hr" />
+                  </div>
+
+                  <div class="table-responsive">
+                    <div class="d-flex flex-row justify-content-start align-items-center table__custom-buttons">
+                      <button type="button" class="btn custom-blue-btn">Excel</button>
+                      <button type="button" class="btn custom-blue-btn mx-2">PDF</button>
+                    </div>
+                    <table class="table tablenl table-striped table-hover datatable">
+                      <thead>
+                        <tr>
+                          <th scope="col">Bedrijf/Organisatie</th>
+                          <th scope="col">Aanvraag Nummer</th>
+                          <th scope="col">Online Nummer</th>
+                          <th scope="col">Achternaam</th>
+                          <th scope="col">Voornaam</th>
+                          <th scope="col">Geboortedatum</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">3509087989</a></td>
+                          <td>3509087989</td>
+                          <td>OSPINA</td>
+                          <td>DANIEL</td>
+                          <td>11/12/2000</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">3509087989</a></td>
+                          <td>3509087989</td>
+                          <td>OSPINA</td>
+                          <td>DANIEL</td>
+                          <td>11/12/2000</td>
+                        </tr>
+
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">3509087989</a></td>
+                          <td>3509087989</td>
+                          <td>OSPINA</td>
+                          <td>DANIEL</td>
+                          <td>11/12/2000</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">3509087989</a></td>
+                          <td>3509087989</td>
+                          <td>OSPINA</td>
+                          <td>DANIEL</td>
+                          <td>11/12/2000</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">3509087989</a></td>
+                          <td>3509087989</td>
+                          <td>OSPINA</td>
+                          <td>DANIEL</td>
+                          <td>11/12/2000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- End Table with stripped rows -->
+                  </div>
+                </div>
+              </div>
+              <!-- End Collapse section WO -->
+
+              <!-- Collapse section GNP -->
+              <div class="collapsable__section" id="gnp_sector">
+                <div class="card-body pt-2">
+                  <div class="line-container d-flex justify-content-center">
+                    <hr class="my-hr" />
+                  </div>
+                  <div class="d-flex flex-row justify-content-end align-items-center"></div>
+                  <div class="table-responsive">
+                    <div class="d-flex flex-row justify-content-start align-items-center table__custom-buttons">
+                      <button type="button" class="btn custom-blue-btn">Excel</button>
+                      <button type="button" class="btn custom-blue-btn mx-2">PDF</button>
+                    </div>
+
+                    <!-- Table with stripped rows -->
+                    <table class="table tablenl table-striped table-hover datatable">
+                      <thead>
+                        <tr>
+                          <th scope="col">Garantsteller Achternaam</th>
+                          <th scope="col">Garantsteller Voornaam</th>
+                          <th scope="col">Geboortedatum</th>
+                          <th scope="col">Nationaliteit</th>
+                          <th scope="col">Adres</th>
+                          <th scope="col">Aanvraag Nummer</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>COLOMBIAANESE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                          <td>350908798</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>NEDERLANDSE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                          <td>350908798</td>
+                        </tr>
+
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>COLOMBIAANESE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                          <td>350908798</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>NEDERLANDSE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                          <td>350908798</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">DANIEL</a></td>
+                          <td>11/12/2000</td>
+                          <td>COLOMBIAANESE</td>
+                          <td>WEG NAAR WESTPUNT 18</td>
+                          <td>350908798</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- End Table with stripped rows -->
+                  </div>
+                </div>
+              </div>
+              <!-- End Collapse section GNP -->
+
+              <!-- Collapse section GO -->
+              <div class="collapsable__section" id="go_sector">
+                <div class="card-body pt-2">
+                  <div class="line-container d-flex justify-content-center">
+                    <hr class="my-hr" />
+                  </div>
+                  <div class="d-flex flex-row justify-content-end align-items-center"></div>
+                  <div class="table-responsive">
+                    <div class="d-flex flex-row justify-content-start align-items-center table__custom-buttons">
+                      <button type="button" class="btn custom-blue-btn">Excel</button>
+                      <button type="button" class="btn custom-blue-btn mx-2">PDF</button>
+                    </div>
+
+                    <!-- Table with stripped rows -->
+                    <table class="table tablenl table-striped table-hover datatable">
+                      <thead>
+                        <tr>
+                          <th scope="col">Bedrijf/Organisatie</th>
+                          <th scope="col">Aanvraag Nummer</th>
+                          <th scope="col">Online Nummer</th>
+                          <th scope="col">Achternaam</th>
+                          <th scope="col">Voornaam</th>
+                          <th scope="col">Geboortedatum</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">3509087989</a></td>
+                          <td>3509087989</td>
+                          <td>OSPINA</td>
+                          <td>DANIEL</td>
+                          <td>11/12/2000</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">3509087989</a></td>
+                          <td>3509087989</td>
+                          <td>OSPINA</td>
+                          <td>DANIEL</td>
+                          <td>11/12/2000</td>
+                        </tr>
+
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">3509087989</a></td>
+                          <td>3509087989</td>
+                          <td>OSPINA</td>
+                          <td>DANIEL</td>
+                          <td>11/12/2000</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">3509087989</a></td>
+                          <td>3509087989</td>
+                          <td>OSPINA</td>
+                          <td>DANIEL</td>
+                          <td>11/12/2000</td>
+                        </tr>
+                        <tr>
+                          <td><a href="aanvragen.html">OSPINA</a></td>
+                          <td><a href="aanvragen.html">3509087989</a></td>
+                          <td>3509087989</td>
+                          <td>OSPINA</td>
+                          <td>DANIEL</td>
+                          <td>11/12/2000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- End Table with stripped rows -->
+                  </div>
+                </div>
+              </div>
+              <!-- End Collapse section GO -->
             </div>
           </div>
-          <!-- End Collapse section aanvraager -->
-
-          <!-- Collapse section aanvraag -->
-          <div class="collapsable__section" id="aanvraag_sector" >
-
-          <div class="card-body pt-2">
-          <div class="line-container d-flex justify-content-center">
-          <hr class="my-hr">
-          </div>
-
-              <div class="table-responsive">
-
-                <div class="d-flex flex-row justify-content-start align-items-center table__custom-buttons">
-                    <button type="button" class="btn custom-blue-btn">Excel</button>
-                    <button type="button" class="btn custom-blue-btn mx-2">PDF</button>
-                </div>
-
-                <!-- Table with stripped rows -->
-                <table class="table tablenl table-striped table-hover datatable">
-                  <thead>
-                    <tr>
-                      <th scope="col">Aanvraag Nummer</th>
-                      <th scope="col">Online Nummer</th>
-                      <th scope="col">Achternaam</th>
-                      <th scope="col">Voornaam</th>
-                      <th scope="col">Geboortedatum</th>
-                      <th scope="col">Hoofddoel</th>
-
-  
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><a href="aanvragen.html">8001000914</a></td>
-                      <td><a href="aanvragen.html">8001000914</a></td>
-                      <td><a href="personalinfo.html">OSPINA</a></td>
-                      <td><a href="personalinfo.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>EERST</td>                   
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">8002000914</a></td>
-                      <td><a href="aanvragen.html">8002000914</a></td>
-                      <td><a href="personalinfo.html">OSPINA</a></td>
-                      <td><a href="personalinfo.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>EERST</td>                        
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">8003000914</a></td>
-                      <td><a href="aanvragen.html">8003000914</a></td>
-                      <td><a href="personalinfo.html">OSPINA</a></td>
-                      <td><a href="personalinfo.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>EERST</td>                         
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">8001000914</a></td>
-                      <td><a href="aanvragen.html">8001000914</a></td>
-                      <td><a href="personalinfo.html">OSPINA</a></td>
-                      <td><a href="personalinfo.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>EERST</td>                     
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">8001000914</a></td>
-                      <td><a href="aanvragen.html">8001000914</a></td>
-                      <td><a href="personalinfo.html">OSPINA</a></td>
-                      <td><a href="personalinfo.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>EERST</td>                         
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">8001000914</a></td>
-                      <td><a href="aanvragen.html">8001000914</a></td>
-                      <td><a href="personalinfo.html">OSPINA</a></td>
-                      <td><a href="personalinfo.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>EERST</td>                       
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">8001000914</a></td>
-                      <td><a href="aanvragen.html">8001000914</a></td>
-                      <td><a href="personalinfo.html">OSPINA</a></td>
-                      <td><a href="personalinfo.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>EERST</td>                         
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">8001000914</a></td>
-                      <td><a href="aanvragen.html">8001000914</a></td>
-                      <td><a href="personalinfo.html">OSPINA</a></td>
-                      <td><a href="personalinfo.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>EERST</td>                      
-                    </tr>
-                  </tbody>
-                </table>
-                <!-- End Table with stripped rows -->
-              </div>
-          
-            </div> 
-          </div>
-          <!-- End Collapse section aanvraag -->
-
-          <!-- Collapse section WNP -->
-          <div class="collapsable__section" id="wnp_sector" >
-
-          <div class="card-body pt-2">
-          <div class="line-container d-flex justify-content-center">
-          <hr class="my-hr">
-          </div>
-
-              <div class="table-responsive">
-
-
-                <div class="d-flex flex-row justify-content-start align-items-center table__custom-buttons">
-                    <button type="button" class="btn custom-blue-btn">Excel</button>
-                    <button type="button" class="btn custom-blue-btn mx-2">PDF</button>
-                </div>
-
-                <!-- Table with stripped rows -->
-                <table class="table tablenl table-striped table-hover datatable">
-                  <thead>
-                    <tr>
-                      <th scope="col">Werkgever Achternaam</th>
-                      <th scope="col">Werkgever Voornaam</th>
-                      <th scope="col">Geboortedatum</th>
-                      <th scope="col">Nationaliteit</th>
-                      <th scope="col">Adres</th>
-                      <th scope="col">Aanvraag Nummer</th>
-  
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>COLOMBIAANESE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>
-                      <td>350908798</td>                  
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>NEDERLANDSE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>
-                      <td>3509087989</td>  
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>COLOMBIAANESE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>
-                      <td>3509087989</td>                       
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>NEDERLANDSE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>
-                      <td>3509087989</td>                     
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>COLOMBIAANESE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>
-                      <td>3509087989</td>                      
-                    </tr>
-                  </tbody>
-                </table>
-                <!-- End Table with stripped rows -->
-              </div>
-          
-            </div> 
-          </div>
-          <!-- End Collapse section WNP -->
-
-          <!-- Collapse section WO -->
-          <div class="collapsable__section" id="wo_sector" >
-
-          <div class="card-body pt-2">
-          <div class="line-container d-flex justify-content-center">
-          <hr class="my-hr">
-          </div>
-
-              <div class="table-responsive">
-                <div class="d-flex flex-row justify-content-start align-items-center table__custom-buttons">
-                    <button type="button" class="btn custom-blue-btn">Excel</button>
-                    <button type="button" class="btn custom-blue-btn mx-2">PDF</button>
-                </div>
-                <table class="table tablenl table-striped table-hover datatable">
-                  <thead>
-                    <tr>
-                      <th scope="col">Bedrijf/Organisatie</th>
-                      <th scope="col">Aanvraag Nummer</th>
-                      <th scope="col">Online Nummer</th>
-                      <th scope="col">Achternaam</th>
-                      <th scope="col">Voornaam</th>
-                      <th scope="col">Geboortedatum</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">3509087989</a></td>
-                      <td>3509087989</td>
-                      <td>OSPINA</td>
-                      <td>DANIEL</td>
-                      <td>11/12/2000</td>                  
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">3509087989</a></td>
-                      <td>3509087989</td>
-                      <td>OSPINA</td>
-                      <td>DANIEL</td>
-                      <td>11/12/2000</td>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">3509087989</a></td>
-                      <td>3509087989</td>
-                      <td>OSPINA</td>
-                      <td>DANIEL</td>
-                      <td>11/12/2000</td>
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">3509087989</a></td>
-                      <td>3509087989</td>
-                      <td>OSPINA</td>
-                      <td>DANIEL</td>
-                      <td>11/12/2000</td>                    
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">3509087989</a></td>
-                      <td>3509087989</td>
-                      <td>OSPINA</td>
-                      <td>DANIEL</td>
-                      <td>11/12/2000</td>                     
-                    </tr>
-                  </tbody>
-                </table>
-                <!-- End Table with stripped rows -->
-              </div>
-          
-            </div> 
-          </div>
-          <!-- End Collapse section WO -->
-
-          <!-- Collapse section GNP -->
-          <div class="collapsable__section" id="gnp_sector" >
-
-          <div class="card-body pt-2">
-          <div class="line-container d-flex justify-content-center">
-          <hr class="my-hr">
-          </div>
-                <div class="d-flex flex-row justify-content-end align-items-center">
-              
-
-                </div>
-              <div class="table-responsive">
-
-
-                <div class="d-flex flex-row justify-content-start align-items-center table__custom-buttons">
-                    <button type="button" class="btn custom-blue-btn">Excel</button>
-                    <button type="button" class="btn custom-blue-btn mx-2">PDF</button>
-                </div>
-
-                <!-- Table with stripped rows -->
-                <table class="table tablenl table-striped table-hover datatable">
-                  <thead>
-                    <tr>
-                      <th scope="col">Garantsteller Achternaam</th>
-                      <th scope="col">Garantsteller Voornaam</th>
-                      <th scope="col">Geboortedatum</th>
-                      <th scope="col">Nationaliteit</th>
-                      <th scope="col">Adres</th>
-                      <th scope="col">Aanvraag Nummer</th>
-
-                      
-  
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>COLOMBIAANESE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>
-                      <td>350908798</td>                                   
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>NEDERLANDSE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>
-                      <td>350908798</td>                  
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>COLOMBIAANESE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>
-                      <td>350908798</td>                   
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>NEDERLANDSE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>
-                      <td>350908798</td>                 
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">DANIEL</a></td>
-                      <td>11/12/2000</td>
-                      <td>COLOMBIAANESE</td>
-                      <td>WEG NAAR WESTPUNT 18</td>
-                      <td>350908798</td>                    
-                    </tr>
-                  </tbody>
-                </table>
-                <!-- End Table with stripped rows -->
-              </div>
-          
-            </div> 
-          </div>
-          <!-- End Collapse section GNP -->
-
-          <!-- Collapse section GO -->
-          <div class="collapsable__section" id="go_sector">
-
-          <div class="card-body pt-2">
-          <div class="line-container d-flex justify-content-center">
-          <hr class="my-hr">
-          </div>
-                <div class="d-flex flex-row justify-content-end align-items-center">
-                </div>
-              <div class="table-responsive">
-
-
-                <div class="d-flex flex-row justify-content-start align-items-center table__custom-buttons">
-                    <button type="button" class="btn custom-blue-btn">Excel</button>
-                    <button type="button" class="btn custom-blue-btn mx-2">PDF</button>
-                </div>
-
-                <!-- Table with stripped rows -->
-                <table class="table tablenl table-striped table-hover datatable">
-                  <thead>
-                    <tr>
-                      <th scope="col">Bedrijf/Organisatie</th>
-                      <th scope="col">Aanvraag Nummer</th>
-                      <th scope="col">Online Nummer</th>
-                      <th scope="col">Achternaam</th>
-                      <th scope="col">Voornaam</th>
-                      <th scope="col">Geboortedatum</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">3509087989</a></td>
-                      <td>3509087989</td>
-                      <td>OSPINA</td>
-                      <td>DANIEL</td>
-                      <td>11/12/2000</td>                                    
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">3509087989</a></td>
-                      <td>3509087989</td>
-                      <td>OSPINA</td>
-                      <td>DANIEL</td>
-                      <td>11/12/2000</td>                  
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">3509087989</a></td>
-                      <td>3509087989</td>
-                      <td>OSPINA</td>
-                      <td>DANIEL</td>
-                      <td>11/12/2000</td>                 
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">3509087989</a></td>
-                      <td>3509087989</td>
-                      <td>OSPINA</td>
-                      <td>DANIEL</td>
-                      <td>11/12/2000</td>                
-                    </tr>
-                    <tr>
-                      <td><a href="aanvragen.html">OSPINA</a></td>
-                      <td><a href="aanvragen.html">3509087989</a></td>
-                      <td>3509087989</td>
-                      <td>OSPINA</td>
-                      <td>DANIEL</td>
-                      <td>11/12/2000</td>                    
-                    </tr>
-                  </tbody>
-                </table>
-                <!-- End Table with stripped rows -->
-              </div>
-          
-            </div> 
-          </div>
-          <!-- End Collapse section GO -->
-           
-          </div>
-
         </div>
+      </section>
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="copyright">
+        &copy; Copyright <strong><span>NiceAdmin</span></strong
+        >. All Rights Reserved
       </div>
-    </section>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </footer>
+    <!-- End Footer -->
 
-  </main>
-  <!-- End #main -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
-  </footer><!-- End Footer -->
+    <!-- Custom Script -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-
-  <!-- Custom Script -->
-
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/chart.js/chart.umd.js"></script>
-  <script src="assets/vendor/echarts/echarts.min.js"></script>
-  <script src="assets/vendor/quill/quill.min.js"></script>
-  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="assets/vendor/evocalendar/evo-calendar.js"></script>
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.min.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/vendor/evocalendar/evo-calendar.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
