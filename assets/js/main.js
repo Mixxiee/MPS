@@ -369,9 +369,8 @@
   if (saveButton) {
     saveButton.addEventListener("click", function () {
       if (confirm("Weet je zeker dat je dit commentaar wilt opslaan?")) {
-        // If the user confirms, submit the form or perform other actions
-        // For example, you can submit the form using JavaScript:
-        // document.getElementById('yourFormId').submit();
+        // If the user confirms, submit the form.
+        // For example, document.getElementById('yourFormId').submit();
       } else {
       }
     });
@@ -391,11 +390,11 @@
 
             if (target.classList.contains('show')) {
                 target.classList.remove('show');
+                this.classList.remove('font-bold'); // Remove font-bold class when collapsing
             } else {
                 target.classList.add('show');
+                this.classList.add('font-bold'); // Add font-bold class when expanding
             }
-
-            this.classList.toggle('font-bold');
 
             target.scrollIntoView({
                 behavior: 'smooth'
@@ -409,6 +408,11 @@
         if (section) {
             if (section.classList.contains('show')) {
                 section.classList.remove('show');
+                // Remove font-bold class when collapsing
+                const toggleButton = document.querySelector(`[data-bs-target="${sectionId}"]`);
+                if (toggleButton) {
+                    toggleButton.classList.remove('font-bold');
+                }
             }
         }
     }
@@ -429,6 +433,7 @@
         });
     }
 });
+
 
 
 /**
