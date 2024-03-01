@@ -334,7 +334,7 @@
   });
 
 
-  // click table row
+  // Clickable table row
   document.addEventListener('DOMContentLoaded', function() {
     // Get all table rows
     const rows = document.querySelectorAll('.datatable tbody tr');
