@@ -333,6 +333,7 @@
     });
   });
 
+
   // click table row
   document.addEventListener('DOMContentLoaded', function() {
     // Get all table rows
