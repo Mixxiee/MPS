@@ -321,16 +321,6 @@
     new simpleDatatables.DataTable(datatable);
   });
 
-  // Initialize a table with a different placeholder
-  document.addEventListener("DOMContentLoaded", function () {
-    const datatables = document.querySelectorAll(".datatable");
-    datatables.forEach(function (table) {
-      const searchInput = table.closest(".table-responsive").querySelector('input[type="search"]');
-      if (searchInput) {
-        searchInput.placeholder = "Filter";
-      }
-    });
-  });
 
   // Initialize a table with search bar disabled
   document.addEventListener("DOMContentLoaded", function () {
@@ -343,6 +333,22 @@
     });
   });
 
+  // click table row
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all table rows
+    const rows = document.querySelectorAll('.datatable tbody tr');
+
+    // Add click event listener to each row
+    rows.forEach(function(row) {
+        row.addEventListener('click', function() {
+            // Get the URL from the first cell (which contains the link)
+            const url = row.querySelector('td:first-child a').getAttribute('href');
+            // Redirect to the URL
+            window.location.href = url;
+        });
+    });
+});
+  
   /**
    * Autoresize echart charts
    */
