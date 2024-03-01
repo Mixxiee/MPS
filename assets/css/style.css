@@ -912,8 +912,12 @@ h6 {
   color: black;
 }
 
-.tablenl a:hover {
+.tablenl tbody tr:hover td a {
   color: blue;
+}
+
+.tablenl tbody tr:hover td:not(:first-child) {
+  color: blue; /* Change the text color of non-link text inside the cell when hovering */
 }
 
 .line-container2 {
@@ -1725,3 +1729,14 @@ h6 {
     font-size: 13px;
   }
 }
+
+/* Style the "per page" element */
+.dataTables_wrapper .dataTables_length label {
+  font-size: 12px !important; /* Adjust the font size as needed */
+}
+
+.dataTables_wrapper .dataTables_length select {
+  font-size: 12px !important; /* Adjust font size */
+  padding: 2px 4px !important; /* Adjust padding */
+}
+
