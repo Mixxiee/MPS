@@ -1653,7 +1653,7 @@ h6 {
 
 .collapsable__section .datatable-dropdown {
   position: relative;
-  left: 175px;
+  left: 130px;
 }
 
 #ao-nav .datatable-dropdown {
@@ -1695,6 +1695,7 @@ h6 {
 
 .datatable-dropdown {
   position: relative;
+  padding-left: 35px;
 }
 
 .datatable-dropdown::before {
@@ -1702,7 +1703,7 @@ h6 {
   content: "Show";
   top: 50%;
   transform: translateY(-50%);
-  left: -40px;
+  left: 0px;
   font-size: 13px;
 }
 
@@ -1761,11 +1762,10 @@ h6 {
 
   .datatable-dropdown::before {
     font-size: 13px;
-    left: -40px;
   }
 
   .collapsable__section .datatable-dropdown {
-    left: 35px;
+    left: 0px;
   }
 }
 
