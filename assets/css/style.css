@@ -920,6 +920,14 @@ h6 {
   color: blue; /* Change the text color of non-link text inside the cell when hovering */
 }
 
+.tablecustom tbody tr:hover td a {
+  color: blue;
+}
+
+.tablecustom tbody tr:hover td:not(:first-child) {
+  color: blue; /* Change the text color of non-link text inside the cell when hovering */
+}
+
 .line-container2 {
   display: flex;
   justify-content: center;
