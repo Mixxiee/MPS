@@ -341,6 +341,9 @@
 
     // Add click event listener to each row
     rows.forEach(function(row) {
+        // Change cursor style to pointer when hovering over the row
+        row.style.cursor = 'pointer';
+
         row.addEventListener('click', function() {
             // Get the URL from the first cell (which contains the link)
             const url = row.querySelector('td:first-child a').getAttribute('href');
@@ -349,6 +352,7 @@
         });
     });
 });
+
   
   /**
    * Autoresize echart charts
