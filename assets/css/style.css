@@ -1085,7 +1085,7 @@ h6 {
   position: absolute;
 }
 
-#collapseBeschikkingButton{
+#collapseBeschikkingButton {
   top: 10px;
   right: 10px;
 }
@@ -1653,7 +1653,7 @@ h6 {
 
 .collapsable__section .datatable-dropdown {
   position: relative;
-  left: 130px;
+  left: 175px;
 }
 
 #ao-nav .datatable-dropdown {
@@ -1691,6 +1691,19 @@ h6 {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+.datatable-dropdown {
+  position: relative;
+}
+
+.datatable-dropdown::before {
+  position: absolute;
+  content: "Show";
+  top: 50%;
+  transform: translateY(-50%);
+  left: -45px;
+  font-size: 16px;
 }
 
 @media (max-width: 767px) {
@@ -1736,6 +1749,19 @@ h6 {
     padding: 3px;
     font-size: 13px;
   }
+
+  .datatable-dropdown::before {
+    font-size: 13px;
+    left: -40px;
+  }
+
+  .datatable-top::after {
+    display: none;
+  }
+
+  .collapsable__section .datatable-dropdown {
+    left: 35px;
+  }
 }
 
 /* Style the "per page" element */
@@ -1747,4 +1773,3 @@ h6 {
   font-size: 12px !important; /* Adjust font size */
   padding: 2px 4px !important; /* Adjust padding */
 }
-
