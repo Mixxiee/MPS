@@ -1702,8 +1702,17 @@ h6 {
   content: "Show";
   top: 50%;
   transform: translateY(-50%);
-  left: -45px;
-  font-size: 16px;
+  left: -40px;
+  font-size: 13px;
+}
+
+.datatable-selector {
+  font-size: 13px;
+  padding: 2px;
+}
+
+.datatable-dropdown label {
+  font-size: 13px;
 }
 
 @media (max-width: 767px) {
@@ -1755,13 +1764,20 @@ h6 {
     left: -40px;
   }
 
-  .datatable-top::after {
-    display: none;
-  }
-
   .collapsable__section .datatable-dropdown {
     left: 35px;
   }
+}
+
+.datatable-top::after {
+  display: none;
+}
+
+.datatable-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 10px;
 }
 
 /* Style the "per page" element */
