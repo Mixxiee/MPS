@@ -286,6 +286,12 @@ h6 {
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
 }
 
+.cardradio {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
 .card-header,
 .card-footer {
   border-color: #ebeef4;
@@ -887,6 +893,15 @@ h6 {
   font-weight: bold;
 }
 
+.custom-tooltip {
+  --bs-tooltip-bg: #bccff0;
+  --bs-tooltip-color: #203b66;
+  --bs-tooltip-opacity: 1;
+  --bs-tooltip-max-width: 250px;
+}
+
+
+
 /*--------------------------------------------------------------
 # Tables
 --------------------------------------------------------------*/
@@ -1001,7 +1016,7 @@ button.sluiten-button:hover {
 
 .othertable tbody td:first-child,
 .othertable thead th:first-child {
-  width: 500px;
+  width: 750px;
 }
 
 .simpletable thead th {
