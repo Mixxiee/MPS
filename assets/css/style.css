@@ -849,8 +849,8 @@ h6 {
 
 .filter-heading {
   position: absolute;
-  top: -20px; /* Adjust the positioning as needed */
-  left: 35px; /* Adjust the positioning as needed */
+  top: -20px; 
+  left: 35px; 
   background-color: #ffffff;
   padding: 5px 20px;
   border-radius: 5px;
@@ -874,7 +874,6 @@ h6 {
 }
 
 .form-check-input[type="radio"] {
-  /* Change the background color of the radio circle */
   border: 2px solid rgba(32, 59, 102, 0.9);
 }
 
@@ -900,11 +899,20 @@ h6 {
   --bs-tooltip-max-width: 250px;
 }
 
-
-
 /*--------------------------------------------------------------
 # Tables
 --------------------------------------------------------------*/
+.datatable th,
+.datatable td {
+  width: 100px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.table {
+  font-size: 15px;
+}
+
 
 .my-hr {
   width: 100%;
@@ -1664,6 +1672,7 @@ h6 {
 
 .table-responsive {
   position: relative;
+  overflow-x: auto;
 }
 
 .collapsable__section .datatable-dropdown {
