@@ -404,7 +404,7 @@
                           <div class="row section__details" id="sector_descriptions">
                             <div class="col-lg-12">
                               <div id="aanvrager" data-bs-parent="#sector_descriptions">
-                                <div class="card card-body shadow-none">
+                                <div class="cardradio card-body shadow-none">
                                   <form id="form-aanvrager" class="my-form" data-section="aanvraag">
                                     <div class="container">
                                       <div class="row">
@@ -428,6 +428,7 @@
                                           <label for="aanvrager5" class="filter-label">Snelzoeken</label>
                                           <input type="text" class="form-control input-borders" id="aanvrager5" />
                                         </div>
+                                        <div style="height: 2px; background-image: repeating-linear-gradient(to right, #56698a, #56698a 4px, transparent 4px, transparent 8px);"></div>
                                       </div>
                                     </div>
                                   </form>
@@ -450,7 +451,7 @@
                           <div class="row section__details" id="sector_descriptions">
                             <div class="col-lg-12">
                               <div id="aanvraag" data-bs-parent="#sector_descriptions">
-                                <div class="card card-body shadow-none">
+                                <div class="cardradio card-body shadow-none">
                                   <form id="form-aanvraag" class="my-form" data-section="aanvraag">
                                     <div class="container">
                                       <div class="row">
@@ -470,6 +471,7 @@
                                           <label for="aanvraag4" class="filter-label">Aanvraagtype</label>
                                           <input type="text" class="form-control input-borders" id="aanvraag4" />
                                         </div>
+                                        <div style="height: 2px; background-image: repeating-linear-gradient(to right, #56698a, #56698a 4px, transparent 4px, transparent 8px);"></div>
                                       </div>
                                     </div>
                                   </form>
@@ -492,18 +494,22 @@
                           <div class="row section__details" id="sector_descriptions">
                             <div class="col-lg-12">
                               <div id="wnp" data-bs-parent="#sector_descriptions">
-                                <div class="card card-body shadow-none">
+                                <div class="cardradio card-body shadow-none">
                                   <form id="form-wnp" class="my-form" data-section="wnp">
                                     <div class="container">
                                       <div class="row">
                                         <div class="col-lg-4 mb-3">
                                           <label for="wnp1" class="filter-label">Werkgever persoon</label>
-                                          <input type="text" class="form-control input-borders" id="wnp1" />
+                                          <input type="text" class="form-control input-borders" id="wnp1"/>
                                         </div>
-                                        <div class="col-lg-4 mb-3">
+                                        <div class="col-lg-4 mb-3 position-relative">
                                           <label for="wnp2" class="filter-label">Snel zoeken</label>
-                                          <input type="text" class="form-control input-borders" id="wnp2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eerste twee letters achternaam + voornaam + geboortejaar" />
-                                        </div>
+                                          <div class="input-group">
+                                            <input type="text" class="form-control input-borders rounded-end-2" id="wnp2"/>
+                                            <i class="bi bi-info-circle position-absolute top-50 translate-middle-y custom-tooltip" style="right: 10px; color: #203b66;" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="custom-tooltip" title="Eerste twee letters achternaam + voornaam + geboortejaar"></i>
+                                          </div>
+                                        </div>                                                                     
+                                        <div style="height: 2px; background-image: repeating-linear-gradient(to right, #56698a, #56698a 4px, transparent 4px, transparent 8px);"></div>
                                       </div>
                                     </div>
                                   </form>
@@ -526,7 +532,7 @@
                           <div class="row section__details" id="sector_descriptions">
                             <div class="col-lg-12">
                               <div id="wo" data-bs-parent="#sector_descriptions">
-                                <div class="card card-body shadow-none">
+                                <div class="cardradio card-body shadow-none">
                                   <form id="form-wo" class="my-form" data-section="wo">
                                     <div class="container">
                                       <div class="row">
@@ -534,6 +540,7 @@
                                           <label for="wo1" class="filter-label">Werkgever organisatie</label>
                                           <input type="text" class="form-control input-borders" id="wo1" />
                                         </div>
+                                        <div style="height: 2px; background-image: repeating-linear-gradient(to right, #56698a, #56698a 4px, transparent 4px, transparent 8px);"></div>
                                       </div>
                                     </div>
                                   </form>
@@ -556,7 +563,7 @@
                           <div class="row section__details" id="sector_descriptions">
                             <div class="col-lg-12">
                               <div id="gnp" data-bs-parent="#sector_descriptions">
-                                <div class="card card-body shadow-none">
+                                <div class="cardradio card-body shadow-none">
                                   <form id="form-gnp" class="my-form" data-section="gnp">
                                     <div class="container">
                                       <div class="row">
@@ -568,6 +575,7 @@
                                           <label for="gnp2" class="filter-label">Snel zoeken</label>
                                           <input type="text" class="form-control input-borders" id="gnp2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eerste twee letters achternaam + voornaam + geboortejaar" />
                                         </div>
+                                        <div style="height: 2px; background-image: repeating-linear-gradient(to right, #56698a, #56698a 4px, transparent 4px, transparent 8px);"></div>
                                       </div>
                                     </div>
                                   </form>
@@ -590,11 +598,11 @@
                           <div class="row section__details" id="sector_descriptions">
                             <div class="col-lg-12">
                               <div id="go" data-bs-parent="#sector_descriptions">
-                                <div class="card card-body shadow-none">
+                                <div class="cardradio card-body shadow-none">
                                   <form id="form-go" class="my-form" data-section="go">
                                     <div class="container">
                                       <div class="row">
-                                        <div class="col-lg-4 mb-3">
+                                        <div class="col-lg-4">
                                           <label for="go1" class="filter-label">Garantsteller organisatie</label>
                                           <input type="text" class="form-control input-borders" id="go1" />
                                         </div>
