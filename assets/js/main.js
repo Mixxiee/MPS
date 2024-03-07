@@ -322,6 +322,18 @@
   });
 
 
+  // Initialize a table with a different placeholder
+  document.addEventListener("DOMContentLoaded", function () {
+    const datatables = document.querySelectorAll(".datatable");
+    datatables.forEach(function (table) {
+      const searchInput = table.closest(".table-responsive").querySelector('input[type="search"]');
+      if (searchInput) {
+        searchInput.placeholder = "Filter";
+      }
+    });
+  });
+
+
   // Initialize a table with search bar disabled
   document.addEventListener("DOMContentLoaded", function () {
     const tablesWithoutSearch = document.querySelectorAll(".datatable-without-search");
@@ -445,6 +457,16 @@
     }
 });
 
+// Function for filter tooltip
+document.addEventListener('DOMContentLoaded', function() {
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl, {
+          placement: 'bottom',
+          container: 'body'
+      });
+  });
+});
 
 
 /**
