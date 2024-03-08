@@ -484,8 +484,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to move cancel button to its original location
   function moveCancelButtonBack() {
-    cancelButtonOriginalLocation.appendChild(cancelButton);
-    originalSubmitButtonParent.appendChild(submitButton);
+    if (cancelButtonOriginalLocation && originalSubmitButtonParent) {
+      cancelButtonOriginalLocation.appendChild(cancelButton);
+      originalSubmitButtonParent.appendChild(submitButton);
+    }
   }
 
   // Function to hide all sections
