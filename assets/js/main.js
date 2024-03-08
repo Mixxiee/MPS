@@ -468,6 +468,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /**
  * Submit button/Radio button handlers
  */
+
 document.addEventListener("DOMContentLoaded", () => {
   const radioButtons = document.querySelectorAll('#radio__wrapper input[type="radio"]');
   const description = document.querySelectorAll("#sector_descriptions");
@@ -514,7 +515,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (radio.id == sectionElements[i].id) {
           sectionElements[i].style.display = "block";
           originalSubmitButtonParent = submitButton.parentElement;
-          cancelButtonDestination[i].appendChild(cancelButton);
+          cancelButtonDestination[0].appendChild(cancelButton);
           sessionStorage.setItem("currentRadioItem", radio.id);
         }
       }
@@ -529,7 +530,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (radio.id == currentSessionValue) {
         sectionElements[i].style.display = "block";
         originalSubmitButtonParent = submitButton.parentElement;
-        cancelButtonDestination[i].appendChild(cancelButton);
+        cancelButtonDestination[0].appendChild(cancelButton);
       }
     });
 
@@ -548,6 +549,7 @@ document.addEventListener("DOMContentLoaded", () => {
     radioButton.addEventListener("click", function (event) {
       description.forEach((el) => (el.style.height = "0px"));
       hideAllSections();
+      moveCancelButtonBack();
       clearOtherInputFields(radioButton);
       const closestParent = radioButton.closest(".main__wrapper");
       const closestParentDesc = closestParent.querySelector("#sector_descriptions");
