@@ -319,7 +319,6 @@
   const datatables = select(".datatable", true);
   datatables.forEach((datatable) => {
     const dataTable = new simpleDatatables.DataTable(datatable, {
-      sortable: false
     });
   });
 
