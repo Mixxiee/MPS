@@ -318,10 +318,8 @@
    */
   const datatables = select(".datatable", true);
   datatables.forEach((datatable) => {
-    const dataTable = new simpleDatatables.DataTable(datatable, {
-    });
+    const dataTable = new simpleDatatables.DataTable(datatable, {});
   });
-
 
   // Initialize a table with a different placeholder
   document.addEventListener("DOMContentLoaded", function () {
@@ -333,7 +331,6 @@
       }
     });
   });
-
 
   // Initialize a table with search bar disabled
   document.addEventListener("DOMContentLoaded", function () {
@@ -347,27 +344,25 @@
     });
   });
 
-
   // Clickable table row
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener("DOMContentLoaded", function () {
     // Get all table rows
-    const rows = document.querySelectorAll('.datatable tbody tr');
+    const rows = document.querySelectorAll(".datatable tbody tr");
 
     // Add click event listener to each row
-    rows.forEach(function(row) {
-        // Change cursor style to pointer when hovering over the row
-        row.style.cursor = 'pointer';
+    rows.forEach(function (row) {
+      // Change cursor style to pointer when hovering over the row
+      row.style.cursor = "pointer";
 
-        row.addEventListener('click', function() {
-            // Get the URL from the first cell (which contains the link)
-            const url = row.querySelector('td:first-child a').getAttribute('href');
-            // Redirect to the URL
-            window.location.href = url;
-        });
+      row.addEventListener("click", function () {
+        // Get the URL from the first cell (which contains the link)
+        const url = row.querySelector("td:first-child a").getAttribute("href");
+        // Redirect to the URL
+        window.location.href = url;
+      });
     });
-});
+  });
 
-  
   /**
    * Autoresize echart charts
    */
@@ -402,74 +397,73 @@
   }
 })();
 
-  // Initialize a collapsing a section
+// Initialize a collapsing a section
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggleCollapseElements = document.querySelectorAll('.toggle-collapse');
-    toggleCollapseElements.forEach(function (element) {
-        element.addEventListener('click', function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('data-bs-target');
-            const target = document.querySelector(targetId);
-            const offsetTop = target.offsetTop;
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleCollapseElements = document.querySelectorAll(".toggle-collapse");
+  toggleCollapseElements.forEach(function (element) {
+    element.addEventListener("click", function (event) {
+      event.preventDefault();
+      const targetId = this.getAttribute("data-bs-target");
+      const target = document.querySelector(targetId);
+      const offsetTop = target.offsetTop;
 
-            if (target.classList.contains('show')) {
-                target.classList.remove('show');
-                this.classList.remove('font-bold'); // Remove font-bold class when collapsing
-            } else {
-                target.classList.add('show');
-                this.classList.add('font-bold'); // Add font-bold class when expanding
-            }
+      if (target.classList.contains("show")) {
+        target.classList.remove("show");
+        this.classList.remove("font-bold"); // Remove font-bold class when collapsing
+      } else {
+        target.classList.add("show");
+        this.classList.add("font-bold"); // Add font-bold class when expanding
+      }
 
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+      target.scrollIntoView({
+        behavior: "smooth",
+      });
     });
+  });
 
-    // Function to collapse the specified section
-    function collapseSection(sectionId) {
-        const section = document.querySelector(sectionId);
-        if (section) {
-            if (section.classList.contains('show')) {
-                section.classList.remove('show');
-                // Remove font-bold class when collapsing
-                const toggleButton = document.querySelector(`[data-bs-target="${sectionId}"]`);
-                if (toggleButton) {
-                    toggleButton.classList.remove('font-bold');
-                }
-            }
+  // Function to collapse the specified section
+  function collapseSection(sectionId) {
+    const section = document.querySelector(sectionId);
+    if (section) {
+      if (section.classList.contains("show")) {
+        section.classList.remove("show");
+        // Remove font-bold class when collapsing
+        const toggleButton = document.querySelector(`[data-bs-target="${sectionId}"]`);
+        if (toggleButton) {
+          toggleButton.classList.remove("font-bold");
         }
+      }
     }
+  }
 
-    // Function to handle collapsing Beschikking section
-    const collapseBeschikkingButton = document.getElementById('collapseBeschikkingButton');
-    if (collapseBeschikkingButton) {
-        collapseBeschikkingButton.addEventListener('click', function () {
-            collapseSection('#tableCollapse');
-        });
-    }
+  // Function to handle collapsing Beschikking section
+  const collapseBeschikkingButton = document.getElementById("collapseBeschikkingButton");
+  if (collapseBeschikkingButton) {
+    collapseBeschikkingButton.addEventListener("click", function () {
+      collapseSection("#tableCollapse");
+    });
+  }
 
-    // Function to handle collapsing Advies section
-    const collapseAdviesButton = document.getElementById('collapseAdviesButton');
-    if (collapseAdviesButton) {
-        collapseAdviesButton.addEventListener('click', function () {
-            collapseSection('#sectiontCollapse');
-        });
-    }
+  // Function to handle collapsing Advies section
+  const collapseAdviesButton = document.getElementById("collapseAdviesButton");
+  if (collapseAdviesButton) {
+    collapseAdviesButton.addEventListener("click", function () {
+      collapseSection("#sectiontCollapse");
+    });
+  }
 });
 
 // Function for filter tooltip
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-  var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl, {
-          placement: 'bottom',
-          container: 'body'
-      });
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl, {
+      placement: "bottom",
+      container: "body",
+    });
   });
 });
-
 
 /**
  * Submit button/Radio button handlers
@@ -481,7 +475,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const radioEl = document.querySelectorAll('.fieldsWrapper input[type="radio"]');
   const sectionElements = document.querySelectorAll(".collapsable__section");
   const cancelButton = document.getElementById("cancel__button");
-  const cancelButtonDestination = document.querySelectorAll(".datatable-pagination");
+  const cancelButtonDestination = document.querySelectorAll("#card__cancel-button");
   const cancelButtonOriginalLocation = document.querySelector(".cancel-button-original-location");
   const sessionStorage = window.sessionStorage;
 
