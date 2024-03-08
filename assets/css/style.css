@@ -849,8 +849,8 @@ h6 {
 
 .filter-heading {
   position: absolute;
-  top: -20px; 
-  left: 35px; 
+  top: -20px;
+  left: 35px;
   background-color: #ffffff;
   padding: 5px 20px;
   border-radius: 5px;
@@ -912,7 +912,6 @@ h6 {
 .table {
   font-size: 15px;
 }
-
 
 .my-hr {
   width: 100%;
@@ -1740,6 +1739,13 @@ h6 {
   font-size: 13px;
 }
 
+@media (max-width: 990px) {
+  .datatable-sorter::before,
+  .datatable-sorter::after {
+    right: -8px;
+  }
+}
+
 @media (max-width: 767px) {
   .nav-content {
     padding: 0;
@@ -1812,4 +1818,9 @@ h6 {
 .dataTables_wrapper .dataTables_length select {
   font-size: 12px !important; /* Adjust font size */
   padding: 2px 4px !important; /* Adjust padding */
+}
+
+.card__cancel-button {
+  width: 100%;
+  text-align: right;
 }
