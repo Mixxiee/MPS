@@ -2084,7 +2084,7 @@
                   rowRender: !1,
                   tableRender: !1,
                   diffDomOptions: { valueDiffing: !1 },
-                  labels: { placeholder: "Search...", searchTitle: "Search within table", perPage: "entries", pageTitle: "Page {page}", noRows: "No entries found", noResults: "No results match your search query", info: "Showing {start} to {end} of {rows} entries" },
+                  labels: { placeholder: "Search...", searchTitle: "Search within table", perPage: "gegevens", pageTitle: "Page {page}", noRows: "No entries found", noResults: "No results match your search query", info: "Showing {start} to {end} of {rows} entries" },
                   template: (t, e) =>
                     `<div class='${t.classes.top}'>\n    ${
                       t.paging && t.perPageSelect ? `<div class='${t.classes.dropdown}'>\n            <label>\n                <select class='${t.classes.selector}'></select> ${t.labels.perPage}\n            </label>\n        </div>` : ""
