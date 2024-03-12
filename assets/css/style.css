@@ -909,6 +909,15 @@ h6 {
   white-space: nowrap;
 }
 
+.datatable-without-search th,
+.datatable-without-search td {
+  width: 100px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+
+
 .table {
   font-size: 15px;
 }
