@@ -321,17 +321,6 @@
     const dataTable = new simpleDatatables.DataTable(datatable, {});
   });
 
-  // Initialize a table with a different placeholder
-  document.addEventListener("DOMContentLoaded", function () {
-    const datatables = document.querySelectorAll(".datatable");
-    datatables.forEach(function (table) {
-      const searchInput = table.closest(".table-responsive").querySelector('input[type="search"]');
-      if (searchInput) {
-        searchInput.placeholder = "Filter";
-      }
-    });
-  });
-
   // Initialize a table with search bar disabled
   document.addEventListener("DOMContentLoaded", function () {
     const tablesWithoutSearch = document.querySelectorAll(".datatable-without-search");
