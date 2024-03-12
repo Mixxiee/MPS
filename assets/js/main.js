@@ -339,7 +339,6 @@
       new simpleDatatables.DataTable(table, {
         searchable: false,
         perPage: 5,
-        sortable: false,
       });
     });
   });
